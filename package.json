@@ -1,0 +1,29 @@
+{
+  "name": "acnb-theme-geek",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awescnb/acnb-theme-geek.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/awescnb/acnb-theme-geek/issues"
+  },
+  "homepage": "https://github.com/awescnb/acnb-theme-geek#readme",
+  "dependencies": {
+    "@acnb/core": "^1.0.7",
+    "vite": "^2.5.10",
+    "vite-plugin-html": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.1"
+  }
+}
