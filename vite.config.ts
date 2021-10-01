@@ -1,12 +1,22 @@
 import { defineConfig } from 'vite'
 import { injectHtml } from 'vite-plugin-html'
+import { viteSingleFile } from 'vite-plugin-singlefile'
 
 export default defineConfig({
   server: {
     open: true,
     port: 8080,
   },
-  build: {},
+  build: {
+    cssCodeSplit: true,
+    emptyOutDir: true,
+    lib: {
+      formats: ['iife'],
+      entry: './src/index.js',
+      name: 'geek',
+      fileName: 'geek',
+    },
+  },
   plugins: [
     {
       ...injectHtml({

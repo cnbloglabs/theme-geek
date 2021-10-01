@@ -1,4 +1,5 @@
 import { createTheme } from '@acnb/core'
+import './style/index.scss'
 
 const theme = createTheme()
 

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build & rm -rf ./dist/images/ & rm -rf ./dist/libs & rm -rf ./dist/templates"
   },
   "repository": {
     "type": "git",
@@ -20,10 +20,12 @@
   "homepage": "https://github.com/awescnb/acnb-theme-geek#readme",
   "dependencies": {
     "@acnb/core": "^1.0.7",
+    "sass": "^1.42.1",
     "vite": "^2.5.10",
     "vite-plugin-html": "^2.1.0"
   },
   "devDependencies": {
-    "@types/node": "^16.10.1"
+    "@types/node": "^16.10.1",
+    "vite-plugin-singlefile": "^0.5.1"
   }
 }
