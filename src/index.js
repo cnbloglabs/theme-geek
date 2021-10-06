@@ -1,10 +1,10 @@
 import { createTheme } from '@acnb/core'
+import { background } from '@acnb/plugins'
 import './style/index.scss'
 
 const theme = createTheme()
 
-const plugin = () => {
-  console.log(1111)
-}
-
-theme.use(plugin)
+theme.use(background, {
+  enable: true,
+  value: '#ffb3cc',
+})

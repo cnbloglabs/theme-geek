@@ -10,6 +10,17 @@
     "@acnb/core" "^1.0.6"
     vite "^2.5.1"
 
+"@acnb/plugins@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@acnb/plugins/-/plugins-0.0.2.tgz#70058a63e0684d07e186f3276d5e62330a40065d"
+  integrity sha512-bwIUMTGAVZ6nZyl4aQ8Yt6339dsHMrb2z/uyS/6bqjDkdYZX2pzRpMPNUxbkdK+Yqsjk9NHGQjmSK4yIf6uGPQ==
+  dependencies:
+    "@acnb/core" "^1.0.7"
+    notyf "^3.10.0"
+    sass "^1.42.1"
+    vite "^2.5.10"
+    vite-plugin-html "^2.1.0"
+
 "@rollup/plugin-node-resolve@^11.2.0":
   version "11.2.1"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-node-resolve/-/plugin-node-resolve-11.2.1.tgz#82aa59397a29cd4e13248b106e6a4a1880362a60"
@@ -413,6 +424,11 @@ normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
   integrity sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==
+
+notyf@^3.10.0:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/notyf/-/notyf-3.10.0.tgz#67a64443c69ea0e6495c56ea0f91198860163d06"
+  integrity sha512-Mtnp+0qiZxgrH+TzVlzhWyZceHdAZ/UWK0/ju9U0HQeDpap1mZ8cC7H5wSI5mwgni6yeAjaxsTw0sbMK+aSuHw==
 
 param-case@^3.0.3:
   version "3.0.4"
