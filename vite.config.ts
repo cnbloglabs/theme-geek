@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import { injectHtml } from 'vite-plugin-html'
-import { viteSingleFile } from 'vite-plugin-singlefile'
 
 export default defineConfig({
   server: {
@@ -10,6 +9,11 @@ export default defineConfig({
   build: {
     cssCodeSplit: true,
     emptyOutDir: true,
+    terserOptions: {
+      format: {
+        comments: false,
+      },
+    },
     lib: {
       formats: ['iife'],
       entry: './src/index.js',
