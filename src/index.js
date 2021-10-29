@@ -8,11 +8,10 @@ import {
   codeCopy,
   postMessage,
   commentsAvatars,
-  //   emoji, // todo
-  themeColor,
+  emoji,
   imagePreview,
-  postSignature,
-  titleFavicon,
+  license,
+  webTag,
   catalog,
   background,
   signature,
@@ -22,6 +21,7 @@ import {
   tools,
   notice,
   live2d,
+  colorMode,
 } from '@acnb/plugins'
 
 const theme = createTheme()
@@ -32,18 +32,18 @@ theme
   .use(codeHighlight)
   .use(notice, {
     enable: true,
-    text: ['2131231'],
+    contents: ['2131231'],
   })
   .use(codeLinenumbers)
   .use(postMessage)
   .use(commentsAvatars)
-  //   .use(emoji)
+  .use(emoji)
   .use(imagePreview)
-  .use(postSignature)
-  .use(titleFavicon)
+  .use(license)
+  .use(webTag)
   .use(codeLang)
   .use(clickEffects, { enable: false })
-  .use(themeColor, { color: '#1B86F9' })
+  .use(colorMode, { color: '#1B86F9' })
   //   .use(musicPlayer, { enable: false })
   .use(live2d, {
     enable: false,

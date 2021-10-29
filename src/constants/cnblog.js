@@ -1,7 +1,7 @@
 /**
  * 博客园相关常量
  */
-import { getThemeOptions } from 'options/extra'
+import { useThemeOptions } from '@acnb/options'
 
 /* 当前使用的博客园官方皮肤名称 */
 export const skinName = window.skinName
@@ -16,4 +16,4 @@ export const blogId = window.currentBlogId
 export const blogApp = window.currentBlogApp
 
 /*  用户头像 */
-export const avatar = getThemeOptions().avatar
+export const avatar = useThemeOptions().avatar

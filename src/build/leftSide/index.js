@@ -1,4 +1,4 @@
-import './index.scss'
+import { useLinksOptions, useGithubOptions } from '@acnb/options'
 import { getBlogname } from '../../utils/cnblog'
 import { isOwner } from '../../utils/cnblog'
 import { avatar } from '../../constants/cnblog'
@@ -10,14 +10,10 @@ import {
   rss,
   admin,
 } from '../../constants/links'
-import {
-  linksConfig,
-  // getGithubOptions
-  defineOptions,
-} from '@acnb/core'
+import './index.scss'
 
 const buildLeftside = () => {
-  const links = getLinksOptions()
+  const links = useLinksOptions()
   const el = $(`
     <div id='left-side'>
         <div class='logo'>
@@ -37,10 +33,11 @@ const buildLeftside = () => {
 }
 
 const buildCustomLinksToLeftSide = () => {
-  const links = getLinksOptions()
-  for (const { name, link } of links) {
+  const links = useLinksOptions()
+  if (!links.length) return
+  for (const { title, url } of links) {
     $('#left-side').find('ul').append(`
-            <li><a href="${link}" target="_blank">${name}</a></li>
+            <li><a href="${url}" target="_blank">${title}</a></li>
         `)
   }
 }
@@ -117,7 +114,7 @@ const removeHeaderToLeftside = () => {
 }
 
 const buildLeftsideBottomBtns = () => {
-  // const { enable, url } = getGithubOptions()
+  const { enable, url } = useGithubOptions()
   if (!enable) return
   const userName = getBlogname()
   const el = `

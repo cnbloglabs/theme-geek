@@ -1,8 +1,7 @@
-import './index.scss'
-import { isOwner } from '../../cnblog'
+import { useThemeOptions } from '@acnb/options'
+import { isOwner } from '../../utils/cnblog'
 import { poll } from '../../utils/helpers'
 import { appWz, appQ, appGroup, appIng } from '../../constants/links'
-import {} from '@acnb/options/extra'
 import { avatar } from '../../constants/cnblog'
 import {
   followersDetailsUrl,
@@ -18,6 +17,7 @@ import {
   follow,
   // unfollow,
 } from '../../utils/cnblog'
+import './index.scss'
 
 function createContainer() {
   return $('<div>').addClass('profile')
@@ -28,7 +28,7 @@ function createSignature() {
 }
 
 function createBackground() {
-  const { headerBackground } = getThemeOptions()
+  const { headerBackground } = useThemeOptions()
   const signatureWrap = createSignature()
   return $('<div>')
     .addClass('profile-banner')
@@ -70,7 +70,7 @@ function createMenu() {
 }
 
 function createBlur() {
-  const { headerBackground } = getThemeOptions()
+  const { headerBackground } = useThemeOptions()
   return $('<div>')
     .addClass('profile-blur')
     .css('backgroundImage', `url(${headerBackground})`)

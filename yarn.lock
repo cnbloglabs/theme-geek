@@ -10,21 +10,22 @@
     "@acnb/core" "^1.0.6"
     vite "^2.5.1"
 
-"@acnb/options@0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@acnb/options/-/options-0.0.4.tgz#7ab3dd6db5f92c9d9d286518b099553fde668d2f"
-  integrity sha512-VSP+l933rW6UnQWmrwbAWQ8/TxbIy76L6ye6Iry+ifPv6Eu4t5vO4CRv3JsH0IaEc8egZMNj9RjRVV8ms6hgLg==
+"@acnb/options@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@acnb/options/-/options-0.1.0.tgz#adaffa773848a5f4a1087d4ffe9b60fc3f781f07"
+  integrity sha512-CZ1YsoYwOUL7r66x/fpUGN8LhC+YiceFxLItBr+yBuHngTA1IXkEg2YJWz0YBURG6zHbUyQCs7cD4ONN3c8xng==
   dependencies:
     "@acnb/core" "^1.0.1"
     "@types/node" "^16.7.2"
     vite "^2.5.1"
 
-"@acnb/plugins@0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@acnb/plugins/-/plugins-0.0.2.tgz#70058a63e0684d07e186f3276d5e62330a40065d"
-  integrity sha512-bwIUMTGAVZ6nZyl4aQ8Yt6339dsHMrb2z/uyS/6bqjDkdYZX2pzRpMPNUxbkdK+Yqsjk9NHGQjmSK4yIf6uGPQ==
+"@acnb/plugins@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@acnb/plugins/-/plugins-0.0.8.tgz#71045566e488b50da5b63d2d073a52069789ec49"
+  integrity sha512-oLrbIfUNLP74G5dLd19VIyGqJAiDnrWqUjBoNxiKHcMRmBUBcbuXWZBMsvamZmAuYW5FBhkDR94MUHjBdifBeQ==
   dependencies:
     "@acnb/core" "^1.0.7"
+    "@acnb/options" "^0.1.0"
     notyf "^3.10.0"
     sass "^1.42.1"
     vite "^2.5.10"

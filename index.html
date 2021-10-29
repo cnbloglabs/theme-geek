@@ -2,7 +2,7 @@
 <html lang="zh-cn">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./images/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>awescnb</title>
 
@@ -150,7 +150,7 @@
             },
           ]
 
-          pageList.forEach(item => {
+          pageList.forEach((item) => {
             const navItem = createNavItem(item)
             this.content.querySelector('.page-list').appendHTML(navItem)
           })
