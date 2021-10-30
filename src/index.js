@@ -26,13 +26,8 @@ import {
 
 const theme = createTheme()
 
-build()
-
-codeCopy()
-
-console.log()
-
 theme
+  .use(build)
   .use(codeHighlight, { enable: true })
   .use(codeLinenumbers, { enable: true })
   .use(commentsAvatars, { enable: true })
