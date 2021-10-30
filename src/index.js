@@ -24,15 +24,14 @@ import {
   colorMode,
 } from '@acnb/plugins'
 
-const theme = createTheme()
-
-theme
+createTheme()
   .use(build)
   .use(codeHighlight, { enable: true })
   .use(codeLinenumbers, { enable: true })
-  .use(commentsAvatars, { enable: true })
   .use(codeLang, { enable: true })
+  .use(codeCopy, { enable: true })
   .use(clickEffects, { enable: false })
+  .use(commentsAvatars, { enable: true })
   .use(colorMode, { enable: true, color: '#1B86F9' })
   .use(emoji, { enable: true })
   .use(imagePreview, { enable: true })
@@ -41,8 +40,7 @@ theme
   .use(musicPlayer, { enable: true })
   .use(live2d, { enable: false })
   .use(darkMode, { enable: true })
-  .use(codeCopy, { enable: true })
-  .use(notice, { enable: true, contents: [1113131] })
+  .use(notice, { enable: false })
   .use(postMessage, { enable: true })
   .use(
     signature,
