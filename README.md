@@ -1,6 +1,6 @@
 # acnb-theme-geek
 
-这是一个博客园皮肤，基于 acnb 构建，欢迎使用！
+这是一个博客园皮肤，基于 [awescnb](https://github.com/awescnb/) 构建，欢迎使用！
 
 ## 浏览器支持
 
@@ -8,7 +8,7 @@
 
 ## 在博客园安装
 
-请[点击这里](https://www.yuque.com/awescnb)查看文档进行安装。
+请 [点击这里](https://www.yuque.com/awescnb) 查看文档进行安装。
 
 ## 特性
 
