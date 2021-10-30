@@ -69,7 +69,7 @@ createTheme()
       enable: true,
     },
     {
-      selector: '.account',
+      mountedNode: '.account',
       fn: 'after',
       scrollContainer: '#mainContent',
     }
