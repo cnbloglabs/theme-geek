@@ -6,9 +6,10 @@ import {
   codeLinenumbers,
   codeLang,
   codeCopy,
-  postMessage,
   commentsAvatars,
+  darkMode,
   emoji,
+  postMessage,
   imagePreview,
   license,
   webTag,
@@ -17,7 +18,6 @@ import {
   signature,
   clickEffects,
   musicPlayer,
-  mode,
   tools,
   notice,
   live2d,
@@ -28,32 +28,27 @@ const theme = createTheme()
 
 build()
 
+codeCopy()
+
+console.log()
+
 theme
-  .use(codeHighlight)
-  .use(notice, {
-    enable: true,
-    contents: ['2131231'],
-  })
-  .use(codeLinenumbers)
-  .use(postMessage)
-  .use(commentsAvatars)
-  .use(emoji)
-  .use(imagePreview)
-  .use(license)
-  .use(webTag)
-  .use(codeLang)
+  .use(codeHighlight, { enable: true })
+  .use(codeLinenumbers, { enable: true })
+  .use(commentsAvatars, { enable: true })
+  .use(codeLang, { enable: true })
   .use(clickEffects, { enable: false })
-  .use(colorMode, { color: '#1B86F9' })
-  //   .use(musicPlayer, { enable: false })
-  .use(live2d, {
-    enable: false,
-  })
-  .use(mode, {
-    enable: true,
-    darkDefault: true,
-    autoDark: false,
-    autoLight: false,
-  })
+  .use(colorMode, { enable: true, color: '#1B86F9' })
+  .use(emoji, { enable: true })
+  .use(imagePreview, { enable: true })
+  .use(license, { enable: true })
+  .use(webTag, { enable: true })
+  .use(musicPlayer, { enable: true })
+  .use(live2d, { enable: false })
+  .use(darkMode, { enable: true })
+  .use(codeCopy, { enable: true })
+  .use(notice, { enable: true, contents: [1113131] })
+  .use(postMessage, { enable: true })
   .use(
     signature,
     {
@@ -67,7 +62,9 @@ theme
   )
   .use(
     background,
-    {},
+    {
+      enable: true,
+    },
     {
       opacitySelector:
         '#left-side,#sideBar,#mainContent, #footer,.custom-searchbar',
@@ -84,31 +81,31 @@ theme
       scrollContainer: '#mainContent',
     }
   )
-//   .use(codeCopy)
-//   .use(
-//     tools,
-//     {},
-//     {
-//       toolbarItems: [
-//         {
-//           icon: 'fa-comment-dots',
-//         },
-//         {
-//           icon: 'fa-star',
-//         },
-//         {
-//           icon: 'fa-heart',
-//         },
-//         {
-//           icon: 'fa-thumbs-up',
-//         },
-//         {
-//           enable: true,
-//           icon: 'fa-adjust',
-//         },
-//         {
-//           icon: 'fa-rocket',
-//         },
-//       ],
-//     }
-//   )
+  .use(
+    tools,
+    { enable: true },
+    {
+      menuIcon: 'fa-angle-up',
+      toolbarItems: [
+        {
+          icon: 'fa-comment-dots',
+        },
+        {
+          icon: 'fa-star',
+        },
+        {
+          icon: 'fa-heart',
+        },
+        {
+          icon: 'fa-thumbs-up',
+        },
+        {
+          enable: true,
+          icon: 'fa-adjust',
+        },
+        {
+          icon: 'fa-rocket',
+        },
+      ],
+    }
+  )

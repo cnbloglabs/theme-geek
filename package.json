@@ -21,7 +21,7 @@
   "dependencies": {
     "@acnb/core": "^1.0.7",
     "@acnb/options": "^0.1.0",
-    "@acnb/plugins": "^0.0.8",
+    "@acnb/plugins": "^0.1.0",
     "sass": "^1.42.1",
     "vite": "^2.5.10",
     "vite-plugin-html": "^2.1.0"

@@ -4,8 +4,10 @@
 @import '../common/variables.scss';
 @import '../common/tools.scss';
 @import '../common/mixins.scss';
+@import './markdown.scss';
 @import './scroll.scss';
 @import './icons.scss';
+@import './plugins.scss';
 
 *::selection {
   background: var(--theme-primary-4);
@@ -760,7 +762,7 @@ h1.PostListTitle + .pager,
 
 // 发表评论
 #comment_form {
-  padding: 32px 16px 0;
+  padding: 32px 16px;
   background-color: var(--form-bg);
   overflow: hidden;
   #divCommentShow,
@@ -914,6 +916,4 @@ h1.PostListTitle + .pager,
   display: none;
 }
 
-@import '../common/markdown';
 @import './index.m.scss';
-// @import './plugins.scss';

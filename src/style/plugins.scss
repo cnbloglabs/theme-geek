@@ -34,21 +34,21 @@ $emoji: (
   hoverBorderColor: var(--postSignature-border-color),
 );
 
-@import '@acnb/plugins/highlight/index.scss';
-@import '@acnb/plugins/linenumbers/index.scss';
-@import '@acnb/plugins/postMessage/index.scss';
-@import '@acnb/plugins/commentsAvatars/index.scss';
-@import '@acnb/plugins/signature/index.scss';
-@import '@acnb/plugins/emoji/index.scss';
-@import '@acnb/plugins/imagebox/index.scss';
-@import '@acnb/plugins/notice/index.scss';
-@import '@acnb/plugins/postSignature/index.scss';
-@import '@acnb/plugins/toolMenu/index.scss';
-@import '@acnb/plugins/mode/index.scss';
-@import '@acnb/plugins/clickEffect/index.scss';
-@import '@acnb/plugins/player/index.scss';
-// @import 'plugins/copyCode/index.scss';
-// @import 'plugins/codeLanguage/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/postMessage/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/codeHighlight/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/codeLinenumbers/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/commentsAvatars/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/signature/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/emoji/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/imagePreview/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/notice/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/license/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/tools/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/darkMode/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/clickEffects/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/musicPlayer/index.scss';
+// @import '/node_modules/@acnb/plugins/src/plugins/codeCopy/index.scss'; // 自定义插件样式
+@import '/node_modules/@acnb/plugins/src/plugins/codeLang/index.scss';
 
 // toolMenu
 
