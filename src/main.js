@@ -24,15 +24,6 @@ import {
   colorMode,
 } from "@acnb/plugins";
 
-window.opts = {
-  links: [
-    {
-      name: "123",
-      url: "",
-    },
-  ],
-};
-
 createTheme()
   .use(build)
   .use(codeHighlight, { enable: true })
