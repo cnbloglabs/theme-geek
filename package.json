@@ -21,7 +21,7 @@
   "dependencies": {
     "@acnb/core": "^1.0.7",
     "@acnb/options": "^0.1.5",
-    "@acnb/plugins": "^0.1.2",
+    "@acnb/plugins": "^0.1.4",
     "@fortawesome/fontawesome-free": "^6.0.0-beta3"
   },
   "devDependencies": {

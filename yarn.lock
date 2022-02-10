@@ -28,10 +28,10 @@
     "@types/node" "^16.7.2"
     vite "^2.5.1"
 
-"@acnb/plugins@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@acnb/plugins/-/plugins-0.1.2.tgz#aaa1ed1afdfd367af851f0b63610a6deca545beb"
-  integrity sha512-tEKM+GunGZgPSPtXLHRqjEr4ki1ubtvH/s8exsAmpHHMhrh7y5CULMxE98xFiQnfYMI4/tHGz1VPvg7HRe5fMQ==
+"@acnb/plugins@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@acnb/plugins/-/plugins-0.1.4.tgz#6514a77e1a3e6126e60f4f9dabd855f1b906ac67"
+  integrity sha512-r5V+jdPreg4lIYLjE62LSejVlalsnXXRu541IoRy1XtxPMJEiEgcmjd8W3NR2I638xPdSaYbsjw79b6nws0BMQ==
   dependencies:
     "@acnb/core" "^1.0.7"
     "@acnb/options" "^0.1.3"
