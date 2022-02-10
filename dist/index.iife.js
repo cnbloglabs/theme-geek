@@ -66,12 +66,12 @@ var __vite_style__=document.createElement("style");__vite_style__.innerHTML=`@im
         <div class='logo'>
             <a href="https://www.cnblogs.com/">CNBLOG</a>
         </div>
-    </div>`);if(o){const e=`
+    </div>`);if(o){const e=$(`
         <div class="links side-wrapper">
             <h3>Links</h3>
             <ul></ul>
         </div>
-        `;e.append(e)}$("#home").append(t)},ht=()=>{const{enable:o,value:t}=K();if(!!o)for(const{name:e,link:n}of t)$("#left-side").find("ul").append(`<li><a href="${n}" target="_blank">${e}</a></li>`)},xt=()=>{const o=[{icon:"fa-blog",title:"\u535A\u5BA2\u56ED",url:Ho,allowVisit:!0},{icon:"fa-home",title:"\u9996\u9875",url:k,allowVisit:!0},{icon:"fa-pen-square",title:"\u65B0\u968F\u7B14",url:Yo,allowVisit:!0},{icon:"fa-envelope",title:"\u8054\u7CFB",url:Ro,allowVisit:!0},{icon:"fa-rss-square",title:"\u8BA2\u9605",url:Wo,allowVisit:!0},{icon:"fa-cog",title:"\u7BA1\u7406",url:Uo,allowVisit:!1}],t=$(`
+        `);e.append(e)}$("#home").append(t)},ht=()=>{const{enable:o,value:t}=K();if(!!o)for(const{name:e,link:n}of t)$("#left-side").find("ul").append(`<li><a href="${n}" target="_blank">${e}</a></li>`)},xt=()=>{const o=[{icon:"fa-blog",title:"\u535A\u5BA2\u56ED",url:Ho,allowVisit:!0},{icon:"fa-home",title:"\u9996\u9875",url:k,allowVisit:!0},{icon:"fa-pen-square",title:"\u65B0\u968F\u7B14",url:Yo,allowVisit:!0},{icon:"fa-envelope",title:"\u8054\u7CFB",url:Ro,allowVisit:!0},{icon:"fa-rss-square",title:"\u8BA2\u9605",url:Wo,allowVisit:!0},{icon:"fa-cog",title:"\u7BA1\u7406",url:Uo,allowVisit:!1}],t=$(`
     <div id="cnblog-nav" class="side-wrapper">
         <h3>MENU</h3>
         <ul></ul>

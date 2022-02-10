@@ -21,12 +21,12 @@ const buildLeftSidebar = () => {
         </div>
     </div>`);
   if (enable) {
-    const el = `
+    const el = $(`
         <div class="links side-wrapper">
             <h3>Links</h3>
             <ul></ul>
         </div>
-        `;
+        `);
     el.append(el);
   }
   $("#home").append(el);
