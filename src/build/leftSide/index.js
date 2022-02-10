@@ -13,14 +13,14 @@ import {
 import "./index.scss";
 
 const buildLeftSidebar = () => {
-  const { links } = useLinksOptions();
+  const { enable } = useLinksOptions();
   const el = $(`
     <div id='left-side'>
         <div class='logo'>
             <a href="https://www.cnblogs.com/">CNBLOG</a>
         </div>
     </div>`);
-  if (links.length) {
+  if (enable) {
     const el = `
         <div class="links side-wrapper">
             <h3>Links</h3>
@@ -33,9 +33,9 @@ const buildLeftSidebar = () => {
 };
 
 const buildCustomLinks = () => {
-  const { links } = useLinksOptions();
-  if (!links.length) return;
-  for (const { name, link } of links) {
+  const { enable, value } = useLinksOptions();
+  if (!enable) return;
+  for (const { name, link } of value) {
     $("#left-side")
       .find("ul")
       .append(`<li><a href="${link}" target="_blank">${name}</a></li>`);
