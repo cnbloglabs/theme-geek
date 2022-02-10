@@ -10,7 +10,7 @@ import {
 } from '../../constants/links'
 import {
   getFollowState,
-  getBlogname,
+  getBlogName,
   getBlogAge,
   getFollowers,
   getFollowing,
@@ -132,7 +132,7 @@ function followAndUnfollow() {
 
 function insertMessage() {
   const followState = getFollowState()
-  const userName = getBlogname()
+  const userName = getBlogName()
   const age = getBlogAge()
   const followers = getFollowers()
   const following = getFollowing()

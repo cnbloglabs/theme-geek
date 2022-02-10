@@ -16,16 +16,16 @@ export default defineConfig({
     },
     lib: {
       formats: ['iife'],
-      entry: './src/index.js',
-      name: 'geek',
-      fileName: 'geek',
+      entry: './src/main.js',
+      name: 'theme',
+      fileName: 'index',
     },
   },
   plugins: [
     {
       ...injectHtml({
         injectData: {
-          injectScript: `<script type="module" src="../../src/index.js"></script>`,
+          injectScript: `<script type="module" src="../../src/main.js"></script>`,
         },
       }),
       apply: 'serve',

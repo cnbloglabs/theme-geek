@@ -1,21 +1,21 @@
-import './index.scss'
-import { getMonth, getQuarter } from '../../utils/helpers'
-// import { getBlogname } from 'utils/cnblog'
-import { contact, message, index } from '../../constants/links'
-import { avatar } from '../../constants/cnblog'
+import "./index.scss";
+import { getMonth, getQuarter } from "../../utils/helpers";
+// import { getBlogName } from 'utils/cnblog'
+import { contact, message, index } from "../../constants/links";
+import { avatar } from "../../constants/cnblog";
 import {
   getViewCount,
   getPostCount,
   getArticleCount,
   getCommentCount,
-} from '../../utils/cnblog'
+} from "../../utils/cnblog";
 
 function flat() {
-  $('#sideBar').appendTo($('#home'))
+  $("#sideBar").appendTo($("#home"));
 }
 
 function buildTopBtns() {
-  const noticeCount = $('#msg_count').text()
+  const noticeCount = $("#msg_count").text();
   const el = `
     <div class="account">
         <div class="account-button email">
@@ -27,7 +27,7 @@ function buildTopBtns() {
             <a href="${message}" class='account-button-notice'>
                 <li class="fas fa-bell"></li>
                 <span class="notice-count" ${
-                  !noticeCount && 'style=display:none'
+                  !noticeCount && "style=display:none"
                 }>${noticeCount}</span>
             </a>
         </div>
@@ -45,18 +45,18 @@ function buildTopBtns() {
         <div class="account-avatar">
             <a href="${index}"><img src="${avatar}"></a>
         </div>
-    </div>`
-  $('#sideBarMain').prepend(el)
+    </div>`;
+  $("#sideBarMain").prepend(el);
 }
 
 function buildCalendar() {
-  const quarter = getQuarter()
-  const quarterImg = `https://guangzan.gitee.io/imagehost/Illustrations/${quarter.toLowerCase()}.svg`
-  const month = getMonth()
-  const instance = new Date()
-  const year = instance.getFullYear()
+  const quarter = getQuarter();
+  const quarterImg = `https://guangzan.gitee.io/imagehost/Illustrations/${quarter.toLowerCase()}.png`;
+  const month = getMonth();
+  const instance = new Date();
+  const year = instance.getFullYear();
   const date =
-    instance.getDate() < 10 ? '0' + instance.getDate() : instance.getDate()
+    instance.getDate() < 10 ? "0" + instance.getDate() : instance.getDate();
   const el = `
     <div id="custom-calendar" class="sidebar-block">
         <div class="event-wrapper">
@@ -69,12 +69,12 @@ function buildCalendar() {
             </div>
         </div>
     </div>
-    `
-  $('#leftcontentcontainer').before($(el))
+    `;
+  $("#leftcontentcontainer").before($(el));
 }
 
 export default () => {
-  flat()
-  buildTopBtns()
-  buildCalendar()
-}
+  flat();
+  buildTopBtns();
+  buildCalendar();
+};

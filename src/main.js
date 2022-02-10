@@ -24,6 +24,15 @@ import {
   colorMode,
 } from '@acnb/plugins'
 
+window.opts = {
+  links: [
+    {
+      name: '123',
+      url: '',
+    },
+  ],
+}
+
 createTheme()
   .use(build)
   .use(codeHighlight, { enable: true })
@@ -37,7 +46,7 @@ createTheme()
   .use(imagePreview, { enable: true })
   .use(license, { enable: true })
   .use(webTag, { enable: true })
-  .use(musicPlayer, { enable: true })
+  .use(musicPlayer, { enable: false })
   .use(live2d, { enable: false })
   .use(darkMode, { enable: true })
   .use(notice, { enable: false })

@@ -1,10 +1,10 @@
 /**
  * 博客园相关链接
  */
-import { getBlogname } from '../utils/cnblog'
+import { getBlogName } from '../utils/cnblog'
 
 const { currentBlogApp } = window
-const blogname = getBlogname()
+const blogname = getBlogName()
 const home = 'https://home.cnblogs.com'
 const cnblog = 'https://www.cnblogs.com'
 

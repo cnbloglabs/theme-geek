@@ -1,5 +1,5 @@
 import { useLinksOptions, useGithubOptions } from '@acnb/options'
-import { getBlogname } from '../../utils/cnblog'
+import { getBlogName } from '../../utils/cnblog'
 import { isOwner } from '../../utils/cnblog'
 import { avatar } from '../../constants/cnblog'
 import {
@@ -12,8 +12,8 @@ import {
 } from '../../constants/links'
 import './index.scss'
 
-const buildLeftside = () => {
-  const links = useLinksOptions()
+const buildLeftSidebar = () => {
+  const { links } = useLinksOptions()
   const el = $(`
     <div id='left-side'>
         <div class='logo'>
@@ -21,28 +21,28 @@ const buildLeftside = () => {
         </div>
     </div>`)
   if (links.length) {
-    const favourite = `
-        <div class="favourite side-wrapper">
-            <h3>FAVOURITE</h3>
+    const el = `
+        <div class="links side-wrapper">
+            <h3>Links</h3>
             <ul></ul>
         </div>
         `
-    el.append(favourite)
+    el.append(el)
   }
   $('#home').append(el)
 }
 
-const buildCustomLinksToLeftSide = () => {
-  const links = useLinksOptions()
+const buildCustomLinks = () => {
+  const { links } = useLinksOptions()
   if (!links.length) return
-  for (const { title, url } of links) {
-    $('#left-side').find('ul').append(`
-            <li><a href="${url}" target="_blank">${title}</a></li>
-        `)
+  for (const { name, link } of links) {
+    $('#left-side')
+      .find('ul')
+      .append(`<li><a href="${link}" target="_blank">${name}</a></li>`)
   }
 }
 
-const removeHeaderToLeftside = () => {
+const removeHeaderToLeftSidebar = () => {
   const navList = [
     {
       icon: 'fa-blog',
@@ -113,12 +113,12 @@ const removeHeaderToLeftside = () => {
   $('#left-side .logo').after(el)
 }
 
-const buildLeftsideBottomBtns = () => {
+const buildBottomBtns = () => {
   const { enable, url } = useGithubOptions()
   if (!enable) return
-  const userName = getBlogname()
+  const userName = getBlogName()
   const el = `
-    <div class="leftside-bottom">
+    <div class="left-sidebar_bottom">
     <a href="${url}" class="follow-me" target="_blank">
         <span class="follow-text"><i class="fas fa-github"></i><span>Fork me on GitHub</span></span>
         <span class="developer">
@@ -131,8 +131,8 @@ const buildLeftsideBottomBtns = () => {
 }
 
 export default () => {
-  buildLeftside()
-  buildCustomLinksToLeftSide()
-  removeHeaderToLeftside()
-  buildLeftsideBottomBtns()
+  buildLeftSidebar()
+  buildCustomLinks()
+  removeHeaderToLeftSidebar()
+  buildBottomBtns()
 }

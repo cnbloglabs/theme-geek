@@ -30,7 +30,6 @@ function buildHeaderTrigger() {
 
 export default () => {
   if (userAgent() === 'pc') return
-  console.log(123)
   buildMobileMenu()
   buildHeaderTrigger()
 }
