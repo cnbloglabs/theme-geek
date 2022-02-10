@@ -19,10 +19,10 @@
     "@types/node" "^16.7.2"
     vite "^2.5.1"
 
-"@acnb/options@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@acnb/options/-/options-0.1.4.tgz#60bbcfd9850794eee6b9cb6c782b3b5befec66f9"
-  integrity sha512-tqOcK8St/eZTH6PT1tr7Klz2vEEnzpfbSbfwN4CKgvMeX9iuxkkZbk92ET/p5tTtsUODa3B42Z/g5DkKtsUJTA==
+"@acnb/options@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@acnb/options/-/options-0.1.5.tgz#cb5ea202f440e82633413e7c788092eae326f13e"
+  integrity sha512-jihouzSUGLZdmap7GADqu0M/8+EKAf6U1ZM2ZfFhHUaRf+KABpqkPhX6fNuFugpHtOxfrRZ7lVFCSaEPkaOkog==
   dependencies:
     "@acnb/core" "^1.0.1"
     "@types/node" "^16.7.2"
