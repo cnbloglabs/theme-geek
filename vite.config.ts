@@ -1,7 +1,14 @@
-import { defineConfig } from 'vite'
-import { injectHtml } from 'vite-plugin-html'
+import { defineConfig } from "vite";
+import { injectHtml } from "vite-plugin-html";
 
 export default defineConfig({
+  css: {
+    preprocessorOptions: {
+      scss: {
+        charset: false,
+      },
+    },
+  },
   server: {
     open: true,
     port: 8080,
@@ -15,10 +22,10 @@ export default defineConfig({
       },
     },
     lib: {
-      formats: ['iife'],
-      entry: './src/main.js',
-      name: 'theme',
-      fileName: 'index',
+      formats: ["iife"],
+      entry: "./src/main.js",
+      name: "theme",
+      fileName: "index",
     },
   },
   plugins: [
@@ -28,7 +35,7 @@ export default defineConfig({
           injectScript: `<script type="module" src="../../src/main.js"></script>`,
         },
       }),
-      apply: 'serve',
+      apply: "serve",
     },
   ],
-})
+});

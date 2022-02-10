@@ -1,5 +1,5 @@
-@import '../../common/mixins.scss';
-@import '../../common/animate.scss';
+@import "../../common/mixins.scss";
+@import "../../common/animate.scss";
 
 .day,
 .c_b_p_desc_readmore {
@@ -35,7 +35,7 @@
   &.top {
     .custom-card-title {
       &:before {
-        content: '\f004';
+        content: "\f004";
         font-weight: 700;
         color: #f14668;
         margin-right: 8px;
@@ -46,9 +46,9 @@
 
 .custom-card-title {
   padding: 20px 20px 8px;
-  font-weight: 700;
+  font-size: 14px;
   &:before {
-    content: '\f15c';
+    content: "\f15c";
     font-weight: 400;
     margin-right: 8px;
   }
@@ -58,9 +58,10 @@
 }
 
 .custom-card-desc {
-  color: #5c5e6e;
+  color: var(--postDesc-color);
   padding: 0 20px 8px;
   flex-grow: 1;
+  font-size: 13px;
   .MJXp-math {
     white-space: break-spaces;
   }
