@@ -77,7 +77,8 @@ function createBlur() {
     .css('backgroundImage', `url(${headerBackground})`)
 }
 
-function createAvatar(avatar) {
+function createAvatar() {
+  const { avatar } = useThemeOptions()
   return $('<div>')
     .addClass('profile-avatar')
     .append(`<a href="${index}"><img src="${avatar}" /></a>`)
@@ -146,19 +147,18 @@ function insertMessage() {
 }
 
 export default () => {
-  const { avatar } = useThemeOptions()
   const container = createContainer()
   const background = createBackground()
   const menu = createMenu()
   const blur = createBlur()
   const messageWrap = createMessageElements()
-  const userAvatar = createAvatar($('#user_icon').attr(avatar))
+  const avatar = createAvatar()
 
   container
     .append(background)
     .append(menu)
     .append(blur)
-    .append(userAvatar)
+    .append(avatar)
     .append(messageWrap)
 
   $('#mainContent').prepend(container)
