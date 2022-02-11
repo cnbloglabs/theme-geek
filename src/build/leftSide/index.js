@@ -13,34 +13,60 @@ import {
 } from '../../constants/links'
 import './index.scss'
 
-const buildLeftSidebar = () => {
-  const { enable } = useLinksOptions()
-  const el = $(`
-    <div id='left-side'>
-        <div class='logo'>
-            <a href="https://www.cnblogs.com/">CNBLOG</a>
-        </div>
-    </div>`)
-  if (enable) {
-    const links = $(`
-        <div class="links side-wrapper">
-            <h3>LINKS</h3>
-            <ul></ul>
-        </div>
-        `)
-    el.append(links)
-  }
+const buildLeftSidebarContainer = () => {
+  const el = $(`<div id='left-side'></div>`)
   $('#home').append(el)
 }
 
+const buildLogo = () => {
+  const el = $(`<div class='logo'>
+                    <a href="https://www.cnblogs.com/">CNBLOG</a>
+                </div>`)
+  $('#left-side').append(el)
+}
+
 const buildCustomLinks = () => {
-  const { enable, value } = useLinksOptions()
-  if (!enable) return
-  for (const { name, link } of value) {
-    $('#left-side')
-      .find('ul')
-      .append(`<li><a href="${link}" target="_blank">${name}</a></li>`)
+  /**
+   * 兼容旧的配置 Array<Link>
+   * 当前推荐的配置类型为
+   *    {
+   *      enable: boolean;
+   *      value: Array<Link>;
+   *    }
+   */
+  function isOldConfig(config) {
+    for (const [key] of Object.entries(userConfig)) {
+      if (!Number.isNaN(parseInt(key))) {
+        return true
+      }
+    }
+    return false
   }
+
+  let links
+  const userConfig = useLinksOptions()
+  if (isOldConfig(userConfig)) {
+    links = []
+    for (const [key, value] of Object.entries(userConfig)) {
+      if (!Number.isNaN(parseInt(key))) {
+        links.push(value)
+      }
+    }
+  } else {
+    const { enable, value } = userConfig
+    links = value
+    if (!enable) return
+  }
+  const el = $(`<div class="links side-wrapper">
+                      <h3>LINKS</h3>
+                      <ul></ul>
+                  </div>`)
+  for (const { name, link } of links) {
+    el.find('ul').append(
+      `<li><a href="${link}" target="_blank">${name}</a></li>`
+    )
+  }
+  $('#left-side').append(el)
 }
 
 const removeHeaderToLeftSidebar = () => {
@@ -49,6 +75,12 @@ const removeHeaderToLeftSidebar = () => {
       icon: 'fa-blog',
       title: '博客园',
       url: cnblogHome,
+      allowVisit: true,
+    },
+    {
+      icon: 'fa-home',
+      title: '首页',
+      url: index,
       allowVisit: true,
     },
     {
@@ -61,12 +93,6 @@ const removeHeaderToLeftSidebar = () => {
       icon: 'fa-paper-plane',
       title: '草稿箱',
       url: draftBox,
-      allowVisit: true,
-    },
-    {
-      icon: 'fa-home',
-      title: '首页',
-      url: index,
       allowVisit: true,
     },
     {
@@ -138,8 +164,9 @@ const buildBottomBtns = () => {
 }
 
 export default () => {
-  buildLeftSidebar()
+  buildLeftSidebarContainer()
+  buildLogo()
   buildCustomLinks()
   removeHeaderToLeftSidebar()
-  buildBottomBtns()
+  // buildBottomBtns()
 }

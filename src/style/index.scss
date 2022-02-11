@@ -133,10 +133,10 @@ body {
     display: flex;
     flex-wrap: wrap;
     li {
-      margin: 0 6px 6px 0;
-      padding: 2px 4px;
+      margin: 0 4px 4px 0;
+      padding: 4px 12px;
       background-color: var(--tags-bg);
-      font-size: 13px;
+      font-size: 12px;
       border-radius: 2px;
     }
   }
@@ -232,25 +232,20 @@ body {
     padding: 0 12px;
     border-radius: 4px;
     background-color: var(--pagerBtn-bg);
+    border: 2px solid rgba(0, 0, 0, 0);
     &:hover {
-      filter: brightness(0.98);
       transition: all 0.2s;
-    }
-    &:active {
-      filter: brightness(0.95);
-      transition: all 0.2s;
+      border: 2px solid var(--themeColor);
     }
   }
 
   a {
     color: var(--color-basic-900);
-    border: 1px solid var(--form-border-color);
   }
 
   span.current {
     color: var(--themeColor);
     font-weight: 500;
-    border: 1px solid var(--themeColor);
   }
 }
 
@@ -277,7 +272,7 @@ h1.PostListTitle + .pager,
     width: 100%;
     background-color: var(--pager-bg);
     display: block;
-    border: 1px solid var(--color-basic-200);
+    border: 2px solid rgba(0, 0, 0, 0);
     &:hover {
       color: var(--themeColor);
       border-color: var(--themeColor);
@@ -371,8 +366,8 @@ h1.PostListTitle + .pager,
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 8px;
-      width: 100%;
       margin-bottom: 8px;
+      width: 100%;
     }
 
     td {

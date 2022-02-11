@@ -86,12 +86,12 @@
   z-index: 1;
   button {
     margin-left: 10px;
-    background-color: #fcc72a;
+    background-color: var(--themeColor);
     border: none;
+    font-size: 12px;
     color: #fff;
     border-radius: 4px;
     padding: 3px 7px;
-    box-shadow: 0 0 3px #ffc312;
     cursor: pointer;
   }
   p {
@@ -101,9 +101,9 @@
   p:nth-child(1) {
     font-size: 22px;
     color: #fff;
-    font-weight: 600;
-    font-family: "DM Sans", sans-serif;
-    text-shadow: 0 0 3px #151728;
+    font-weight: bold;
+    font-family: 'DM Sans', sans-serif;
+    text-shadow: 0 0 3px #33354b;
   }
   p:nth-child(2) {
     margin-top: 12px;

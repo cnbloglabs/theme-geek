@@ -1,5 +1,5 @@
-@import "../../common/mixins.scss";
-@import "../../common/animate.scss";
+@import '../../common/mixins.scss';
+@import '../../common/animate.scss';
 
 .day,
 .c_b_p_desc_readmore {
@@ -35,8 +35,8 @@
   &.top {
     .custom-card-title {
       &:before {
-        content: "\f004";
-        font-weight: 700;
+        content: '\f004';
+        font-weight: bold;
         color: #f14668;
         margin-right: 8px;
       }
@@ -48,8 +48,8 @@
   padding: 20px 20px 8px;
   font-size: 14px;
   &:before {
-    content: "\f15c";
-    font-weight: 400;
+    content: '\f15c';
+    font-weight: normal;
     margin-right: 8px;
   }
   &:hover {
@@ -108,7 +108,7 @@
     @include btn(primary);
   }
   li:before {
-    font-weight: 500;
+    font-weight: normal;
   }
 }
 

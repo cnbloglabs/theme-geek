@@ -34,21 +34,21 @@ $emoji: (
   hoverBorderColor: var(--postSignature-border-color),
 );
 
-@import "/node_modules/@acnb/plugins/src/plugins/postMessage/index.scss";
-@import "/node_modules/@acnb/plugins/src/plugins/codeHighlight/index.scss";
-@import "/node_modules/@acnb/plugins/src/plugins/codeLinenumbers/index.scss";
-@import "/node_modules/@acnb/plugins/src/plugins/commentsAvatars/index.scss";
-@import "/node_modules/@acnb/plugins/src/plugins/signature/index.scss";
-@import "/node_modules/@acnb/plugins/src/plugins/emoji/index.scss";
-@import "/node_modules/@acnb/plugins/src/plugins/imagePreview/index.scss";
-@import "/node_modules/@acnb/plugins/src/plugins/notice/index.scss";
-@import "/node_modules/@acnb/plugins/src/plugins/license/index.scss";
-@import "/node_modules/@acnb/plugins/src/plugins/tools/index.scss";
-@import "/node_modules/@acnb/plugins/src/plugins/darkMode/index.scss";
-@import "/node_modules/@acnb/plugins/src/plugins/clickEffects/index.scss";
-@import "/node_modules/@acnb/plugins/src/plugins/musicPlayer/index.scss";
+@import '/node_modules/@acnb/plugins/src/plugins/postMessage/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/codeHighlight/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/codeLinenumbers/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/commentsAvatars/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/signature/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/emoji/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/imagePreview/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/notice/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/license/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/tools/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/darkMode/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/clickEffects/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/musicPlayer/index.scss';
 // @import '/node_modules/@acnb/plugins/src/plugins/codeCopy/index.scss'; // 自定义插件样式
-@import "/node_modules/@acnb/plugins/src/plugins/codeLang/index.scss";
+@import '/node_modules/@acnb/plugins/src/plugins/codeLang/index.scss';
 
 // toolMenu
 
@@ -72,7 +72,7 @@ $emoji: (
     position: absolute;
     bottom: 11px;
     right: 5px;
-    content: "\f058";
+    content: '\f058';
     color: #4ac7ff;
     background-color: #fff;
     line-height: 1em;
@@ -96,6 +96,10 @@ $emoji: (
 }
 
 // dragmenu
+
+.toolbar-item {
+  box-shadow: 0 2px 6px 0 rgb(0 0 0 / 20%);
+}
 
 .custom-drag-menu {
   z-index: 3;
@@ -134,7 +138,6 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
     font-family: DM Sans, sans-serif;
     color: #5c5e6e;
     font-size: 15px;
-    font-weight: 600;
     margin-bottom: 20px;
   }
 
@@ -151,7 +154,7 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
         display: block;
         width: 7px;
         height: 7px;
-        content: "";
+        content: '';
         border-radius: 50%;
         border: 1px solid var(--themeColor);
         background-color: var(--sidebar-bg);
@@ -232,7 +235,7 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
   border-radius: 4px;
   color: var(--color-copy-btn);
   &:before {
-    content: "\f0c5";
+    content: '\f0c5';
     margin-right: 8px;
     font-weight: 500;
   }

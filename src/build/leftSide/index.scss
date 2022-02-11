@@ -8,7 +8,7 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
   font-family: 'DM Sans', sans-serif;
   font-size: 15px;
   color: var(--logo-color);
-  font-weight: 600;
+  font-weight: bold;
   text-align: center;
   height: 68px;
   line-height: 68px;
@@ -39,12 +39,12 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
 }
 
 .side-wrapper {
-  padding: 30px;
+  padding: 20px;
   h3 {
     font-family: 'DM Sans', sans-serif;
     color: #5c5e6e;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: bold;
     margin-bottom: 20px;
   }
   ul {
@@ -73,6 +73,9 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
 
 .side-wrapper.links {
   padding-top: 0;
+  a {
+    font-size: 13px;
+  }
 }
 
 .links {

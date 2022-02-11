@@ -81,12 +81,9 @@
 
 .account-avatar {
   margin-left: auto;
-  img {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    margin: 0 10px;
-  }
+  margin-right: 20px;
+  font-size: 20px;
+  color: var(--account-color);
 }
 
 // 顶部按钮 end
@@ -187,13 +184,14 @@
   }
   .event-date {
     position: absolute;
-    left: -10px;
-    top: -10px;
+    left: -14px;
+    top: -14px;
+    font-size: 12px;
+    font-weight: bold;
+    transform: scale(0.8);
     .event-month {
       background-color: #1687fa;
-      padding: 1px 10px;
-      font-weight: 600;
-      font-size: 12px;
+      padding: 1px 14px;
       font-family: 'DM Sans', sans-serif;
       color: #fff;
       text-align: center;
@@ -203,22 +201,20 @@
       width: 100%;
       backdrop-filter: blur(4px);
       color: #fff;
-      font-size: 12px;
-      font-weight: 600;
       font-family: 'DM Sans', sans-serif;
       background-color: rgba(0, 0, 0, 0.4);
       text-align: center;
     }
   }
   .event-title {
-    color: #c3c5d5;
+    color: var(--color-basic-700);
     margin: 8px 0 0;
     font-family: 'DM Sans', sans-serif;
     padding: 0 14px;
     font-size: 13px;
   }
   .event-subtitle {
-    color: #5c5e6e;
+    color: var(--color-basic-500);
     font-family: 'DM Sans', sans-serif;
     font-size: 12px;
     font-weight: 500;

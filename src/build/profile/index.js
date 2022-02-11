@@ -2,7 +2,7 @@ import { useThemeOptions } from '@acnb/options'
 import { isOwner } from '../../utils/cnblog'
 import { poll } from '../../utils/helpers'
 import { appWz, appQ, appGroup, appIng } from '../../constants/links'
-import { avatar } from '../../constants/cnblog'
+import { __DEV__ } from '../../constants/env'
 import {
   followersDetailsUrl,
   followingDetailsUrl,
@@ -76,7 +76,7 @@ function createBlur() {
     .css('backgroundImage', `url(${headerBackground})`)
 }
 
-function createAvatar() {
+function createAvatar(avatar) {
   return $('<div>')
     .addClass('profile-avatar')
     .append(`<a href="${index}"><img src="${avatar}" /></a>`)
@@ -92,7 +92,7 @@ function createMessageElements() {
           $('<button>')
             .addClass('profile-followstate')
             .attr('href', index)
-            .text('关注')
+            .text('+ 关注')
         )
     )
     .append(
@@ -119,7 +119,7 @@ function followAndUnfollow() {
       return
     }
     const followButton = $('.profile-followstate')
-    if (followButton.text() === '关注') {
+    if (followButton.text() === '+ 关注') {
       follow()
       followButton.text('已关注')
     }
@@ -141,7 +141,7 @@ function insertMessage() {
   $('.profile-age').append(age)
   $('.profile-followers').append(followers)
   $('.profile-following').append(following)
-  $('.profile-followstate').text(followState ? '已关注' : '关注')
+  $('.profile-followstate').text(followState ? '已关注' : '+ 关注')
 }
 
 export default () => {
@@ -149,17 +149,24 @@ export default () => {
   const background = createBackground()
   const menu = createMenu()
   const blur = createBlur()
-  const avatar = createAvatar()
   const messageWrap = createMessageElements()
 
-  container
-    .append(background)
-    .append(menu)
-    .append(blur)
-    .append(avatar)
-    .append(messageWrap)
-
+  container.append(background).append(menu).append(blur).append(messageWrap)
   $('#mainContent').prepend(container)
+
+  if (__DEV__) {
+    const avatar = createAvatar()
+    $('.profile-blur').after(avatar)
+  } else {
+    z0
+    poll(
+      () => !$('#user_icon').attr('src').endsWith('default-avatar.png'),
+      () => {
+        const avatar = createAvatar($('#user_icon').attr('src'))
+        $('.profile-blur').after(avatar)
+      }
+    )
+  }
 
   followAndUnfollow()
   poll(() => $('#home #profile_block>a').length, insertMessage)

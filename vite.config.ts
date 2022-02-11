@@ -1,5 +1,5 @@
-import { defineConfig } from "vite";
-import { injectHtml } from "vite-plugin-html";
+import { defineConfig } from 'vite'
+import { createHtmlPlugin } from 'vite-plugin-html'
 
 export default defineConfig({
   css: {
@@ -22,20 +22,29 @@ export default defineConfig({
       },
     },
     lib: {
-      formats: ["iife"],
-      entry: "./src/main.js",
-      name: "theme",
-      fileName: "index",
+      formats: ['iife'],
+      entry: './src/main.js',
+      name: 'theme',
+      fileName: 'index',
     },
   },
   plugins: [
-    {
-      ...injectHtml({
-        injectData: {
-          injectScript: `<script type="module" src="../../src/main.js"></script>`,
-        },
-      }),
-      apply: "serve",
-    },
+    // createHtmlPlugin({
+    //   inject: {
+    //     data: {
+    //       injectScript: `<script type="module" src="./src/main.js"></script>`,
+    //     },
+    //   },
+    // }),
+    // {
+    //   ...createHtmlPlugin({
+    //     inject: {
+    //       data: {
+    //         injectScript: `<script type="module" src="./src/main.js"></script>`,
+    //       },
+    //     },
+    //   }),
+    //   apply: 'serve',
+    // },
   ],
-});
+})
