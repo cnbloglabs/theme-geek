@@ -259,12 +259,12 @@ export function poll(conditionFn, callback) {
         clearInterval(intervalId)
         return true
       }
-      if (count === 50) {
+      if (count === 180) {
         clearInterval(intervalId)
         return false
       }
       count++
-    }, 500)
+    }, 1000)
   }
 }
 
