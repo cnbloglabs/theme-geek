@@ -159,7 +159,7 @@ export default () => {
     $('.profile-blur').after(avatar)
   } else {
     poll(
-      () => !$('#user_icon').attr('src').endsWith('default-avatar.png'),
+      () => !$('#user_icon').attr('src').endsWith('default-avatar.svg'),
       () => {
         const avatar = createAvatar($('#user_icon').attr('src'))
         $('.profile-blur').after(avatar)

@@ -53,7 +53,7 @@ function buildGithubIcon() {
 function buildStatistics() {
   poll(
     () => {
-      return Number.isInteger(
+      return !Number.isNaN(
         parseInt(
           $('#stats_post_count')
             .text()
