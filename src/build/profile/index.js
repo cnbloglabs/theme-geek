@@ -158,7 +158,6 @@ export default () => {
     const avatar = createAvatar()
     $('.profile-blur').after(avatar)
   } else {
-    z0
     poll(
       () => !$('#user_icon').attr('src').endsWith('default-avatar.png'),
       () => {
