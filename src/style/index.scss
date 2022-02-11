@@ -31,7 +31,7 @@ body {
 
 #home {
   display: grid;
-  grid-template-columns: 14vw 1fr 1fr 17.5vw;
+  grid-template-columns: 14vw 1fr 1fr 19vw;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
     'left main main right'
@@ -95,6 +95,10 @@ body {
   grid-area: right;
   background-color: var(--sidebar-bg);
   border-radius: 0 4px 0 0;
+}
+
+#sideBarMain {
+  padding-bottom: 20px;
 }
 
 #sidebar_news,
@@ -291,10 +295,9 @@ h1.PostListTitle + .pager,
 .PostListTitle {
   margin: 20px 0 0;
   padding: 12px;
-  border: 1px solid var(--listItemTitle-border-color);
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: normal;
   background-color: var(--listItemTitle-bg);
-  border-radius: 4px;
   text-align: center;
 }
 
@@ -345,12 +348,15 @@ h1.PostListTitle + .pager,
 #taglist_main {
   margin-top: 0;
 
+  background-color: var(--sidebar-bg);
+
   #taglist_title_wrap {
+    border-radius: 4px;
     padding: 0 !important;
   }
 
   #taglist {
-    margin-top: 20px;
+    padding: 20px;
     table,
     tbody,
     tr,
@@ -377,11 +383,12 @@ h1.PostListTitle + .pager,
 
       a {
         display: block;
-        padding: 4px 16px;
+        padding: 6px 18px;
         width: 100%;
         border-radius: 4px;
-        background-color: var(--btn-bg-color);
-        border: 1px solid var(--btn-border-color);
+        background-color: var(--tags-bg);
+        border: 1px solid var(--tag-border-color);
+        font-size: 13px;
         &:hover {
           background: var(--btn-bg-hover-color);
           transition: all 0.2s;

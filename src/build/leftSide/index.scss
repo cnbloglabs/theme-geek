@@ -1,4 +1,4 @@
-$iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
+$iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
 
 #left-side .fas {
   margin-right: 8px;
@@ -28,6 +28,9 @@ $iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
 }
 
 #cnblog-nav {
+  // span {
+  //   width: 20px;
+  // }
   @for $i from 1 through length($iconsColor) {
     a:nth-child(#{$i}) span::before {
       color: nth($iconsColor, $i);
@@ -51,7 +54,7 @@ $iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
     white-space: nowrap;
     li {
       text-decoration: none;
-      color: #777;
+      color: var(--color-basic-700);
       display: flex;
       align-items: center;
       &:not(:last-child) {

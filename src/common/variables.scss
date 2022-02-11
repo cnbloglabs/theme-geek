@@ -25,7 +25,7 @@
   --sidebarTitle-color: #333;
   --sidebarItem-hover-color: #000;
 
-  --tags-bg: #fff;
+  --tags-bg: #f5f6f7;
   --tags-color: #000;
   --tags-border: #eaeaea;
 
@@ -108,7 +108,7 @@
 }
 
 // variables in dark mode
-:root[theme="dark"] {
+:root[theme='dark'] {
   --color-basic-50: #252525;
   --color-basic-75: #2f2f2f;
   --color-basic-100: #323232;
