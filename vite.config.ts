@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite'
-import { createHtmlPlugin } from 'vite-plugin-html'
 
 export default defineConfig({
   css: {
@@ -28,23 +27,4 @@ export default defineConfig({
       fileName: 'index',
     },
   },
-  plugins: [
-    // createHtmlPlugin({
-    //   inject: {
-    //     data: {
-    //       injectScript: `<script type="module" src="./src/main.js"></script>`,
-    //     },
-    //   },
-    // }),
-    // {
-    //   ...createHtmlPlugin({
-    //     inject: {
-    //       data: {
-    //         injectScript: `<script type="module" src="./src/main.js"></script>`,
-    //       },
-    //     },
-    //   }),
-    //   apply: 'serve',
-    // },
-  ],
 })
