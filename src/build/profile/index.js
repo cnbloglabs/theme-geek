@@ -18,6 +18,7 @@ import {
   // unfollow,
 } from '../../utils/cnblog'
 import './index.scss'
+import { avatar } from '../../constants/cnblog'
 
 function createContainer() {
   return $('<div>').addClass('profile')
@@ -145,27 +146,22 @@ function insertMessage() {
 }
 
 export default () => {
+  const { avatar } = useThemeOptions()
   const container = createContainer()
   const background = createBackground()
   const menu = createMenu()
   const blur = createBlur()
   const messageWrap = createMessageElements()
+  const userAvatar = createAvatar($('#user_icon').attr(avatar))
 
-  container.append(background).append(menu).append(blur).append(messageWrap)
+  container
+    .append(background)
+    .append(menu)
+    .append(blur)
+    .append(userAvatar)
+    .append(messageWrap)
+
   $('#mainContent').prepend(container)
-
-  if (__DEV__) {
-    const avatar = createAvatar()
-    $('.profile-blur').after(avatar)
-  } else {
-    poll(
-      () => !$('#user_icon').attr('src').endsWith('default-avatar.svg'),
-      () => {
-        const avatar = createAvatar($('#user_icon').attr('src'))
-        $('.profile-blur').after(avatar)
-      }
-    )
-  }
 
   followAndUnfollow()
   poll(() => $('#home #profile_block>a').length, insertMessage)
