@@ -47,18 +47,18 @@
 .profile-menu {
   display: flex;
   padding-left: 185px;
-  background: var(--profileMenu-bg);
+  background: var(--bg-profile-menu);
   border-radius: 0 0 4px 4px;
   a {
     padding: 12px 16px;
-    color: var(--color-profile-links);
+    color: var(--color-basic-700);
     cursor: pointer;
     font-size: 14px;
   }
   a.active,
   a:hover {
-    color: var(--themeColor);
-    background-color: var(--color-profile-links-hover);
+    color: var(--color-primary);
+    background-color: var(--bg-profile-links-hover);
     transition: 0.3s;
   }
 }
@@ -75,7 +75,7 @@
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--profileAvatar-border-color);
+    border: 3px solid var(--border-avatar);
   }
 }
 
@@ -86,7 +86,7 @@
   z-index: 1;
   button {
     margin-left: 10px;
-    background-color: var(--themeColor);
+    background-color: var(--color-primary);
     border: none;
     font-size: 12px;
     color: #fff;

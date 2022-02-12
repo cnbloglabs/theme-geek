@@ -1,6 +1,6 @@
-import "./style/index.scss";
-import { createTheme } from "@acnb/core";
-import build from "./build";
+import './style/index.scss'
+import { createTheme } from '@acnb/core'
+import build from './build'
 import {
   codeHighlight,
   codeLinenumbers,
@@ -22,7 +22,7 @@ import {
   notice,
   live2d,
   colorMode,
-} from "@acnb/plugins";
+} from '@acnb/plugins'
 
 createTheme()
   .use(build)
@@ -32,7 +32,7 @@ createTheme()
   .use(codeCopy, { enable: true })
   .use(clickEffects, { enable: false })
   .use(commentsAvatars, { enable: true })
-  .use(colorMode, { enable: true, color: "#1B86F9" })
+  .use(colorMode, { enable: true, color: '#1B86F9' })
   .use(emoji, { enable: true })
   .use(imagePreview, { enable: true })
   .use(license, { enable: true })
@@ -47,11 +47,11 @@ createTheme()
     {
       enable: true,
       contents: [
-        '欢迎使用皮肤<b style="color:#3742fa">Geek</b>',
-        "快去自定义签名吧~",
+        '欢迎使用皮肤 <b style="color:#3742fa">Geek</b>',
+        '快去自定义签名吧~',
       ],
     },
-    { selector: ".profile-signature" }
+    { selector: '.profile-signature' }
   )
   .use(
     background,
@@ -60,7 +60,7 @@ createTheme()
     },
     {
       opacitySelector:
-        "#left-side,#sideBar,#mainContent, #footer,.custom-searchbar",
+        '#left-side,#sideBar,#mainContent, #footer,.custom-searchbar',
     }
   )
   .use(
@@ -69,36 +69,36 @@ createTheme()
       enable: true,
     },
     {
-      mountedNode: ".account",
-      fn: "after",
-      scrollContainer: "#mainContent",
+      mountedNode: '.account',
+      fn: 'after',
+      scrollContainer: '#mainContent',
     }
   )
   .use(
     tools,
     { enable: true },
     {
-      menuIcon: "",
+      menuIcon: '',
       toolbarItems: [
         {
-          icon: "fa-comment-dots",
+          icon: 'fa-comment-dots',
         },
         {
-          icon: "fa-star",
+          icon: 'fa-star',
         },
         {
-          icon: "fa-heart",
+          icon: 'fa-heart',
         },
         {
-          icon: "fa-thumbs-up",
+          icon: 'fa-thumbs-up',
         },
         {
           enable: true,
-          icon: "fa-adjust",
+          icon: 'fa-adjust',
         },
         {
-          icon: "fa-rocket",
+          icon: 'fa-rocket',
         },
       ],
     }
-  );
+  )

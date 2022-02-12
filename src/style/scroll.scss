@@ -6,16 +6,16 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--scrollbarTrack-bg);
+  background: var(--bg-scrollbar-track);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--scrollbarThumb-bg);
+  background: var(--bg-scrollbar-thumb);
   border-radius: 4px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbarThumb-hover-bg);
+  background: var(--bg-scrollbar-thumb-hover);
 }

@@ -1,11 +1,11 @@
 $postSignature: (
-  primary: var(--postSignature-border-color),
-  background: var(--postSignature-bg),
+  primary: var(--border-post-signature),
+  background: var(--bg-post-signature),
   borderRadius: 2px,
 );
 
 $toolMenu: (
-  background: var(--md-summary-bg),
+  background: var(--bg-md-summary),
   color: #fff,
 );
 
@@ -15,23 +15,23 @@ $signature: (
 );
 
 $imagebox: (
-  background: var(--dragmenuItem-bg),
+  background: var(--bg-tool-item),
 );
 
 $player: (
-  bodyBackground: var(--tags-bg),
+  bodyBackground: var(--bg-tags),
 );
 
 $postMessage: (
-  tagsColor: var(--body-color),
+  tagsColor: var(--color-basic-700),
 );
 
 $emoji: (
-  textEmojiColor: var(--body-color),
-  bg: var(--emoji-bg),
-  borderColor: var(--form-border-color),
-  hoverBg: var(--tags-bg),
-  hoverBorderColor: var(--postSignature-border-color),
+  textEmojiColor: var(--color-basic-700),
+  bg: var(--bg-emoji),
+  borderColor: var(--border-form),
+  hoverBg: var(--bg-tags),
+  hoverBorderColor: var(--border-post-signature),
 );
 
 @import '/node_modules/@acnb/plugins/src/plugins/postMessage/index.scss';
@@ -142,9 +142,9 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
   }
 
   ul {
-    border-left: 1px solid var(--color-catalog-border);
+    border-left: 1px solid var(--border-catalog);
     li {
-      color: var(--catalog-color);
+      color: var(--color-basic-700);
       display: flex;
       align-items: center;
       line-height: 1.8;
@@ -156,13 +156,13 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
         height: 7px;
         content: '';
         border-radius: 50%;
-        border: 1px solid var(--themeColor);
-        background-color: var(--sidebar-bg);
+        border: 1px solid var(--color-primary);
+        background-color: var(--bg-sidebar);
         margin-right: 4px;
         transition: transform 0.2s;
       }
       &:hover {
-        color: var(--catalogList-hover);
+        color: var(--color-basic-900);
       }
       a {
         display: inline-block;
@@ -205,11 +205,11 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
     }
 
     .catalog-active {
-      color: var(--themeColor);
+      color: var(--color-primary);
       transition: all 0.3s;
       &::before {
         transform: scale(1) translateX(0);
-        background-color: var(--themeColor);
+        background-color: var(--color-primary);
       }
     }
   }
@@ -233,14 +233,14 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
   cursor: pointer;
   padding: 2px 4px 1px 8px;
   border-radius: 4px;
-  color: var(--color-copy-btn);
+  color: var(--color-basic-600);
   &:before {
     content: '\f0c5';
     margin-right: 8px;
     font-weight: 500;
   }
   &:hover {
-    background: var(--md-hr-color);
+    background: var(--color-basic-200);
     transition: background 0.2s;
   }
 }
@@ -254,8 +254,8 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
   line-height: 1.2;
   padding-right: 14px;
   margin-right: 4px;
-  border-right: 1px solid var(--md-hr-color);
+  border-right: 1px solid var(--color-basic-300);
   font-size: 12px;
   text-transform: uppercase;
-  color: var(--color-copy-btn);
+  color: var(--color-basic-500);
 }

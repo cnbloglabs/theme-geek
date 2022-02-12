@@ -20,8 +20,8 @@ html {
 }
 
 body {
-  background-color: var(--body-bg);
-  color: var(--body-color);
+  background-color: var(--bg-body);
+  color: var(--color-basic-900);
   font-size: 1em;
   line-height: 1.5;
   font-family: UbuntuMono, 'Varela Round', 'PingFang SC', 'Microsoft YaHei',
@@ -61,7 +61,7 @@ body {
   grid-template-columns: 100%;
   grid-template-rows: 40vh 1fr;
   padding: 20px;
-  background-color: var(--mainContent-bg);
+  background-color: var(--bg-mainContent);
   overflow: auto;
 }
 
@@ -76,7 +76,7 @@ body {
 
 .entrylistPostSummary,
 .postCon {
-  color: var(--postDesc-color);
+  color: var(--color-basic-700);
   font-size: 14px;
 }
 
@@ -93,7 +93,7 @@ body {
 
 #sideBar {
   grid-area: right;
-  background-color: var(--sidebar-bg);
+  background-color: var(--bg-sidebar);
   border-radius: 0 4px 0 0;
 }
 
@@ -109,8 +109,8 @@ body {
 .sidebar-block {
   padding: 20px 20px 0;
   h3 {
-    color: var(--sidebarTitle-color);
-    font-size: 16px;
+    color: var(--color-basic-900);
+    font-size: 14px;
     margin-bottom: 16px;
     font-weight: 500;
   }
@@ -120,7 +120,7 @@ body {
       font-size: 12px;
       cursor: pointer;
       &:hover {
-        color: var(--themeColor);
+        color: var(--color-primary);
         transition: all 0.2s;
       }
     }
@@ -135,7 +135,7 @@ body {
     li {
       margin: 0 4px 4px 0;
       padding: 4px 12px;
-      background-color: var(--tags-bg);
+      background-color: var(--bg-tags);
       font-size: 12px;
       border-radius: 2px;
     }
@@ -143,7 +143,7 @@ body {
 }
 
 .recent_comment_body {
-  background-color: var(--tags-bg);
+  background-color: var(--bg-tags);
   border-radius: 4px;
 }
 
@@ -166,10 +166,10 @@ body {
 
 #left-side {
   grid-area: left;
-  border-right: 1px solid var(--sidebarBlock-border-color);
+  border-right: 1px solid var(--border-sidebar-block);
   display: flex;
   flex-direction: column;
-  background-color: var(--sidebar-bg);
+  background-color: var(--bg-sidebar);
   flex-shrink: 0;
   border-radius: 4px 0 0 0;
 }
@@ -179,9 +179,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--footer-bg);
-  color: var(--footer-color);
+  background-color: var(--bg-footer);
+  color: var(--color-basic-700);
   font-size: 13px;
+  border-top: 1px solid var(--color-basic-200);
   #poweredby {
     margin-left: 12px;
   }
@@ -192,13 +193,13 @@ body {
   padding: 16px;
   animation: content-in 0.5s ease-in 0s;
   border-radius: 4px;
-  background-color: var(--form-bg);
+  background-color: var(--bg-form);
   overflow: hidden;
 
   #topics .postDesc {
     margin: 0 0 20px;
     padding: 0;
-    color: var(--postDesc-color);
+    color: var(--color-basic-700);
     text-align: center;
     font-size: 13px;
     text-transform: capitalize;
@@ -223,7 +224,7 @@ body {
   margin: 24px 0 0;
   font-size: 14px;
   text-align: center;
-  background-color: var(--pager-bg);
+  background-color: var(--bg-pager);
   color: var(--color-basic-700);
   border-radius: 4px;
   a,
@@ -231,11 +232,11 @@ body {
     margin: 0 10px;
     padding: 0 12px;
     border-radius: 4px;
-    background-color: var(--pagerBtn-bg);
+    background-color: var(--bg-pager-btn);
     border: 2px solid rgba(0, 0, 0, 0);
     &:hover {
       transition: all 0.2s;
-      border: 2px solid var(--themeColor);
+      border: 2px solid var(--color-primary);
     }
   }
 
@@ -244,7 +245,7 @@ body {
   }
 
   span.current {
-    color: var(--themeColor);
+    color: var(--color-primary);
     font-weight: 500;
   }
 }
@@ -270,12 +271,12 @@ h1.PostListTitle + .pager,
     padding: 8px 0;
     border-radius: 4px;
     width: 100%;
-    background-color: var(--pager-bg);
+    background-color: var(--bg-pager);
     display: block;
     border: 2px solid rgba(0, 0, 0, 0);
     &:hover {
-      color: var(--themeColor);
-      border-color: var(--themeColor);
+      color: var(--color-primary);
+      border-color: var(--color-primary);
       transition: all 0.2s;
     }
   }
@@ -292,7 +293,7 @@ h1.PostListTitle + .pager,
   padding: 12px;
   font-size: 16px;
   font-weight: normal;
-  background-color: var(--listItemTitle-bg);
+  background-color: var(--bg-listItemTitle);
   text-align: center;
 }
 
@@ -319,11 +320,12 @@ h1.PostListTitle + .pager,
   .PostList {
     padding: 8px;
     margin: 0;
-    background-color: var(--listItem-bg);
+    background-color: var(--bg-listItem);
     border-radius: 4px;
     box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
 
     .postTitl2 {
+      color: var(--color-basic-800);
       font-size: 16px;
       font-weight: normal;
     }
@@ -331,7 +333,7 @@ h1.PostListTitle + .pager,
     .postDesc2 {
       margin-bottom: 0;
       padding-top: 0;
-      color: var(--postDesc-color);
+      color: var(--color-basic-600);
     }
 
     .postText2 {
@@ -343,7 +345,7 @@ h1.PostListTitle + .pager,
 #taglist_main {
   margin-top: 0;
 
-  background-color: var(--sidebar-bg);
+  background-color: var(--bg-sidebar);
 
   #taglist_title_wrap {
     border-radius: 4px;
@@ -381,15 +383,15 @@ h1.PostListTitle + .pager,
         padding: 6px 18px;
         width: 100%;
         border-radius: 4px;
-        background-color: var(--tags-bg);
+        background-color: var(--bg-tags);
         border: 1px solid var(--tag-border-color);
         font-size: 13px;
         &:hover {
-          background: var(--btn-bg-hover-color);
+          background: var(--bg-btn-hover);
           transition: all 0.2s;
         }
         &:active {
-          background: var(--btn-bg-active-color);
+          background: var(--bg-btn-active);
           transition: all 0.2s;
         }
       }
@@ -464,8 +466,8 @@ h1.PostListTitle + .pager,
   #green_channel_favorite {
     padding: 6px 12px;
     border-radius: 4px;
-    background-color: var(--pagerBtn-bg);
-    border: 1px solid var(--form-border-color) !important;
+    background-color: var(--bg-pager-btn);
+    border: 1px solid var(--border-form) !important;
     color: var(--color-basic-900) !important;
     &:hover {
       filter: brightness(1.1);
@@ -510,8 +512,8 @@ h1.PostListTitle + .pager,
     background: none;
     padding: 6px 12px;
     border-radius: 4px;
-    background-color: var(--pagerBtn-bg);
-    border: 1px solid var(--form-border-color) !important;
+    background-color: var(--bg-pager-btn);
+    border: 1px solid var(--border-form) !important;
     white-space: nowrap;
     &:hover {
       filter: brightness(1.1);
@@ -568,13 +570,13 @@ h1.PostListTitle + .pager,
 #blog-comments-placeholder {
   border-radius: 4px;
   padding: 0 16px;
-  background-color: var(--form-bg);
+  background-color: var(--bg-form);
   overflow: hidden;
 
   .feedback_area_title {
     padding: 7.56px 10.8px;
-    border: 1px solid var(--form-border-color);
-    background-color: var(--formTitle-bg);
+    border: 1px solid var(--border-form);
+    background-color: var(--bg-form-title);
     border-radius: 2px 2px 0 0;
     font-size: 12px;
     font-weight: 700;
@@ -587,11 +589,11 @@ h1.PostListTitle + .pager,
   }
 
   .feedbackItem {
-    border-left: 1px solid var(--form-border-color);
-    border-right: 1px solid var(--form-border-color);
+    border-left: 1px solid var(--border-form);
+    border-right: 1px solid var(--border-form);
     padding: 17.982px 10.8px;
     &:nth-last-child(2) {
-      border-bottom: 1px solid var(--form-border-color);
+      border-bottom: 1px solid var(--border-form);
     }
   }
 
@@ -605,8 +607,8 @@ h1.PostListTitle + .pager,
     }
 
     .blog_comment_body {
-      background-color: var(--commonBody-bg) !important;
-      color: var(--commonBody-color);
+      background-color: var(--bg-common-body) !important;
+      color: var(--color-basic-700);
       margin-right: 10px;
       margin-left: 0;
       a:nth-child(1) {
@@ -630,7 +632,7 @@ h1.PostListTitle + .pager,
       top: 5.4px;
       width: 6.258px;
       height: 0;
-      border-left: solid 12.96px var(--commonBody-bg);
+      border-left: solid 12.96px var(--bg-common-body);
       border-top: solid 3.24px rgba(0, 0, 0, 0);
       border-bottom: solid 7.182px rgba(0, 0, 0, 0);
     }
@@ -681,9 +683,8 @@ h1.PostListTitle + .pager,
 
   .layer {
     padding: 0 5.4px;
-    background-color: var(--layer-bg);
-    color: var(--layer-color);
-    font-weight: 700;
+    background-color: var(--bg-layer);
+    color: var(--color-basic-700);
     border-radius: 4px;
     margin-right: 5.4px;
     order: 0;
@@ -702,10 +703,13 @@ h1.PostListTitle + .pager,
   flex-wrap: wrap;
   margin-bottom: 5px;
   font-size: 0;
-  color: var(--sidebarTitle-color);
+  .comment_actions a:last-child {
+    margin-right: 8px;
+  }
+  color: var(--color-basic-600);
   & > a:last-of-type {
     margin-left: 8px;
-    color: #00a1d6;
+    color: var(--color-primary);
     order: 1;
     font-size: 14px;
   }
@@ -714,7 +718,7 @@ h1.PostListTitle + .pager,
     order: 3;
     font-size: 14px;
     .comment_actions {
-      border-bottom: 1px solid #3273dc;
+      border-bottom: 1px solid var(--color-primary);
     }
   }
 
@@ -736,11 +740,11 @@ h1.PostListTitle + .pager,
     margin: 16px 0 0 10px;
     max-width: 72%;
     border-radius: 4px;
-    color: var(--commonBody-color);
+    color: var(--color-basic-700);
     font-size: 14px;
     line-height: 1.6;
     padding: 5.4px 10.8px;
-    background-color: var(--commonBody-bg);
+    background-color: var(--bg-common-body);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     &:before {
       content: '';
@@ -750,7 +754,7 @@ h1.PostListTitle + .pager,
       top: 5.4px;
       width: 12.258px;
       height: 0;
-      border-right: solid 12.96px var(--commonBody-bg);
+      border-right: solid 12.96px var(--bg-common-body);
       border-top: solid 3.24px rgba(0, 0, 0, 0);
       border-bottom: solid 7.182px rgba(0, 0, 0, 0);
     }
@@ -765,7 +769,7 @@ h1.PostListTitle + .pager,
 // 发表评论
 #comment_form {
   padding: 32px 16px;
-  background-color: var(--form-bg);
+  background-color: var(--bg-form);
   overflow: hidden;
   #divCommentShow,
   #ad_text_under_commentbox,
@@ -776,7 +780,7 @@ h1.PostListTitle + .pager,
 
   #comment_form_container {
     position: relative;
-    border: 1px solid var(--form-border-color);
+    border: 1px solid var(--border-form);
     border-radius: 4px;
 
     & > p:nth-of-type(3),
@@ -785,7 +789,7 @@ h1.PostListTitle + .pager,
     }
 
     & > p:last-of-type {
-      color: var(--formDesc-color);
+      color: var(--color-basic-300);
       margin-left: 10.8px;
       font-size: 14px;
     }
@@ -794,8 +798,8 @@ h1.PostListTitle + .pager,
       background: none;
       margin-bottom: 0;
       padding: 7.56px 10.8px;
-      border-bottom: 1px solid var(--form-border-color);
-      background-color: var(--formTitle-bg);
+      border-bottom: 1px solid var(--border-form);
+      background-color: var(--bg-form-title);
       border-radius: 2px 2px 0 0;
       font-size: 12px;
       font-weight: 700;
@@ -818,11 +822,11 @@ h1.PostListTitle + .pager,
       border: none;
 
       .commentbox_title {
-        border-bottom-color: var(--form-border-color);
+        border-bottom-color: var(--border-form);
       }
 
       .commentbox_tab.active {
-        border-color: var(--themeColor);
+        border-color: var(--color-primary);
       }
 
       .commentbox_title_left {
@@ -837,7 +841,7 @@ h1.PostListTitle + .pager,
         min-height: 170px;
         background: none;
         font-size: 16px;
-        border-bottom: 1px dashed var(--form-border-color);
+        border-bottom: 1px dashed var(--border-form);
         color: #999;
       }
 
@@ -878,7 +882,7 @@ h1.PostListTitle + .pager,
   display: flex;
   flex-direction: column;
   font-size: 14px;
-  color: var(--ad-color);
+  color: var(--color-basic-600);
   border-radius: 4px;
 
   br {
@@ -888,9 +892,9 @@ h1.PostListTitle + .pager,
   a {
     border-radius: 4px;
     margin-right: 0;
+    padding: 4px 0;
     @include text-over();
-    background-color: var(--ad-bg);
-
+    background-color: var(--bg-common-body);
     &:not(:nth-child(1)) {
       margin-top: 5px;
     }

@@ -7,7 +7,7 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
 .logo {
   font-family: 'DM Sans', sans-serif;
   font-size: 15px;
-  color: var(--logo-color);
+  color: var(--color-basic-900);
   font-weight: bold;
   text-align: center;
   height: 68px;
@@ -15,7 +15,7 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
   letter-spacing: 4px;
   position: sticky;
   top: 0;
-  background: var(--logo-bg);
+  background: var(--bg-logo);
 }
 
 #cnblog-nav {
@@ -61,7 +61,7 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
         margin-bottom: 20px;
       }
       &:hover {
-        color: var(--sidebarItem-hover-color);
+        color: var(--color-basic-900);
       }
     }
   }
@@ -83,7 +83,7 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
   h3 {
     position: sticky;
     top: 0;
-    background-color: var(--sidebar-bg);
+    background-color: var(--bg-sidebar);
   }
 }
 
@@ -96,7 +96,7 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
   color: #9c9cab;
   padding: 0 20px;
   height: 52px;
-  border-top: 1px solid var(--sidebarBlock-border-color);
+  border-top: 1px solid var(--border-sidebar-block);
   position: relative;
   .follow-text {
     display: flex;
@@ -111,7 +111,7 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
     transition: 0.3s;
     padding: 0 20px;
     align-items: center;
-    background-color: var(--sidebar-bg);
+    background-color: var(--bg-sidebar);
     width: 100%;
     height: 100%;
     img {
@@ -202,14 +202,14 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
       padding-top: 60px;
       flex-direction: row;
       flex-wrap: wrap;
-      border-bottom: 1px solid var(--sidebarBlock-border-color);
+      border-bottom: 1px solid var(--border-sidebar-block);
       ul {
         flex-direction: row;
         a {
           width: 20%;
           li {
             span:first-child {
-              background-color: var(--tags-bg);
+              background-color: var(--bg-tags);
               border-radius: 50%;
               display: flex;
               justify-content: center;
