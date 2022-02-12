@@ -23,7 +23,11 @@ $player: (
 );
 
 $postMessage: (
+  categoriesBackground: #f13a3a,
+  tagsBackground: #22a6b3 #0097e6 #fbc531 #10ac84,
   tagsColor: var(--color-basic-700),
+  colorMessage: var(--color-basic-600),
+  colorCategories: #fff,
 );
 
 $emoji: (
@@ -136,7 +140,7 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
     position: sticky;
     top: 0;
     font-family: DM Sans, sans-serif;
-    color: #5c5e6e;
+    color: var(--color-basic-700);
     font-size: 15px;
     margin-bottom: 20px;
   }
@@ -144,7 +148,7 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
   ul {
     border-left: 1px solid var(--border-catalog);
     li {
-      color: var(--color-basic-700);
+      color: var(--color-basic-800);
       display: flex;
       align-items: center;
       line-height: 1.8;
