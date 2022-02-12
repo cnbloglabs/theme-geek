@@ -1,7 +1,6 @@
 $md: () !default;
 $md: map-merge(
   (
-    linkColor: #ccc,
     hrColor: #ddd,
     blockquoteBg: #f6f8fa,
     color-blockquote: #f6f8fa,
@@ -18,7 +17,6 @@ $md: map-merge(
   $md
 );
 
-$color-hover-link: map-get($md, linkColor);
 $color-hr: map-get($md, hrColor);
 $color-blockquote-bg: map-get($md, blockquoteBg);
 $color-blockquote: map-get($md, color-blockquote);
@@ -106,11 +104,9 @@ $height-iframe: map-get($md, iframe-height);
   }
 
   a {
-    border-bottom: 2px solid $color-hover-link;
-    background-color: transparent;
+    color: #0074de;
     &:hover {
-      transition: box-shadow 0.2s linear;
-      box-shadow: inset 0 -10px $color-hover-link;
+      color: #68b5fb;
     }
   }
 
