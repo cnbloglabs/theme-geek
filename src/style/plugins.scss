@@ -270,3 +270,12 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
   text-transform: uppercase;
   color: var(--color-basic-500);
 }
+
+@media screen and (max-width: 1024px) {
+  .blog_comment_body {
+    .awes-linenumber,
+    .awes-lang {
+      display: none;
+    }
+  }
+}
