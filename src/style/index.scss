@@ -6,8 +6,8 @@
 @import '../common/mixins.scss';
 @import './markdown.scss';
 @import './scroll.scss';
-@import './plugins.scss';
 @import './icons.scss';
+@import './plugins.scss';
 
 *::selection {
   background: var(--theme-primary-4);
