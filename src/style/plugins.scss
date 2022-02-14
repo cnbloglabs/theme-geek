@@ -53,11 +53,18 @@ $emoji: (
 @import '/node_modules/@acnb/plugins/src/plugins/musicPlayer/index.scss';
 // @import '/node_modules/@acnb/plugins/src/plugins/codeCopy/index.scss'; // 自定义插件样式
 @import '/node_modules/@acnb/plugins/src/plugins/codeLang/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/codeTrafficLight/index.scss';
 
 // toolMenu
 
 .custom-toolbar {
   z-index: 9;
+}
+
+.rocket-rotate {
+  position: relative;
+  top: 2px;
+  transform: rotate(-45deg);
 }
 
 // comments avatars

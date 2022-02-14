@@ -22,15 +22,17 @@ import {
   notice,
   live2d,
   colorMode,
+  codeTrafficLight,
 } from '@acnb/plugins'
 
 createTheme()
   .use(build)
+  .use(codeTrafficLight, { enable: true })
   .use(codeHighlight, { enable: true })
   .use(codeLinenumbers, { enable: true })
   .use(codeLang, { enable: true })
   .use(codeCopy, { enable: true })
-  .use(clickEffects, { enable: true })
+  .use(clickEffects, { enable: false })
   .use(commentsAvatars, { enable: true })
   .use(colorMode, { enable: true, color: '#1B86F9' })
   .use(emoji, { enable: true })
@@ -79,25 +81,26 @@ createTheme()
     { enable: true },
     {
       menuIcon: '',
+      scrollContainer: '#mainContent',
       toolbarItems: [
         {
-          icon: 'fa-comment-dots',
+          icon: 'fa-rocket rocket-rotate',
         },
         {
-          icon: 'fa-star',
-        },
-        {
-          icon: 'fa-heart',
+          enable: true,
+          icon: 'fa-moon',
         },
         {
           icon: 'fa-thumbs-up',
         },
         {
-          enable: true,
-          icon: 'fa-adjust',
+          icon: 'fa-heart',
         },
         {
-          icon: 'fa-rocket',
+          icon: 'fa-star',
+        },
+        {
+          icon: 'fa-comment-dots',
         },
       ],
     }
