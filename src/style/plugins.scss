@@ -271,9 +271,14 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
   color: var(--color-basic-500);
 }
 
+.blog_comment_body {
+  .awes-linenumber {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .blog_comment_body {
-    .awes-linenumber,
     .awes-lang {
       display: none;
     }
