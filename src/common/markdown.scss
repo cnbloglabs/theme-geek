@@ -11,6 +11,7 @@ $md: map-merge(
     singleLineCoodeColor: #15a7a7,
     detailsBg: #fafafa,
     detailsBorderColor: #eaeaea,
+    detailsActiveBorderColor: rgb(234, 234, 234),
     code-font: "Menlo,Monaco,Consolas,'Courier New', monospace",
     iframe-height: 40vw,
   ),
@@ -26,7 +27,8 @@ $color-kbd-bg: map-get($md, kbdBg);
 $color-singlelinecode-bg: map-get($md, singleLineCoodeBg);
 $color-singlelinecode: map-get($md, singleLineCoodeColor);
 $color-details-bg: map-get($md, detailsBg);
-$color-details-border: map-get($md, detailsBorderColor);
+$details-border-color: map-get($md, detailsBorderColor);
+$details-active-border-color: map-get($md, detailsActiveBorderColor);
 $font-code: map-get($md, code-font);
 $height-iframe: map-get($md, iframe-height);
 
@@ -167,12 +169,16 @@ $height-iframe: map-get($md, iframe-height);
     margin: 1.5rem 0;
     padding: 0.5rem 1rem;
     background: $color-details-bg;
-    border: 1px solid $color-details-border;
     border-radius: 3px;
+    border: 1px solid;
+    border-color: $details-border-color;
     & > summary {
       font-weight: 500;
       outline: none;
       cursor: pointer;
+    }
+    &[open] {
+      border: 1px solid $details-active-border-color;
     }
   }
 

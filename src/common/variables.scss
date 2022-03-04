@@ -33,7 +33,7 @@
   --bg-layer: #ccc;
   --bg-md-hr: #ddd;
   --bg-md-blockquote: #f6f8fa;
-  --bg-md-summary: #fafafa;
+  --bg-md-summary: rgb(250, 250, 250);
   --bg-md-single-code: #eee;
   --bg-search-bar: #fff;
   --bg-account: #fff;
@@ -60,6 +60,8 @@
   --border-avatar: rgb(240, 239, 239);
   --border-post-signature: var(--color-primary);
   --border-catalog: #eaeaea;
+  --border-md-details: rgb(234, 234, 234);
+  --border-md-details-active: rgb(234, 234, 234);
 }
 
 // variables in dark mode
@@ -120,4 +122,6 @@
   --border-avatar: #151728;
   --border-post-signature: var(--color-primary);
   --border-catalog: #272a3a;
+  --border-md-details: rgba(255, 255, 255, 0.2);
+  --border-md-details-active: var(--color-primary);
 }

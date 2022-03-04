@@ -8,7 +8,8 @@ $md: (
   singleLineCoodeBg: var(--bg-md-single-code),
   singleLineCoodeColor: #15a7a7,
   detailsBg: var(--bg-md-summary),
-  detailsBorderColor: var(--color-primary),
+  detailsBorderColor: var(--border-md-details),
+  detailsActiveBorderColor: var(--border-md-details-active),
 );
 
 @import '../common/markdown.scss';
