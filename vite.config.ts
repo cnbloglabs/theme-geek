@@ -1,6 +1,10 @@
 import { defineConfig } from 'vite'
+import { IgnorePublicPlugin } from 'vite-plugin-ignore-public'
 
-export default defineConfig({
+export default defineConfig(({ command, mode }) => ({
+  plugins: [
+    IgnorePublicPlugin()
+  ],
   css: {
     preprocessorOptions: {
       scss: {
@@ -15,6 +19,7 @@ export default defineConfig({
   build: {
     cssCodeSplit: true,
     emptyOutDir: true,
+    brotliSize: true,
     terserOptions: {
       format: {
         comments: false,
@@ -27,4 +32,4 @@ export default defineConfig({
       fileName: 'index',
     },
   },
-})
+}))
