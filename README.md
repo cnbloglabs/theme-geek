@@ -1,6 +1,6 @@
-# acnb-theme-geek
+# Geek
 
-这是一个博客园皮肤，基于 [awescnb](https://github.com/awescnb/) 构建，欢迎使用！
+这是一个博客园皮肤，它来自 [Cnblog Labs](https://github.com/cnbloglabs)，欢迎使用！
 
 ## 浏览器支持
 
@@ -38,7 +38,7 @@
 ## 贡献
 
 1. 欢迎 fork！
-2. 创建你的特性分支：git checkout -b your-new-feature
-3. 提交您的修改：git commit -m "Add some feature
+2. 创建你的分支：git checkout -b your-new-feature
+3. 提交你的修改：git commit -m "Add some feature
 4. 推送到该分支：git push origin your-new-feature
 5. 提交一个 pull request
