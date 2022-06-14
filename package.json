@@ -20,8 +20,8 @@
   "homepage": "https://github.com/acnblogs/acnb-theme-geek#readme",
   "dependencies": {
     "@acnb/core": "^1.0.8",
-    "@acnb/options": "^0.1.8",
-    "@acnb/plugins": "^0.2.7"
+    "@acnb/options": "^0.2.2",
+    "@acnb/plugins": "^0.2.9"
   },
   "devDependencies": {
     "@guangzan/eslint-config": "^0.1.3",

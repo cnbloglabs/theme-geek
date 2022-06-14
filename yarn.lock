@@ -4,25 +4,25 @@
 
 "@acnb/core@^1.0.7", "@acnb/core@^1.0.8":
   version "1.0.8"
-  resolved "https://registry.npmmirror.com/@acnb/core/-/core-1.0.8.tgz#99ed812f435496e5fdc9f42ae8d39db5eb3ba86f"
+  resolved "https://registry.npmjs.org/@acnb/core/-/core-1.0.8.tgz#99ed812f435496e5fdc9f42ae8d39db5eb3ba86f"
   integrity sha512-ZqoHg87R4qz1FstxV9NYbfcXdd8cGSXSbcyll2QnlYEran8eLQg/MgvrIahUQeAqiyo8tEozwNLh4RDafRw2jw==
   dependencies:
     "@acnb/core" "^1.0.7"
 
-"@acnb/options@^0.1.7", "@acnb/options@^0.1.8":
-  version "0.1.9"
-  resolved "https://registry.npmmirror.com/@acnb/options/-/options-0.1.9.tgz#e022d72ae3faa7c5ab5395ce2df130e92edd7763"
-  integrity sha512-yfvX3Z1fj6I7+e3fhVnWIZvX/gbWnzGypr0CwCij3mCYev0bANxy1JCgiiZYSCFYmWj1wjsFacbg3HxAahXxuA==
+"@acnb/options@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.npmjs.org/@acnb/options/-/options-0.2.2.tgz#abd2b1ce02180d27ba94920ff61f0595c664b56f"
+  integrity sha512-wSoVMyv6EjBP0qFii+s83LaMrRojVetaeQWl5c/etg7O1T2zjEyqLVgRVypqFKXNXxozQ/6UQGiTqeSNziaSSw==
   dependencies:
     "@acnb/core" "^1.0.8"
 
-"@acnb/plugins@^0.2.7":
-  version "0.2.7"
-  resolved "https://registry.npmmirror.com/@acnb/plugins/-/plugins-0.2.7.tgz#fd7f95195be05d99f865587e3014750df73cc37a"
-  integrity sha512-tGpNRuWouS2mfr4zoQHZY+BaTV9Ilrlm5YnLM/58R2BHSfAlKtagxOnwE01w+Q+TP05sRysb7oVYz8u71KX5Eg==
+"@acnb/plugins@^0.2.9":
+  version "0.2.9"
+  resolved "https://registry.npmjs.org/@acnb/plugins/-/plugins-0.2.9.tgz#ff98c88faac6a9e5ec075cd86e18aa6c25553ea3"
+  integrity sha512-r+iwUT7W0tQINxSMKBy1yoTlcfsc68hJtDbi7EhnRXmQIPX9YtXOFlzmdjT5Itb3iUZsTAtAVaWd2QrU6pAeOw==
   dependencies:
     "@acnb/core" "^1.0.8"
-    "@acnb/options" "^0.1.7"
+    "@acnb/options" "^0.2.2"
     notyf "^3.10.0"
 
 "@babel/code-frame@^7.0.0":
