@@ -128,7 +128,7 @@
   .profile-avatar {
     left: 20px;
     bottom: 54px;
-    img {
+    .avatar {
       width: 80px;
       height: 80px;
     }
@@ -140,13 +140,10 @@
 }
 
 @media screen and (max-width: 768px) {
-  // .profile {
-  //     height: 30vh;
-  // }
   .profile-avatar {
     left: 10px;
-    bottom: 38px;
-    img {
+    bottom: 50px;
+    .avatar {
       width: 60px;
       height: 60px;
     }
