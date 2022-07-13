@@ -70,6 +70,12 @@
   z-index: 1;
   bottom: 16px;
   left: 24px;
+  .avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--border-avatar);
+  }
   img {
     width: 150px;
     height: 150px;

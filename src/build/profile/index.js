@@ -79,9 +79,18 @@ function createBlur() {
 
 function createAvatar() {
   const { avatar } = useThemeOptions()
+  const avatarElement =
+    $('<div>')
+      .addClass('avatar')
+      .css({ background: `center / cover url("${avatar}") no-repeat` })
+
   return $('<div>')
     .addClass('profile-avatar')
-    .append(`<a href="${index}"><img src="${avatar}" /></a>`)
+    .append(
+      $('<a>')
+        .attr('href', index)
+        .append(avatarElement)
+    )
 }
 
 function createMessageElements() {
