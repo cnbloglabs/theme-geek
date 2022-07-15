@@ -5,11 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Markdown</title>
     <link rel="icon" type="image/svg+xml" href="/images/favicon.png" />
-    <link rel="stylesheet" href="../libs/blog-common.min.css" />
-    <link rel="stylesheet" href="../libs/atom-one-dark.css">
-    <script src="../libs/jquery.min.js"></script>
-    <script src="../libs/highlight.min.js"></script>
-    <script type="module" src="../src/main.js"></script>
+    <link rel="stylesheet" href="../css/blog-common.min.css" />
+    <link rel="stylesheet" href="../css/atom-one-dark.css">
+
+    <style>
+      :not(.cnblogs_code):not(.cnblogs_Highlighter)>pre:not([highlighted]):not([class*="brush:"]) code:not(.hljs) {background: rgb(40, 44, 52);
+        padding: 13px;
+        border: 0px none rgb(171, 178, 191);
+        border-radius: 0px;
+        border-color: transparent;
+        color: rgb(171, 178, 191);
+        font-family: monospace;
+        font-size: 13px}
+      .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+    </style>
+
+    <script>
+        var currentBlogId = 466832;
+        var currentBlogApp = 'guangzan';
+        var isLogined = true;
+        var isBlogOwner = true;
+        var skinName = 'Custom';
+        var visitorUserId = 'adce83c6-a022-414e-4369-08d6259d0de2';
+        var hasCustomScript = false;
+        try {
+            if (hasCustomScript && document.referrer && document.referrer.indexOf('baidu.com') >= 0) {
+                Object.defineProperty(document, 'referrer', { value: '' });
+                Object.defineProperty(Document.prototype, 'referrer', { get: function(){ return ''; } });
+            }
+        } catch(error) { }
+        window.cb_enable_mathjax = false;
+        window.mathEngine = 1;
+        window.codeHighlightEngine = 1;
+        window.enableCodeLineNumber = true;
+        window.codeHighlightTheme = 'atom-one-dark';
+        window.darkModeCodeHighlightTheme = 'atom-one-dark';
+        window.isDarkCodeHighlightTheme = true;
+        window.isDarkModeCodeHighlightThemeDark = true;
+        window.isDisableCodeHighlighter = false;
+        window.enableCodeThemeTypeFollowSystem = false;
+    </script>
   </head>
 
   <body>
@@ -2650,5 +2685,9 @@
         <span id="poweredby">Powered by .NET Core on Kubernetes</span>
       </div>
     </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/highlight.min.js"></script>
+    <script src="../js/highlightjs-line-numbers.min.js"></script>
+    <script type="module" src="../src/main.js"></script>
   </body>
 </html>
