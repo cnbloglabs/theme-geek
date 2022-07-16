@@ -16,10 +16,10 @@
   dependencies:
     "@acnb/core" "^1.0.8"
 
-"@acnb/plugins@^0.3.3":
-  version "0.3.3"
-  resolved "https://registry.npmjs.org/@acnb/plugins/-/plugins-0.3.3.tgz#73135bcd93c1f4da178689830291d8ef0bdf95e0"
-  integrity sha512-Tk7ZrGgmLDLtIKmuGWf2aQxWYsKrUnLz10LX0v+cqdcXExKMYm4sOMwm5d0pqfIkR01p5gl59PMHR2+cfbZ6tA==
+"@acnb/plugins@^0.3.4":
+  version "0.3.4"
+  resolved "https://registry.npmjs.org/@acnb/plugins/-/plugins-0.3.4.tgz#e24be9261f35e38b3b01dc0d6e9fe4f01ef9deb3"
+  integrity sha512-jvzYziTnL7+7BXOmvBXx+vG94JkvOiTCy5dJ/4AGRkHgmLHihxQ2Yvz+0eWV80TsYuWDamf53ZNpMz6lWI8OLA==
   dependencies:
     "@acnb/core" "^1.0.8"
     "@acnb/options" "^0.2.2"
