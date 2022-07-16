@@ -2,7 +2,6 @@ import { useThemeOptions } from '@acnb/options'
 import { isOwner } from '../../utils/cnblog'
 import { poll } from '../../utils/helpers'
 import { appWz, appQ, appGroup, appIng } from '../../constants/links'
-import { __DEV__ } from '../../constants/env'
 import {
   followersDetailsUrl,
   followingDetailsUrl,
