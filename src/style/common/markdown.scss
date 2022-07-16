@@ -83,7 +83,7 @@ $height-iframe: map-get($md, iframe-height);
     display: flex;
     margin: 10px auto;
     max-width: 100% !important;
-    border-radius: 4px;
+    border-radius: 2px;
   }
 
   hr {
@@ -99,31 +99,31 @@ $height-iframe: map-get($md, iframe-height);
     }
   }
 
-  table {
-    display: inline-block !important;
-    font-size: 12px;
-    width: auto;
-    max-width: 100%;
-    overflow: auto;
-  }
-  thead {
-    background: none;
-    text-align: left;
-    th {
-      background: none;
-    }
-  }
-  tr:nth-child(2n) {
-    background: none;
-  }
-  th,
-  td {
-    padding: 8px 4px;
-    line-height: 24px;
-  }
-  td {
-    min-width: 120px;
-  }
+  // table {
+  //   display: inline-block !important;
+  //   font-size: 12px;
+  //   width: auto;
+  //   max-width: 100%;
+  //   overflow: auto;
+  // }
+  // thead {
+  //   background: none;
+  //   text-align: left;
+  //   th {
+  //     background: none;
+  //   }
+  // }
+  // tr:nth-child(2n) {
+  //   background: none;
+  // }
+  // th,
+  // td {
+  //   padding: 8px 4px;
+  //   line-height: 24px;
+  // }
+  // td {
+  //   min-width: 120px;
+  // }
 
   ol,
   ul {
@@ -157,7 +157,7 @@ $height-iframe: map-get($md, iframe-height);
     margin: 1.5rem 0;
     padding: 0.5rem 1rem;
     background: $color-details-bg;
-    border-radius: 3px;
+    border-radius: 2px;
     border: 1px solid;
     border-color: $details-border-color;
     & > summary {
@@ -213,11 +213,10 @@ $height-iframe: map-get($md, iframe-height);
   word-break: break-word;
 }
 
-// prism.js engin
-pre[class*='language-'],
+pre[class*='language-'].highlighter-prismjs,
 pre code.hljs {
-  padding: 2.5em 1em 1em;
-  border-radius: 8px;
+  padding: 2.8em 1em 1em;
+  border-radius: 2px;
 }
 
 // code toolbar
