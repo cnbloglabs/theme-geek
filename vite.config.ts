@@ -17,7 +17,6 @@ export default defineConfig(({ command, mode }) => ({
     port: 8080,
   },
   build: {
-    minify: 'terser',
     cssCodeSplit: true,
     emptyOutDir: true,
     brotliSize: true,
