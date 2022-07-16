@@ -3,7 +3,7 @@
   --color-primary: var(--themeColor);
 }
 // default-variables
-:root {
+:root[theme='light'] {
   --color-basic-50: #ffffff;
   --color-basic-75: #fafafa;
   --color-basic-100: #f8f8f8;
@@ -63,7 +63,6 @@
   --border-md-details: rgb(234, 234, 234);
   --border-md-details-active: rgb(234, 234, 234);
 }
-
 // variables in dark mode
 :root[theme='dark'] {
   --color-basic-50: #252525;
