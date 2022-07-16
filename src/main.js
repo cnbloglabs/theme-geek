@@ -2,10 +2,6 @@ import './style/index.scss'
 import { createTheme } from '@acnb/core'
 import build from './build'
 import {
-  codeHighlight,
-  codeLinenumbers,
-  codeLang,
-  codeCopy,
   commentsAvatars,
   darkMode,
   emoji,
@@ -28,10 +24,6 @@ import {
 createTheme()
   .use(build)
   .use(codeTrafficLight, { enable: true })
-  .use(codeHighlight, { enable: true })
-  .use(codeLinenumbers, { enable: true })
-  .use(codeLang, { enable: true })
-  .use(codeCopy, { enable: true })
   .use(clickEffects, { enable: false })
   .use(commentsAvatars, { enable: true })
   .use(colorMode, { enable: true, color: '#1B86F9' })
