@@ -92,18 +92,6 @@ $height-iframe: map-get($md, iframe-height);
     border-bottom: 1px solid $color-hr;
   }
 
-  code {
-    font-family: $font-code;
-    word-break: break-word;
-    border-radius: 2px;
-    overflow-x: auto;
-    background-color: $color-singlelinecode-bg !important;
-    color: $color-singlelinecode !important;
-    font-size: 0.87em;
-    padding: 2px 6px !important;
-    display: inline;
-  }
-
   a {
     color: #47a1f6;
     &:hover {
@@ -211,12 +199,31 @@ $height-iframe: map-get($md, iframe-height);
   }
 }
 
-// 评论内容 Markdown
-#mainContent #blog-comments-placeholder {
-  blockquote,
-  p {
-    margin: 4px 0;
-  }
+// singleline code
+.cnblogs-markdown :not(pre, div, td) > code,
+.blogpost-body :not(pre, div, td) > code {
+  display: inline;
+  padding: 0.065em 0.4em;
+  background-color: $color-singlelinecode-bg;
+  border-radius: 2px;
+  overflow-x: auto;
+  font-size: 0.87em;
+  font-family: $font-code;
+  color: $color-singlelinecode;
+  word-break: break-word;
+}
+
+// prism.js engin
+pre[class*='language-'],
+pre code.hljs {
+  padding: 2.5em 1em 1em;
+  border-radius: 8px;
+}
+
+// code toolbar
+.span.cnb-code-toolbar-item {
+  background: #fff;
+  color: #fff;
 }
 
 @media screen and (max-width: 1023px) {

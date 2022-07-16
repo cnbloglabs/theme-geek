@@ -38,9 +38,13 @@ $emoji: (
   hoverBorderColor: var(--border-post-signature),
 );
 
+// @import '/node_modules/@acnb/plugins/src/plugins/codeHighlight/index.scss';
+// @import '/node_modules/@acnb/plugins/src/plugins/codeLinenumbers/index.scss';
+// @import '/node_modules/@acnb/plugins/src/plugins/codeLang/index.scss';
+// @import '/node_modules/@acnb/plugins/src/plugins/codeCopy/index.scss'; // 自定义插件样式
+
+@import '/node_modules/@acnb/plugins/src/plugins/codeTrafficLight/index.scss';
 @import '/node_modules/@acnb/plugins/src/plugins/postMessage/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/codeHighlight/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/codeLinenumbers/index.scss';
 @import '/node_modules/@acnb/plugins/src/plugins/commentsAvatars/index.scss';
 @import '/node_modules/@acnb/plugins/src/plugins/signature/index.scss';
 @import '/node_modules/@acnb/plugins/src/plugins/emoji/index.scss';
@@ -51,24 +55,9 @@ $emoji: (
 @import '/node_modules/@acnb/plugins/src/plugins/darkMode/index.scss';
 @import '/node_modules/@acnb/plugins/src/plugins/clickEffects/index.scss';
 @import '/node_modules/@acnb/plugins/src/plugins/musicPlayer/index.scss';
-// @import '/node_modules/@acnb/plugins/src/plugins/codeCopy/index.scss'; // 自定义插件样式
-@import '/node_modules/@acnb/plugins/src/plugins/codeLang/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/codeTrafficLight/index.scss';
 
-// toolMenu
-
-.custom-toolbar {
-  z-index: 9;
-}
-
-.rocket-rotate {
-  position: relative;
-  top: 2px;
-  transform: rotate(-45deg);
-}
 
 // comments avatars
-
 .custom-comment-avatar {
   position: relative;
   img {
@@ -94,46 +83,47 @@ $emoji: (
 }
 
 // postMessage
-
 .custom-categories a,
 .custom-tags a {
   box-shadow: none;
 }
 
 // image box
-
 .medium-zoom-image--opened {
   z-index: 41;
 }
 
-// dragmenu
+// toolMenu
+.custom-toolbar {
+  z-index: 9;
+}
 
+.rocket-rotate {
+  position: relative;
+  top: 2px;
+  transform: rotate(-45deg);
+}
 .toolbar-item {
   box-shadow: 0 2px 6px 0 rgb(0 0 0 / 20%);
 }
-
 .custom-drag-menu {
   z-index: 3;
 }
-
 .medium-zoom-overlay {
   z-index: 2;
 }
 
 // click
-
 #click-effects {
   z-index: 6;
 }
 
 // player
-
 body .aplayer.aplayer-fixed .aplayer-lrc {
   bottom: 30px;
 }
 
 // catalog
-
 #catalog {
   padding: 25px;
   font-size: 14px;
@@ -226,61 +216,3 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
   }
 }
 
-// copy code
-.cnblogs_code,
-.cnblogs_Highlighter {
-  position: relative;
-  .copy-btns {
-    z-index: 1;
-  }
-}
-
-.copy-btns {
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  width: 86px;
-  font-size: 12px;
-  cursor: pointer;
-  padding: 2px 4px 1px 8px;
-  border-radius: 4px;
-  color: var(--color-basic-600);
-  &:before {
-    content: '\f0c5';
-    margin-right: 8px;
-    font-weight: 500;
-  }
-  &:hover {
-    background: var(--color-basic-200);
-    transition: background 0.2s;
-  }
-}
-
-// code language
-.awes-lang {
-  position: absolute;
-  right: 98px;
-  top: 13px;
-  height: 14px;
-  line-height: 1.2;
-  padding-right: 14px;
-  margin-right: 4px;
-  border-right: 1px solid var(--color-basic-300);
-  font-size: 12px;
-  text-transform: uppercase;
-  color: var(--color-basic-500);
-}
-
-.blog_comment_body {
-  .awes-linenumber {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .blog_comment_body {
-    .awes-lang {
-      display: none;
-    }
-  }
-}

@@ -1,0 +1,127 @@
+// Works in both dark and light modes
+:root {
+  --color-primary: var(--themeColor);
+}
+// default-variables
+:root {
+  --color-basic-50: #ffffff;
+  --color-basic-75: #fafafa;
+  --color-basic-100: #f8f8f8;
+  --color-basic-200: #eaeaea;
+  --color-basic-300: #e1e1e1;
+  --color-basic-400: #cacaca;
+  --color-basic-500: #b3b3b3;
+  --color-basic-600: #8e8e8e;
+  --color-basic-700: #6e6e6e;
+  --color-basic-800: #4b4b4b;
+  --color-basic-900: #2c2c2c;
+
+  --bg-body: #f5f6f7;
+  --bg-mainContent: #f5f6f7;
+  --bg-sidebar: #fff;
+  --bg-tags: #eaeaea;
+  --bg-footer: #fff;
+  --bg-btn-hover: #f5f6f7;
+  --bg-btn-active: #eaeaea;
+  --bg-pager: #fff;
+  --bg-pager-btn: #f5f6f7;
+  --bg-listItem: #fff;
+  --bg-listItemTitle: #fff;
+  --bg-form: #ffffff;
+  --bg-form-title: #f6f8fa;
+  --bg-common-body: #f5f6f7;
+  --bg-layer: #ccc;
+  --bg-md-hr: #ddd;
+  --bg-md-blockquote: #f6f8fa;
+  --bg-md-summary: rgb(250, 250, 250);
+  --bg-md-single-code: #eee;
+  --bg-search-bar: #fff;
+  --bg-account: #fff;
+  --bg-logo: linear-gradient(
+    to bottom,
+    #fff 0%,
+    #fff 76%,
+    rgba(21, 23, 40, 0) 100%
+  );
+  --bg-profile-menu: #f8f8f8;
+  --bg-tool-item: #eee;
+  --bg-calendar: #f6f8fa;
+  --bg-post-signature: #f6f8fa;
+  --bg-scrollbar-track: rgba(0, 0, 0, 0.01);
+  --bg-scrollbar-thumb: rgba(0, 0, 0, 0.11);
+  --bg-scrollbar-thumb-hover: rgba(0, 0, 0, 0.2);
+  --bg-card: #fff;
+  --bg-profile-links: #333;
+  --bg-profile-links-hover: #eaeaea;
+  --bg-emoji: #fff;
+
+  --border-sidebar-block: #f5f6f7;
+  --border-form: #ccc;
+  --border-avatar: rgb(240, 239, 239);
+  --border-post-signature: var(--color-primary);
+  --border-catalog: #eaeaea;
+  --border-md-details: rgb(234, 234, 234);
+  --border-md-details-active: rgb(234, 234, 234);
+}
+
+// variables in dark mode
+:root[theme='dark'] {
+  --color-basic-50: #252525;
+  --color-basic-75: #2f2f2f;
+  --color-basic-100: #323232;
+  --color-basic-200: #3e3e3e;
+  --color-basic-300: #4a4a4a;
+  --color-basic-400: #5a5a5a;
+  --color-basic-500: #6e6e6e;
+  --color-basic-600: #909090;
+  --color-basic-700: #b9b9b9;
+  --color-basic-800: #bdbdbd;
+  --color-basic-900: #c2c2c2;
+
+  --bg-body: #373e57;
+  --bg-mainContent: #24273b;
+  --bg-sidebar: #151728;
+  --bg-tags: #303447;
+  --bg-footer: #24273b;
+  --bg-btn-hover: #202234;
+  --bg-btn-active: #5c5e6e;
+  --bg-pager: #151728;
+  --bg-pager-btn: #202234;
+  --bg-listItem: #202234;
+  --bg-listItemTitle: #202234;
+  --bg-form: #151728;
+  --bg-form-title: #202234;
+  --bg-common-body: #202234;
+  --bg-layer: #202234;
+  --bg-md-hr: #5c5e6e;
+  --bg-md-blockquote: #515363;
+  --bg-md-summary: #3d4052;
+  --bg-md-single-code: #24273b;
+  --bg-search-bar: #151728;
+  --bg-account: #151728;
+  --bg-logo: linear-gradient(
+    to bottom,
+    #151728 0%,
+    #151728 76%,
+    rgba(21, 23, 40, 0) 100%
+  );
+  --bg-profile-menu: #151728;
+  --bg-tool-item: #24273b;
+  --bg-calendar: #202234;
+  --bg-post-signature: #24273b;
+  --bg-scrollbar-track: rgba(255, 255, 255, 0.01);
+  --bg-scrollbar-thumb: rgba(255, 255, 255, 0.11);
+  --bg-scrollbar-thumb-hover: rgba(255, 255, 255, 0.2);
+  --bg-card: #151728;
+  --bg-profile-links: rgb(156, 156, 171);
+  --bg-profile-links-hover: #1b1d2e;
+  --bg-emoji: #303447;
+
+  --border-sidebar-block: #272a3a;
+  --border-form: #202234;
+  --border-avatar: #151728;
+  --border-post-signature: var(--color-primary);
+  --border-catalog: #272a3a;
+  --border-md-details: rgba(255, 255, 255, 0.2);
+  --border-md-details-active: var(--color-primary);
+}
