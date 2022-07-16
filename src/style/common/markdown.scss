@@ -99,32 +99,6 @@ $height-iframe: map-get($md, iframe-height);
     }
   }
 
-  // table {
-  //   display: inline-block !important;
-  //   font-size: 12px;
-  //   width: auto;
-  //   max-width: 100%;
-  //   overflow: auto;
-  // }
-  // thead {
-  //   background: none;
-  //   text-align: left;
-  //   th {
-  //     background: none;
-  //   }
-  // }
-  // tr:nth-child(2n) {
-  //   background: none;
-  // }
-  // th,
-  // td {
-  //   padding: 8px 4px;
-  //   line-height: 24px;
-  // }
-  // td {
-  //   min-width: 120px;
-  // }
-
   ol,
   ul {
     margin: 22px 0;
@@ -223,6 +197,20 @@ pre code.hljs {
 .span.cnb-code-toolbar-item {
   background: #fff;
   color: #fff;
+}
+
+// table start
+#cnblogs_post_body th,
+.cnblogs-post-body th {
+  background: none;
+}
+
+// table end
+.blogpost-body th,
+.blogpost-body td,
+.cnblogs-post-body th,
+.cnblogs-post-body td {
+  border-color: $details-border-color;
 }
 
 @media screen and (max-width: 1023px) {
