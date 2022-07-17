@@ -3,25 +3,20 @@ $postSignature: (
   background: var(--bg-post-signature),
   borderRadius: 2px,
 );
-
 $toolMenu: (
   background: var(--bg-md-summary),
   color: #fff,
 );
-
 $signature: (
   padding: 1rem 14px,
   fontSize: 1em,
 );
-
 $imagebox: (
   background: var(--bg-tool-item),
 );
-
 $player: (
   bodyBackground: var(--bg-tags),
 );
-
 $postMessage: (
   categoriesBackground: #f13a3a,
   tagsBackground: #22a6b3 #0097e6 #fbc531 #10ac84,
@@ -29,7 +24,6 @@ $postMessage: (
   colorMessage: var(--color-basic-600),
   colorCategories: #fff,
 );
-
 $emoji: (
   textEmojiColor: var(--color-basic-700),
   bg: var(--bg-emoji),
@@ -37,11 +31,6 @@ $emoji: (
   hoverBg: var(--bg-tags),
   hoverBorderColor: var(--border-post-signature),
 );
-
-// @import '/node_modules/@acnb/plugins/src/plugins/codeHighlight/index.scss';
-// @import '/node_modules/@acnb/plugins/src/plugins/codeLinenumbers/index.scss';
-// @import '/node_modules/@acnb/plugins/src/plugins/codeLang/index.scss';
-// @import '/node_modules/@acnb/plugins/src/plugins/codeCopy/index.scss'; // 自定义插件样式
 
 @import '/node_modules/@acnb/plugins/src/plugins/codeTrafficLight/index.scss';
 @import '/node_modules/@acnb/plugins/src/plugins/postMessage/index.scss';
@@ -56,7 +45,6 @@ $emoji: (
 @import '/node_modules/@acnb/plugins/src/plugins/clickEffects/index.scss';
 @import '/node_modules/@acnb/plugins/src/plugins/musicPlayer/index.scss';
 
-
 // comments avatars
 .custom-comment-avatar {
   position: relative;
@@ -66,7 +54,6 @@ $emoji: (
     border-radius: 50%;
   }
 }
-
 .custom-comments-author {
   .custom-comment-avatar::after {
     position: absolute;
@@ -81,23 +68,19 @@ $emoji: (
     font-size: 80%;
   }
 }
-
 // postMessage
 .custom-categories a,
 .custom-tags a {
   box-shadow: none;
 }
-
 // image box
 .medium-zoom-image--opened {
   z-index: 41;
 }
-
 // toolMenu
 .custom-toolbar {
   z-index: 9;
 }
-
 .rocket-rotate {
   position: relative;
   top: 2px;
@@ -112,17 +95,14 @@ $emoji: (
 .medium-zoom-overlay {
   z-index: 2;
 }
-
 // click
 #click-effects {
   z-index: 6;
 }
-
 // player
 body .aplayer.aplayer-fixed .aplayer-lrc {
   bottom: 30px;
 }
-
 // catalog
 #catalog {
   padding: 25px;
@@ -215,4 +195,3 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
     }
   }
 }
-
