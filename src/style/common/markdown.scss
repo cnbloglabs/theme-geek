@@ -231,3 +231,11 @@ pre code.hljs {
     }
   }
 }
+// .cnb-code-toolbar:hover {
+//   color: var(--color-basic-900);
+//   background-color: rgba(0,0,0,0.3);
+// }
+span.cnb-code-toolbar-item {
+  color: var(--color-basic-900);
+  background-color: rgba(0,0,0,0.3);
+}
