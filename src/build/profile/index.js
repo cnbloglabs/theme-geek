@@ -6,6 +6,7 @@ import {
   getBlogName,
   getFollowers,
   getFollowing,
+  isOwner,
 } from '../../utils/cnblog'
 import {
   appGroup, appIng, appQ, appWz,
@@ -154,6 +155,10 @@ export default () => {
     .append(messageWrap)
 
   $('#mainContent').prepend(container)
+
   poll(() => $('#home #profile_block>a').length, setProfile)
-  poll(() => $('#p_b_follow').length, createFollowButton)
+
+  if (!isOwner()) {
+    poll(() => $('#p_b_follow').length, createFollowButton)
+  }
 }
