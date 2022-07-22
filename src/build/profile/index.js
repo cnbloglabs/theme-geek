@@ -96,9 +96,6 @@ function createMessageElements() {
           $('<a>')
             .addClass('profile-nickname')
             .attr('href', index),
-        )
-        .append(
-          $('#p_b_follow').addClass('profile-follow'),
         ),
     )
     .append(
@@ -121,6 +118,12 @@ function createMessageElements() {
             .text('关注：'),
         ),
     )
+}
+
+function createFollowButton() {
+  $('.profile-nickname').after(
+    $('#p_b_follow').addClass('profile-follow'),
+  )
 }
 
 function setProfile() {
@@ -152,4 +155,5 @@ export default () => {
 
   $('#mainContent').prepend(container)
   poll(() => $('#home #profile_block>a').length, setProfile)
+  poll(() => $('#p_b_follow').length, createFollowButton)
 }
