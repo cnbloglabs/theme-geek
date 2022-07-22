@@ -1,22 +1,21 @@
+import './index.scss'
 import { useThemeOptions } from '@acnb/options'
+import { poll } from '../../utils/helpers'
 import {
   follow,
   getBlogAge,
   getBlogName,
-  getFollowState,
   getFollowers,
   getFollowing,
   isOwner,
-  // unfollow,
+  unfollow,
 } from '../../utils/cnblog'
-import { poll } from '../../utils/helpers'
 import {
   appGroup, appIng, appQ, appWz,
   followersDetailsUrl,
   followingDetailsUrl,
   index,
 } from '../../constants/links'
-import './index.scss'
 
 function createContainer() {
   return $('<div>').addClass('profile')
@@ -98,10 +97,7 @@ function createMessageElements() {
       $('<p>')
         .append($('<a>').addClass('profile-nickname').attr('href', index))
         .append(
-          $('<button>')
-            .addClass('profile-followstate')
-            .attr('href', index)
-            .text('+ 关注'),
+          $('#p_b_follow').addClass('profile-followstate'),
         ),
     )
     .append(
@@ -132,16 +128,14 @@ function followAndUnfollow() {
     if (followButton.text() === '+ 关注') {
       follow()
       followButton.text('已关注')
+    } else {
+      unfollow()
+      followButton.text('关注')
     }
-    // else {
-    //     unfollow()
-    //     followButton.text('关注')
-    // }
   })
 }
 
-function insertMessage() {
-  const followState = getFollowState()
+function setProfile() {
   const userName = getBlogName()
   const age = getBlogAge()
   const followers = getFollowers()
@@ -151,7 +145,6 @@ function insertMessage() {
   $('.profile-age').append(age)
   $('.profile-followers').append(followers)
   $('.profile-following').append(following)
-  $('.profile-followstate').text(followState ? '已关注' : '+ 关注')
 }
 
 export default () => {
@@ -172,5 +165,5 @@ export default () => {
   $('#mainContent').prepend(container)
 
   followAndUnfollow()
-  poll(() => $('#home #profile_block>a').length, insertMessage)
+  poll(() => $('#home #profile_block>a').length, setProfile)
 }
