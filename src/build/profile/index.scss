@@ -31,6 +31,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
+
   .profile-signature {
     position: relative;
     bottom: 24px;
@@ -49,12 +50,14 @@
   padding-left: 185px;
   background: var(--bg-profile-menu);
   border-radius: 0 0 4px 4px;
+
   a {
     padding: 12px 16px;
     color: var(--color-basic-900);
     cursor: pointer;
     font-size: 14px;
   }
+
   a.active,
   a:hover {
     color: var(--color-primary);
@@ -70,6 +73,7 @@
   z-index: 1;
   bottom: 16px;
   left: 24px;
+
   .avatar {
     width: 150px;
     height: 150px;
@@ -83,7 +87,8 @@
   left: 200px;
   bottom: 80px;
   z-index: 1;
-  .profile-followstate {
+
+  .profile-follow {
     margin-left: 10px;
     padding: 2px 7px;
     background-color: var(--color-primary);
@@ -93,11 +98,17 @@
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
+
+    .profile-follow span {
+      color: #fff !important;
+    }
   }
+
   p {
     display: flex;
     align-items: center;
   }
+
   p:nth-child(1) {
     font-size: 22px;
     color: #fff;
@@ -105,11 +116,13 @@
     font-family: 'DM Sans', sans-serif;
     text-shadow: 0 0 3px #33354b;
   }
+
   p:nth-child(2) {
     margin-top: 12px;
     font-size: 13px;
     color: #fff;
     text-shadow: 0 0 3px #151728;
+
     a,
     span {
       margin-right: 16px;
@@ -122,18 +135,22 @@
     padding: 0 30px;
     overflow: auto;
     font-size: 14px;
+
     a {
       padding: 10px 8px;
     }
   }
+
   .profile-avatar {
     left: 20px;
     bottom: 54px;
+
     .avatar {
       width: 80px;
       height: 80px;
     }
   }
+
   .profile-msg {
     left: 114px;
     bottom: 62px;
@@ -144,11 +161,13 @@
   .profile-avatar {
     left: 10px;
     bottom: 50px;
+
     .avatar {
       width: 60px;
       height: 60px;
     }
   }
+
   .profile-msg {
     left: 83px;
     bottom: 51px;
@@ -162,6 +181,6 @@
   }
 }
 
-.profile-followstate.disabled {
+.profile-follow.disabled {
   cursor: no-drop;
 }
