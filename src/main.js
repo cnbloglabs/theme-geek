@@ -1,25 +1,25 @@
 import './style/index.scss'
 import { createTheme } from '@acnb/core'
-import build from './build'
 import {
+  background,
+  catalog,
+  clickEffects,
+  codeTrafficLight,
+  colorMode,
   commentsAvatars,
   darkMode,
   emoji,
-  postMessage,
   imagePreview,
   license,
-  webTag,
-  catalog,
-  background,
-  signature,
-  clickEffects,
-  musicPlayer,
-  tools,
-  notice,
   live2d,
-  colorMode,
-  codeTrafficLight,
+  musicPlayer,
+  notice,
+  postMessage,
+  signature,
+  tools,
+  webTag,
 } from '@acnb/plugins'
+import build from './build'
 
 createTheme()
   .use(build)
@@ -45,7 +45,7 @@ createTheme()
         '快去自定义签名吧~',
       ],
     },
-    { selector: '.profile-signature' }
+    { selector: '.profile-signature' },
   )
   .use(
     background,
@@ -55,7 +55,7 @@ createTheme()
     {
       opacitySelector:
         '#left-side,#sideBar,#mainContent, #footer,.custom-searchbar',
-    }
+    },
   )
   .use(
     catalog,
@@ -66,14 +66,14 @@ createTheme()
       mountedNode: '.account',
       fn: 'after',
       scrollContainer: '#mainContent',
-    }
+    },
   )
   .use(
     tools,
     { enable: true },
     {
       menuIconType: 'className',
-      menuIcon: "fa-angle-up",
+      menuIcon: 'fa-angle-up',
       menuActiveIcon: 'fa-angle-down',
       scrollContainer: '#mainContent',
       toolbarItems: [
@@ -103,5 +103,5 @@ createTheme()
           iconType: 'className',
         },
       ],
-    }
+    },
   )

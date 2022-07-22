@@ -26,10 +26,12 @@ export function getBlogName() {
   if (openNews()) {
     return $('#profile_block>a:nth-of-type(1)').html().trim()
   }
+
   const headerTitle = $('#Header1_HeaderTitle').text().trim()
   if (headerTitle.length) {
     return headerTitle
   }
+
   return currentBlogApp
 }
 
@@ -78,7 +80,7 @@ export function getBlogAge() {
  * @returns {string} 当前博文链接
  */
 export function getCurrentPostUrl() {
-  return location.href.indexOf('#') === -1
+  return !location.href.includes('#')
     ? location.href
     : location.href.substring(0, location.href.lastIndexOf('#'))
 }
@@ -173,14 +175,14 @@ export function getCurrentPage() {
   return $('#post_detail').length
     ? 'post'
     : $('.day').length
-    ? 'index'
-    : $('#taglist_main').length
-    ? 'tag'
-    : $('.entrylistPosttitle').length
-    ? 'list'
-    : $('#myposts').length
-    ? 'tag'
-    : void 0
+      ? 'index'
+      : $('#taglist_main').length
+        ? 'tag'
+        : $('.entrylistPosttitle').length
+          ? 'list'
+          : $('#myposts').length
+            ? 'tag'
+            : undefined
 }
 
 /**
@@ -191,7 +193,7 @@ export function isMd() {
   return $('#cnblogs_post_body').hasClass('cnblogs-markdown')
 }
 
-//TODO
+// TODO
 /**
  * 判断编辑器类型是否为 tinymce 5
  * @returns {boolean} 辑器类型是否为 tinymce 5
@@ -204,7 +206,7 @@ export function isTinymce5() {}
  */
 export function hasPostTitle() {
   return !!$(
-    '#cnblogs_post_body>h1,#cnblogs_post_body>h2,#cnblogs_post_body>h3,#cnblogs_post_body>h4'
+    '#cnblogs_post_body>h1,#cnblogs_post_body>h2,#cnblogs_post_body>h3,#cnblogs_post_body>h4',
   ).length
 }
 

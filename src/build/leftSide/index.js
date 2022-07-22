@@ -1,20 +1,18 @@
-import { useLinksOptions, useGithubOptions } from '@acnb/options'
-import { getBlogName } from '../../utils/cnblog'
+import { useLinksOptions } from '@acnb/options'
 import { isOwner } from '../../utils/cnblog'
-import { avatar } from '../../constants/cnblog'
 import {
+  admin,
   cnblogHome,
+  draftBox,
   index,
   newPost,
-  send,
   rss,
-  admin,
-  draftBox,
+  send,
 } from '../../constants/links'
 import './index.scss'
 
 const buildLeftSidebarContainer = () => {
-  const el = $(`<div id='left-side'></div>`)
+  const el = $('<div id=\'left-side\'></div>')
   $('#home').append(el)
 }
 
@@ -34,7 +32,7 @@ const buildCustomLinks = () => {
    *      value: Array<Link>;
    *    }
    */
-  function isOldConfig(config) {
+  function isOldConfig(userConfig) {
     for (const [key] of Object.entries(userConfig)) {
       if (!Number.isNaN(parseInt(key))) {
         return true
@@ -52,10 +50,12 @@ const buildCustomLinks = () => {
         links.push(value)
       }
     }
-  } else {
+  }
+  else {
     const { enable, value } = userConfig
     links = value
-    if (!enable) return
+    if (!enable)
+    { return }
   }
   const el = $(`<div class="links side-wrapper">
                       <h3>LINKS</h3>
@@ -63,7 +63,7 @@ const buildCustomLinks = () => {
                   </div>`)
   for (const { name, link } of links) {
     el.find('ul').append(
-      `<li><a href="${link}" target="_blank">${name}</a></li>`
+      `<li><a href="${link}" target="_blank">${name}</a></li>`,
     )
   }
   $('#left-side').append(el)
@@ -131,12 +131,13 @@ const removeHeaderToLeftSidebar = () => {
             </li>
         </a>`)
 
-    if (!isOwner && !allowVisit) continue
+    if (!isOwner && !allowVisit)
+    { continue }
     if (title === '订阅') {
       item.removeAttr('target').attr({
         'data-rss': url,
-        href: 'javascript:void(0)',
-        onclick: '$("#blog_nav_rss").trigger("click");',
+        'href': 'javascript:void(0)',
+        'onclick': '$("#blog_nav_rss").trigger("click");',
       })
     }
 
@@ -146,27 +147,9 @@ const removeHeaderToLeftSidebar = () => {
   $('#left-side .logo').after(el)
 }
 
-const buildBottomBtns = () => {
-  const { enable, url } = useGithubOptions()
-  if (!enable) return
-  const userName = getBlogName()
-  const el = `
-    <div class="left-sidebar_bottom">
-    <a href="${url}" class="follow-me" target="_blank">
-        <span class="follow-text"><i class="fas fa-github"></i><span>Fork me on GitHub</span></span>
-        <span class="developer">
-            <img src="${avatar}">
-            <span>${userName}</span>
-        </span>
-    </a>
-    </div>`
-  $('#left-side').append(el)
-}
-
 export default () => {
   buildLeftSidebarContainer()
   buildLogo()
   buildCustomLinks()
   removeHeaderToLeftSidebar()
-  // buildBottomBtns()
 }

@@ -6,20 +6,20 @@ import leftSide from './leftSide'
 import mobileMenu from './mobileMenu'
 
 const removeClearel = () => {
-    $('.clear').remove()
+  $('.clear').remove()
 }
 
 const moveFooterToMain = () => {
-    $('#footer').appendTo('#main')
+  $('#footer').appendTo('#main')
 }
 
 export default () => {
-    removeClearel()
-    moveFooterToMain()
-    cards()
-    rightSide()
-    searchbar()
-    profile()
-    leftSide()
-    mobileMenu()
+  removeClearel()
+  moveFooterToMain()
+  cards()
+  rightSide()
+  searchbar()
+  profile()
+  leftSide()
+  mobileMenu()
 }

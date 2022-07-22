@@ -5,7 +5,7 @@ import { userAgent } from '../../utils/helpers'
  * 构建移动端菜单
  */
 function buildMobileMenu() {
-  const el = $(`<div>`).addClass('mobile-menu')
+  const el = $('<div>').addClass('mobile-menu')
 
   $('#left-side').clone().appendTo(el)
 
@@ -19,7 +19,7 @@ function buildMobileMenu() {
  * 构建头部菜单按钮
  */
 function buildHeaderTrigger() {
-  const el = `<div id="navbarBurger" class="navbar-burger burger" data-target="navMenuMore"><span></span> <span></span><span></span></div>`
+  const el = '<div id="navbarBurger" class="navbar-burger burger" data-target="navMenuMore"><span></span> <span></span><span></span></div>'
   $(el)
     .appendTo('.custom-searchbar')
     .click(function () {
@@ -29,7 +29,9 @@ function buildHeaderTrigger() {
 }
 
 export default () => {
-  if (userAgent() === 'pc') return
+  if (userAgent() === 'pc') {
+    return
+  }
   buildMobileMenu()
   buildHeaderTrigger()
 }

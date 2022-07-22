@@ -1,23 +1,22 @@
 import { useThemeOptions } from '@acnb/options'
-import { isOwner } from '../../utils/cnblog'
-import { poll } from '../../utils/helpers'
-import { appWz, appQ, appGroup, appIng } from '../../constants/links'
 import {
+  follow,
+  getBlogAge,
+  getBlogName,
+  getFollowState,
+  getFollowers,
+  getFollowing,
+  isOwner,
+  // unfollow,
+} from '../../utils/cnblog'
+import { poll } from '../../utils/helpers'
+import {
+  appGroup, appIng, appQ, appWz,
   followersDetailsUrl,
   followingDetailsUrl,
   index,
 } from '../../constants/links'
-import {
-  getFollowState,
-  getBlogName,
-  getBlogAge,
-  getFollowers,
-  getFollowing,
-  follow,
-  // unfollow,
-} from '../../utils/cnblog'
 import './index.scss'
-import { avatar } from '../../constants/cnblog'
 
 function createContainer() {
   return $('<div>').addClass('profile')
@@ -78,8 +77,8 @@ function createBlur() {
 
 function createAvatar() {
   const { avatar } = useThemeOptions()
-  const avatarElement =
-    $('<div>')
+  const avatarElement
+    = $('<div>')
       .addClass('avatar')
       .css({ background: `center / cover url("${avatar}") no-repeat` })
 
@@ -88,7 +87,7 @@ function createAvatar() {
     .append(
       $('<a>')
         .attr('href', index)
-        .append(avatarElement)
+        .append(avatarElement),
     )
 }
 
@@ -102,8 +101,8 @@ function createMessageElements() {
           $('<button>')
             .addClass('profile-followstate')
             .attr('href', index)
-            .text('+ 关注')
-        )
+            .text('+ 关注'),
+        ),
     )
     .append(
       $('<p>')
@@ -112,22 +111,23 @@ function createMessageElements() {
           $('<a>')
             .addClass('profile-followers')
             .attr('href', followersDetailsUrl)
-            .text('粉丝：')
+            .text('粉丝：'),
         )
         .append(
           $('<a>')
             .addClass('profile-following')
             .attr('href', followingDetailsUrl)
-            .text('关注：')
-        )
+            .text('关注：'),
+        ),
     )
 }
 
 function followAndUnfollow() {
-  $('.profile-msg button').click(function () {
+  $('.profile-msg button').click(() => {
     if (isOwner()) {
       return
     }
+
     const followButton = $('.profile-followstate')
     if (followButton.text() === '+ 关注') {
       follow()

@@ -20,11 +20,11 @@ function createCard(
   commentCount,
   diggCount,
   detailUrl,
-  editUrl
+  editUrl,
 ) {
   const cardClass = top ? 'custom-card top' : 'custom-card'
 
-  let el = `
+  const el = `
         <div class="${cardClass}">
             <a href="${detailUrl}">
                <div class="custom-card-title">${title}</div>
@@ -52,7 +52,7 @@ function createCard(
 }
 
 function isTop(string) {
-  return string.indexOf('置顶') === -1 ? false : true
+  return !!string.includes('置顶')
 }
 
 function pageElementInit() {
@@ -62,7 +62,7 @@ function pageElementInit() {
 function initHomePageElement() {}
 
 function initCategoryPageElement() {
-  if ($('.pager').length == 2) {
+  if ($('.pager').length === 2) {
     $('.pager:first').remove()
   }
   if ($('.forFlow>.entrylistTitle').length === 0) {
@@ -92,7 +92,7 @@ function build({ page, wrap, find, callback }) {
 
   const el = $(wrap).find(find)
 
-  for (var i = 0; i < el.length; i += 3) {
+  for (let i = 0; i < el.length; i += 3) {
     const firstEl = $(el.slice(i, i + 3)[0])
     const secondEl = $(el.slice(i, i + 3)[1])
     const thirdEl = $(el.slice(i, i + 3)[2])
@@ -106,10 +106,12 @@ function build({ page, wrap, find, callback }) {
       if (!thirdEl.find(`${selector}`).text()) {
         return 0
       }
+
       const count = thirdEl
         .find(`${selector}`)
         .text()
         .match(/\(([^)]*)\)/)[1]
+
       return count
     }
 
@@ -126,8 +128,8 @@ function build({ page, wrap, find, callback }) {
         commentCount,
         diggCount,
         detailUrl,
-        editUrl
-      )
+        editUrl,
+      ),
     )
   }
 
@@ -138,7 +140,10 @@ export default () => {
   const home = isHomePage()
   const category = isCategoryPage()
 
-  if (!home && !category) return
+  if (!home && !category) {
+    return
+  }
+
   pageElementInit()
   let options = {}
 

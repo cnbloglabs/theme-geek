@@ -3,7 +3,7 @@ import { IgnorePublicPlugin } from 'vite-plugin-ignore-public'
 
 export default defineConfig(({ command, mode }) => ({
   plugins: [
-    IgnorePublicPlugin()
+    IgnorePublicPlugin(),
   ],
   css: {
     preprocessorOptions: {

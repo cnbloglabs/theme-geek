@@ -1,15 +1,12 @@
 import './index.scss'
 import { useGithubOptions } from '@acnb/options'
-import { getMonth, getQuarter } from '../../utils/helpers'
-// import { getBlogName } from 'utils/cnblog'
-import { contact, message, index } from '../../constants/links'
-import { avatar } from '../../constants/cnblog'
-import { poll } from '../../utils/helpers'
+import { getMonth, getQuarter, poll } from '../../utils/helpers'
+import { contact, message } from '../../constants/links'
 import {
-  getViewCount,
-  getPostCount,
   getArticleCount,
   getCommentCount,
+  getPostCount,
+  getViewCount,
 } from '../../utils/cnblog'
 
 function flat() {
@@ -44,6 +41,9 @@ function buildTopBtns() {
 
 function buildGithubIcon() {
   const { enable, url } = useGithubOptions({ enable: true })
+  if (!enable) {
+    return
+  }
   const el = `<div class="account-avatar">
                 <a href="${url}"><i class="fab fa-github"></i></a>
               </div>`
@@ -58,8 +58,8 @@ function buildStatistics() {
           $('#stats_post_count')
             .text()
             .trim()
-            .replace(/[^0-9]/gi, '')
-        )
+            .replace(/[^0-9]/gi, ''),
+        ),
       )
     },
     () => {
@@ -70,7 +70,7 @@ function buildStatistics() {
                       <li>阅读：<span>${getViewCount()}</span></li>
                     </ul>`
       $('.account-button-stats').after(el)
-    }
+    },
   )
 }
 
@@ -80,8 +80,8 @@ function buildCalendar() {
   const month = getMonth()
   const instance = new Date()
   const year = instance.getFullYear()
-  const date =
-    instance.getDate() < 10 ? '0' + instance.getDate() : instance.getDate()
+  const date
+    = instance.getDate() < 10 ? `0${instance.getDate()}` : instance.getDate()
   const el = `
     <div id="custom-calendar" class="sidebar-block">
         <div class="event-wrapper">

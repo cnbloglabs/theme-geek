@@ -38,7 +38,7 @@ export function HTMLDecode(str) {
  * @param {string} css 字符串
  */
 export function insertStyle(style) {
-  let styleElement = document.createElement('style')
+  const styleElement = document.createElement('style')
   styleElement.innerHTML = style
   document.getElementsByTagName('head')[0].appendChild(styleElement)
 }
@@ -49,19 +49,25 @@ export function insertStyle(style) {
  * @param {function} downCallback 向下滚动回调
  */
 export function mousewheel(upCallback, downCallback) {
-  if (!downCallback) downCallback = upCallback
+  if (!downCallback) {
+    downCallback = upCallback
+  }
+
   const removeListener = () => {
     $(document).unbind('mousewheel DOMMouseScroll')
   }
+
   const up = () => {
     upCallback()
     removeListener()
   }
+
   const down = () => {
     upCallback()
     removeListener()
   }
-  $(document).on('mousewheel DOMMouseScroll', function (e) {
+
+  $(document).on('mousewheel DOMMouseScroll', (e) => {
     // e.preventDefault()
     const wheel = e.originalEvent.wheelDelta || -e.originalEvent.detail
     const delta = Math.max(-1, Math.min(1, wheel))
@@ -74,7 +80,7 @@ export function mousewheel(upCallback, downCallback) {
  * @returns {string} 季节英文单词
  */
 export function getQuarter() {
-  let month = new Date().getMonth()
+  const month = new Date().getMonth()
   if (month < 3) {
     return 'Spring'
   } else if (month < 6) {
@@ -115,13 +121,13 @@ export function getMonth() {
  * @returns {boolean} 元素是否在视口范围内
  */
 export function isElementInViewport(el) {
-  let rect = el.getBoundingClientRect()
+  const rect = el.getBoundingClientRect()
   return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    rect.top >= 0
+    && rect.left >= 0
+    && rect.bottom
+      <= (window.innerHeight || document.documentElement.clientHeight)
+    && rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   )
 }
 
@@ -155,6 +161,7 @@ export function isNight() {
  * @param {string} color - 打印颜色
  */
 export function prettyLog(str, color = '#ffb3cc') {
+  // eslint-disable-next-line no-console
   console.log(`%c  ${str}`, `color: ${color}; font-weight: bold;`)
 }
 
@@ -165,8 +172,8 @@ export function prettyLog(str, color = '#ffb3cc') {
 export function getDate() {
   const time = new Date()
   const year = time.getFullYear()
-  const month = ('0' + (time.getMonth() + 1)).slice(-2)
-  const day = ('0' + time.getDate()).slice(-2)
+  const month = (`0${time.getMonth() + 1}`).slice(-2)
+  const day = (`0${time.getDate()}`).slice(-2)
   // const hour = ('0' + time.getHours()).slice(-2)
   // const minute = ('0' + time.getMinutes()).slice(-2)
   // const second = ('0' + time.getSeconds()).slice(-2)
@@ -181,11 +188,11 @@ export function getDate() {
  * @returns {any} 可能是数组中的任意指定数量的元素
  */
 export function randomArrayElements(arr, count = 1) {
-  let shuffled = arr.slice(0),
-    i = arr.length,
-    min = i - count,
-    temp,
-    index
+  const shuffled = arr.slice(0)
+  let i = arr.length
+  const min = i - count
+  let temp
+  let index
   while (i-- > min) {
     index = Math.floor((i + 1) * Math.random())
     temp = shuffled[index]
@@ -201,7 +208,7 @@ export function randomArrayElements(arr, count = 1) {
  * @returns {Promise}
  */
 export async function sleep(time) {
-  return new Promise((res) => setTimeout(res, time))
+  return new Promise(resolve => setTimeout(resolve, time))
 }
 
 /**
@@ -221,17 +228,17 @@ export function randomImgurl() {
  */
 export function unpass(show) {
   if (show) {
-    let body = document.body
+    const body = document.body
     body.style.position = ''
-    let top = body.style.top
-    document.body.scrollTop = document.documentElement.scrollTop =
-      -parseInt(top)
+    const top = body.style.top
+    document.body.scrollTop = document.documentElement.scrollTop
+      = -parseInt(top)
     body.style.top = ''
   } else {
-    let scrollTop =
-      document.body.scrollTop || document.documentElement.scrollTop
-    document.body.style.cssText +=
-      'position:fixed;width:100%;top:-' + scrollTop + 'px;'
+    const scrollTop
+      = document.body.scrollTop || document.documentElement.scrollTop
+    document.body.style.cssText
+      += `position:fixed;width:100%;top:-${scrollTop}px;`
   }
 }
 
@@ -248,14 +255,17 @@ export function poll(conditionFn, callback) {
       return res
     }
     return true
-  } else {
+  }
+  else {
     let count = 1
-    let intervalId = setInterval(() => {
+    const intervalId = setInterval(() => {
       if (conditionFn()) {
         const res = callback()
+
         if (typeof res === 'boolean' || typeof res === 'string') {
           return res
         }
+
         clearInterval(intervalId)
         return true
       }
@@ -295,16 +305,22 @@ export function loadScript(url, callback = function () {}) {
 export function debounce(func, wait, immediate) {
   let timeout
   return function () {
-    let context = this,
-      args = arguments
-    let later = function () {
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
+    const context = this
+    // eslint-disable-next-line prefer-rest-params
+    const args = arguments
+    const later = function () {
       timeout = null
-      if (!immediate) func.apply(context, args)
+      if (!immediate) {
+        func.apply(context, args)
+      }
     }
-    let callNow = immediate && !timeout
+    const callNow = immediate && !timeout
     clearTimeout(timeout)
     timeout = setTimeout(later, wait)
-    if (callNow) func.apply(context, args)
+    if (callNow) {
+      func.apply(context, args)
+    }
   }
 }
 
@@ -315,13 +331,15 @@ export function debounce(func, wait, immediate) {
  * @param {number} mustRun
  */
 export function throttle(func, wait, mustRun) {
-  let timeout,
-    startTime = new Date()
+  let timeout
+  let startTime = new Date()
 
   return function () {
-    let context = this,
-      args = arguments,
-      curTime = new Date()
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
+    const context = this
+    // eslint-disable-next-line prefer-rest-params
+    const args = arguments
+    const curTime = new Date()
 
     clearTimeout(timeout)
 
@@ -342,7 +360,11 @@ export function throttle(func, wait, mustRun) {
 export function randomProperty(obj) {
   let result
   let count = 0
-  for (let prop in obj) if (Math.random() < 1 / ++count) result = prop
+  for (const prop in obj) {
+    if (Math.random() < 1 / ++count) {
+      result = prop
+    }
+  }
   return result
 }
 
@@ -360,7 +382,7 @@ export function randomColor(type) {
     const a = 0.6
     res = `rgba(${r},${g},${b},${a})`
   } else if (type === '16') {
-    res = '#' + Math.floor(Math.random() * 0xffffff).toString(16)
+    res = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`
   } else {
     const colors = type || [
       '#FE0302',
@@ -433,5 +455,5 @@ export function isPhone() {
  * @returns {boolean} 是否为 http 网址
  */
 export function isUrl(string) {
-  return new RegExp('http').test(string)
+  return /http/.test(string)
 }
