@@ -73,17 +73,17 @@ function createBlur() {
 
 function createAvatar() {
   const { avatar } = useThemeOptions()
-  const avatarElement
-    = $('<div>')
-      .addClass('avatar')
-      .css({ background: `center / cover url("${avatar}") no-repeat` })
 
   return $('<div>')
     .addClass('profile-avatar')
     .append(
       $('<a>')
         .attr('href', index)
-        .append(avatarElement),
+        .append(
+          $('<div>')
+            .addClass('avatar')
+            .css({ background: `center / cover url("${avatar}") no-repeat` }),
+        ),
     )
 }
 
