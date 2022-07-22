@@ -1,7 +1,7 @@
 import './index.scss'
 import { useGithubOptions } from '@acnb/options'
 import { getMonth, getQuarter, poll } from '../../utils/helpers'
-import { contact, message } from '../../constants/links'
+import { contact, message, rss } from '../../constants/links'
 import {
   getArticleCount,
   getCommentCount,
@@ -9,7 +9,7 @@ import {
   getViewCount,
 } from '../../utils/cnblog'
 
-function flat() {
+function flatSidebar() {
   $('#sideBar').appendTo($('#home'))
 }
 
@@ -25,14 +25,18 @@ function buildTopBtns() {
         <div class="account-button message">
             <a href="${message}" class='account-button-notice'>
                 <li class="fas fa-bell"></li>
-                <span class="notice-count" ${
-                  !noticeCount && 'style=display:none'
-                }>${noticeCount}</span>
+                <span class="notice-count" ${!noticeCount && 'style=display:none'
+    }>${noticeCount}</span>
             </a>
         </div>
         <div class="account-button stats">
             <div class="account-button-stats">
                 <li class="fas fa-chart-bar"></li>
+            </div>
+        </div>
+        <div class="account-button rss" data-rss="${rss}" onclick="$('#blog_nav_rss').trigger('click');">
+            <div class="account-button-rss">
+                <li class="fa fa-rss"></li>
             </div>
         </div>
     </div>`
@@ -44,7 +48,7 @@ function buildGithubIcon() {
   if (!enable) {
     return
   }
-  const el = `<div class="account-avatar">
+  const el = `<div class="account-github">
                 <a href="${url}"><i class="fab fa-github"></i></a>
               </div>`
   $('.account').append(el)
@@ -99,7 +103,7 @@ function buildCalendar() {
 }
 
 export default () => {
-  flat()
+  flatSidebar()
   buildTopBtns()
   buildStatistics()
   buildGithubIcon()

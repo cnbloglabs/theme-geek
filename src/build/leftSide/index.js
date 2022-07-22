@@ -6,7 +6,6 @@ import {
   draftBox,
   index,
   newPost,
-  rss,
   send,
 } from '../../constants/links'
 import './index.scss'
@@ -50,8 +49,7 @@ const buildCustomLinks = () => {
         links.push(value)
       }
     }
-  }
-  else {
+  } else {
     const { enable, value } = userConfig
     links = value
     if (!enable)
@@ -102,12 +100,6 @@ const removeHeaderToLeftSidebar = () => {
       allowVisit: true,
     },
     {
-      icon: 'fa-rss',
-      title: '订阅',
-      url: rss,
-      allowVisit: true,
-    },
-    {
       icon: 'fa-cog',
       title: '管理',
       url: admin,
@@ -131,14 +123,8 @@ const removeHeaderToLeftSidebar = () => {
             </li>
         </a>`)
 
-    if (!isOwner && !allowVisit)
-    { continue }
-    if (title === '订阅') {
-      item.removeAttr('target').attr({
-        'data-rss': url,
-        'href': 'javascript:void(0)',
-        'onclick': '$("#blog_nav_rss").trigger("click");',
-      })
+    if (!isOwner && !allowVisit) {
+      continue
     }
 
     el.find('ul').append(item)
