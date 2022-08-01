@@ -6,6 +6,7 @@ import {
   getBlogName,
   getFollowers,
   getFollowing,
+  getUserPhoto,
   isOwner,
 } from '../../utils/cnblog'
 import {
@@ -72,22 +73,6 @@ function createBlur() {
     .css('backgroundImage', `url(${headerBackground})`)
 }
 
-function createAvatar() {
-  const { avatar } = useThemeOptions()
-
-  return $('<div>')
-    .addClass('profile-avatar')
-    .append(
-      $('<a>')
-        .attr('href', index)
-        .append(
-          $('<div>')
-            .addClass('avatar')
-            .css({ background: `center / cover url("${avatar}") no-repeat` }),
-        ),
-    )
-}
-
 function createMessageElements() {
   return $('<div>')
     .addClass('profile-msg')
@@ -127,6 +112,23 @@ function createFollowButton() {
   )
 }
 
+function setAvatar() {
+  const { avatar } = getUserPhoto()
+  $('.profile-blur').after(
+    $('<div>')
+      .addClass('profile-avatar')
+      .append(
+        $('<a>')
+          .attr('href', index)
+          .append(
+            $('<div>')
+              .addClass('avatar')
+              .css({ background: `center / cover url("${avatar}") no-repeat` }),
+          ),
+      ),
+  )
+}
+
 function setProfile() {
   const userName = getBlogName()
   const age = getBlogAge()
@@ -145,17 +147,16 @@ export default () => {
   const menu = createMenu()
   const blur = createBlur()
   const messageWrap = createMessageElements()
-  const avatar = createAvatar()
 
   container
     .append(background)
     .append(menu)
     .append(blur)
-    .append(avatar)
     .append(messageWrap)
 
   $('#mainContent').prepend(container)
 
+  poll(() => $('#user_icon').length, setAvatar)
   poll(() => $('#home #profile_block>a').length, setProfile)
 
   if (!isOwner()) {
