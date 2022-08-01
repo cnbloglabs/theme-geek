@@ -198,7 +198,7 @@ export function isMd() {
  * 判断编辑器类型是否为 tinymce 5
  * @returns {boolean} 辑器类型是否为 tinymce 5
  */
-export function isTinymce5() {}
+export function isTinymce5() { }
 
 /**
  * 判断文章内容是否存在标题
@@ -283,4 +283,17 @@ export function getCommentCount() {
  */
 export function getViewCount() {
   return $('#stats-total-view-count>span').text().trim()
+}
+
+/**
+ * 获取用户头像，需异步
+ * @return {string}
+ */
+export function getUserPhoto() {
+  const face = $('#user_icon').attr('src')
+  const avatar = face.replace('face', 'avatar')
+  return {
+    face,
+    avatar,
+  }
 }
