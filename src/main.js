@@ -50,7 +50,8 @@ createTheme()
   .use(
     background,
     {
-      enable: true,
+      enable: false,
+      opacity: 1,
     },
     {
       opacitySelector:

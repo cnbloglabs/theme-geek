@@ -5,13 +5,11 @@ import { userAgent } from '../../utils/helpers'
  * 构建移动端菜单
  */
 function buildMobileMenu() {
-  const el = $('<div>').addClass('mobile-menu')
-
-  $('#left-side').clone().appendTo(el)
-
-  $('#sideBar').clone().appendTo(el)
-
-  $('body').append(el)
+  const $el = $('<div>').addClass('mobile-menu')
+  $el.append($('<div>').addClass('mobile-menu-wrap'))
+  $('#left-side').clone().appendTo($el.find('.mobile-menu-wrap'))
+  $('#sideBar').clone().appendTo($el.find('.mobile-menu-wrap'))
+  $('body').append($el)
   $('.mobile-menu #catalog').remove()
 }
 
