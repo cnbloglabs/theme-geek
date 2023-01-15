@@ -22,17 +22,17 @@
   },
   "dependencies": {
     "@acnb/core": "^1.0.8",
-    "@acnb/options": "^0.2.2",
-    "@acnb/plugins": "^0.3.7"
+    "@acnb/options": "^0.2.6",
+    "@acnb/plugins": "^0.4.1"
   },
   "devDependencies": {
     "@guangzan/eslint-config": "^0.1.19",
-    "@types/node": "^17.0.23",
-    "eslint": "^8.13.0",
-    "sass": "^1.42.1",
-    "terser": "^5.14.2",
-    "typescript": "^4.7.4",
-    "vite": "^3.0.0",
+    "@types/node": "^18.11.18",
+    "eslint": "^8.32.0",
+    "sass": "^1.57.1",
+    "terser": "^5.16.1",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4",
     "vite-plugin-ignore-public": "^0.0.1"
   }
 }
