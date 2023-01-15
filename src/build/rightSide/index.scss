@@ -18,6 +18,7 @@
   cursor: pointer;
   position: relative;
   margin-left: 20px;
+
   .fas::before {
     font-size: 20px;
     font-weight: 500;
@@ -30,6 +31,7 @@
 
 .account-button-notice {
   position: relative;
+
   .notice-count {
     display: inline-block;
     position: absolute;
@@ -50,6 +52,7 @@
 
 .account-button.stats {
   position: relative;
+
   .stat-list {
     visibility: hidden;
     position: absolute;
@@ -58,6 +61,7 @@
     border-radius: 4px;
     background: var(--bg-body);
     opacity: 0;
+
     li {
       display: flex;
       white-space: nowrap;
@@ -66,6 +70,7 @@
       color: var(--color-basic-700);
     }
   }
+
   &:hover .stat-list {
     opacity: 1;
     visibility: visible;
@@ -105,20 +110,23 @@
   padding: 20px 20px 20px;
   border-bottom: 1px solid #272a3a;
   overflow: hidden;
+
   #blogCalendar {
+
     table,
     tbody,
     tr,
     td {
       display: block;
     }
+
     tr {
       &:nth-child(1) {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
 
-        & > td:first-of-type {
+        &>td:first-of-type {
           width: 100%;
 
           td {
@@ -175,6 +183,7 @@
   position: relative;
   padding: 20px 8px 8px;
   border-radius: 0 0 2px 2px;
+
   img {
     width: 90%;
     height: 120px;
@@ -182,6 +191,7 @@
     border-radius: 2px 2px 0 0;
     margin: 0 auto;
   }
+
   .event-date {
     position: absolute;
     left: -14px;
@@ -189,14 +199,16 @@
     font-size: 12px;
     font-weight: bold;
     transform: scale(0.8);
+
     .event-month {
-      background-color: #1687fa;
+      background-color: var(--color-primary);
       padding: 1px 14px;
       font-family: 'DM Sans', sans-serif;
       color: #fff;
       text-align: center;
       border-radius: 4px 4px 0 0;
     }
+
     .event-day {
       width: 100%;
       backdrop-filter: blur(4px);
@@ -206,6 +218,7 @@
       text-align: center;
     }
   }
+
   .event-title {
     color: var(--color-basic-700);
     margin: 8px 0 0;
@@ -213,6 +226,7 @@
     padding: 0 14px;
     font-size: 13px;
   }
+
   .event-subtitle {
     color: var(--color-basic-500);
     font-family: 'DM Sans', sans-serif;
@@ -238,10 +252,12 @@
 @media screen and (max-width: 767px) {
   .event-wrapper {
     padding-top: 20px;
+
     img {
       padding-bottom: 12px;
     }
   }
+
   #home {
     #sideBar {
       display: none;
