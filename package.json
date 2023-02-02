@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@guangzan/eslint-config": "^0.1.19",
+    "@types/jquery": "^3.5.16",
     "@types/node": "^18.11.18",
     "eslint": "^8.32.0",
     "sass": "^1.57.1",

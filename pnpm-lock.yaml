@@ -5,6 +5,7 @@ specifiers:
   '@acnb/options': ^0.2.6
   '@acnb/plugins': ^0.4.1
   '@guangzan/eslint-config': ^0.1.19
+  '@types/jquery': ^3.5.16
   '@types/node': ^18.11.18
   eslint: ^8.32.0
   sass: ^1.57.1
@@ -20,6 +21,7 @@ dependencies:
 
 devDependencies:
   '@guangzan/eslint-config': 0.1.19_7uibuqfxkfaozanbtbziikiqje
+  '@types/jquery': 3.5.16
   '@types/node': 18.11.18
   eslint: 8.32.0
   sass: 1.57.1
@@ -463,6 +465,12 @@ packages:
       fastq: 1.15.0
     dev: true
 
+  /@types/jquery/3.5.16:
+    resolution: {integrity: sha512-bsI7y4ZgeMkmpG9OM710RRzDFp+w4P1RGiIt30C1mSBT+ExCleeh4HObwgArnDFELmRrOpXgSYN9VF1hj+f1lw==}
+    dependencies:
+      '@types/sizzle': 2.3.3
+    dev: true
+
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
@@ -487,6 +495,10 @@ packages:
 
   /@types/semver/7.3.13:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
+    dev: true
+
+  /@types/sizzle/2.3.3:
+    resolution: {integrity: sha512-JYM8x9EGF163bEyhdJBpR2QX1R5naCJHC8ucJylJ3w9/CVBaskdQ8WqBf8MmQrd1kRvp/a4TS8HJ+bxzR7ZJYQ==}
     dev: true
 
   /@types/unist/2.0.6:
