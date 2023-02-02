@@ -577,18 +577,6 @@ h1.PostListTitle+.pager,
   }
 }
 
-#post_next_prev {
-  display: none;
-  order: 3;
-  margin-top: 21.6px;
-  font-size: 16px;
-  color: #999;
-
-  a:nth-child(3n + 1) {
-    display: none;
-  }
-}
-
 #blog-comments-placeholder br,
 #comment_pager_top {
   display: none;
