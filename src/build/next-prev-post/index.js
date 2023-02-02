@@ -1,5 +1,6 @@
 import './index.scss'
 import { isPostDetailsPage } from '../../utils/cnblog'
+import { poll } from '../../utils/helpers'
 
 function buildNextPrevPost() {
   if (!isPostDetailsPage) {
@@ -59,4 +60,4 @@ function buildNextPrevPost() {
   $('#cnblogs_post_body').after(elements)
 }
 
-export default buildNextPrevPost
+export default () => poll(() => $('#post_next_prev>a').length, buildNextPrevPost)
