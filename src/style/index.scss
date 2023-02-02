@@ -108,17 +108,20 @@ body {
 
 .sidebar-block {
   padding: 20px 20px 0;
+
   h3 {
     color: var(--color-basic-900);
     font-size: 14px;
     margin-bottom: 16px;
     font-weight: 500;
   }
+
   ul {
     li {
       padding: 4px 8px;
       font-size: 12px;
       cursor: pointer;
+
       &:hover {
         color: var(--color-primary);
         transition: all 0.2s;
@@ -132,6 +135,7 @@ body {
   ul {
     display: flex;
     flex-wrap: wrap;
+
     li {
       margin: 0 4px 4px 0;
       padding: 4px 12px;
@@ -155,6 +159,7 @@ body {
 #sidebar_recentcomments {
   .recent_comment_body {
     padding: 12px;
+
     &:hover {
       color: inherit;
       transition: all 0.2s;
@@ -183,6 +188,7 @@ body {
   color: var(--color-basic-700);
   font-size: 13px;
   border-top: 1px solid var(--color-basic-200);
+
   #poweredby {
     margin-left: 12px;
   }
@@ -203,6 +209,7 @@ body {
     text-align: center;
     font-size: 13px;
     text-transform: capitalize;
+
     a {
       text-transform: none;
     }
@@ -227,6 +234,7 @@ body {
   background-color: var(--bg-pager);
   color: var(--color-basic-700);
   border-radius: 4px;
+
   a,
   span.current {
     margin: 0 10px;
@@ -234,6 +242,7 @@ body {
     border-radius: 4px;
     background-color: var(--bg-pager-btn);
     border: 2px solid rgba(0, 0, 0, 0);
+
     &:hover {
       transition: all 0.2s;
       border: 2px solid var(--color-primary);
@@ -250,7 +259,7 @@ body {
   }
 }
 
-h1.PostListTitle + .pager,
+h1.PostListTitle+.pager,
 #homepage_top_pager {
   display: none;
 }
@@ -267,6 +276,7 @@ h1.PostListTitle + .pager,
 #nav_next_page {
   margin: 0 0 12px;
   text-align: center;
+
   a {
     padding: 8px 0;
     border-radius: 4px;
@@ -274,6 +284,7 @@ h1.PostListTitle + .pager,
     background-color: var(--bg-pager);
     display: block;
     border: 2px solid rgba(0, 0, 0, 0);
+
     &:hover {
       color: var(--color-primary);
       border-color: var(--color-primary);
@@ -354,6 +365,7 @@ h1.PostListTitle + .pager,
 
   #taglist {
     padding: 20px;
+
     table,
     tbody,
     tr,
@@ -361,8 +373,7 @@ h1.PostListTitle + .pager,
       display: block;
     }
 
-    tbody {
-    }
+    tbody {}
 
     tr {
       display: grid;
@@ -386,15 +397,18 @@ h1.PostListTitle + .pager,
         background-color: var(--bg-tags);
         border: 1px solid var(--tag-border-color);
         font-size: 13px;
+
         &:hover {
           background: var(--bg-btn-hover);
           transition: all 0.2s;
         }
+
         &:active {
           background: var(--bg-btn-active);
           transition: all 0.2s;
         }
       }
+
       span {
         position: absolute;
         right: 4px;
@@ -431,15 +445,18 @@ h1.PostListTitle + .pager,
   align-items: baseline;
   margin: 20px 0;
 }
+
 #author_profile {
   @include center();
   margin: 0 10.8px 0 0;
   padding: 0;
   width: auto;
   order: -1;
+
   #author_profile_info {
     display: none;
   }
+
   #author_profile_follow {
     display: none;
   }
@@ -469,10 +486,12 @@ h1.PostListTitle + .pager,
     background-color: var(--bg-pager-btn);
     border: 1px solid var(--border-form) !important;
     color: var(--color-basic-900) !important;
+
     &:hover {
       filter: brightness(1.1);
       transition: all 0.2s;
     }
+
     &:active {
       filter: brightness(0.95);
       transition: all 0.2s;
@@ -504,6 +523,7 @@ h1.PostListTitle + .pager,
   align-items: center;
   margin: 0;
   padding: 0;
+
   .diggit,
   .buryit {
     width: auto;
@@ -515,35 +535,43 @@ h1.PostListTitle + .pager,
     background-color: var(--bg-pager-btn);
     border: 1px solid var(--border-form) !important;
     white-space: nowrap;
+
     &:hover {
       filter: brightness(1.1);
       transition: all 0.2s;
     }
+
     &:active {
       filter: brightness(0.95);
       transition: all 0.2s;
     }
+
     span {
       color: var(--color-basic-900);
     }
+
     .diggnum,
     .burynum {
       line-height: 1em !important;
     }
   }
+
   .diggit {
     margin-right: 10px;
+
     &::before {
       content: '\f164';
       font-weight: 500;
     }
   }
+
   .buryit {
     &::before {
       content: '\f165';
       font-weight: 500;
     }
   }
+
   .diggword {
     display: none;
   }
@@ -592,6 +620,7 @@ h1.PostListTitle + .pager,
     border-left: 1px solid var(--border-form);
     border-right: 1px solid var(--border-form);
     padding: 17.982px 10.8px;
+
     &:nth-last-child(2) {
       border-bottom: 1px solid var(--border-form);
     }
@@ -602,6 +631,7 @@ h1.PostListTitle + .pager,
     flex-direction: column;
     align-items: flex-end;
     position: relative;
+
     .louzhu {
       display: none;
     }
@@ -611,6 +641,7 @@ h1.PostListTitle + .pager,
       color: var(--color-basic-700);
       margin-right: 10px;
       margin-left: 0;
+
       a:nth-child(1) {
         border-bottom: none;
       }
@@ -703,11 +734,14 @@ h1.PostListTitle + .pager,
   flex-wrap: wrap;
   margin-bottom: 5px;
   font-size: 0;
+
   .comment_actions a:last-child {
     margin-right: 8px;
   }
+
   color: var(--color-basic-600);
-  & > a:last-of-type {
+
+  &>a:last-of-type {
     margin-left: 8px;
     color: var(--color-primary);
     order: 1;
@@ -717,6 +751,7 @@ h1.PostListTitle + .pager,
   .feedbackManage {
     order: 3;
     font-size: 14px;
+
     .comment_actions {
       border-bottom: 1px solid var(--color-primary);
     }
@@ -725,6 +760,7 @@ h1.PostListTitle + .pager,
   .comment_vote {
     order: 4;
     font-size: 14px;
+
     a {
       padding-left: 8px;
     }
@@ -735,6 +771,7 @@ h1.PostListTitle + .pager,
   @include center();
   margin-top: 5px;
   align-items: flex-start;
+
   .blog_comment_body {
     position: relative;
     margin: 16px 0 0 10px;
@@ -746,6 +783,7 @@ h1.PostListTitle + .pager,
     padding: 5.4px 10.8px;
     background-color: var(--bg-common-body);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
     &:before {
       content: '';
       display: block;
@@ -771,6 +809,7 @@ h1.PostListTitle + .pager,
   padding: 32px 16px;
   background-color: var(--bg-form);
   overflow: hidden;
+
   #divCommentShow,
   #ad_text_under_commentbox,
   #comment_nav,
@@ -783,12 +822,12 @@ h1.PostListTitle + .pager,
     border: 1px solid var(--border-form);
     border-radius: 4px;
 
-    & > p:nth-of-type(3),
-    & > a:first-of-type {
+    &>p:nth-of-type(3),
+    &>a:first-of-type {
       display: none;
     }
 
-    & > p:last-of-type {
+    &>p:last-of-type {
       color: var(--color-basic-300);
       margin-left: 10.8px;
       font-size: 14px;
@@ -852,7 +891,7 @@ h1.PostListTitle + .pager,
     }
 
     #commentbox_opt {
-      & > a {
+      &>a {
         display: none;
       }
 
@@ -863,6 +902,7 @@ h1.PostListTitle + .pager,
         width: 75.6px;
         height: 32px;
         @include btn(primary);
+
         &:hover {
           transition: all 0.2s;
           filter: brightness(0.8);
@@ -895,6 +935,7 @@ h1.PostListTitle + .pager,
     padding: 4px 0;
     @include text-over();
     background-color: var(--bg-common-body);
+
     &:not(:nth-child(1)) {
       margin-top: 5px;
     }
