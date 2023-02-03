@@ -49,19 +49,12 @@ createTheme()
   )
   .use(
     background,
-    {
-      enable: true,
-    },
-    {
-      opacitySelector:
-        '#left-side,#sideBar,#mainContent, #footer,.custom-searchbar',
-    },
+    { enable: true },
+    { opacitySelector: '#left-side,#sideBar,#mainContent,#footer,.custom-searchbar' },
   )
   .use(
     catalog,
-    {
-      enable: true,
-    },
+    { enable: true },
     {
       mountedNode: '.account',
       fn: 'after',
