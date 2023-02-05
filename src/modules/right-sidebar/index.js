@@ -87,10 +87,6 @@ function buildCalendar() {
             <img src="${quarterImg}" class="event-img">
             <div class="event-title">${quarter} Wonderland</div>
             <div class="event-subtitle">${date} ${month}, ${year}</div>
-            <div class="event-date">
-                <div class="event-month">${month}</div>
-                <div class="event-day">${date}</div>
-            </div>
         </div>
     </div>
     `

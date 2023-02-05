@@ -95,7 +95,7 @@
 
 // 日历 start
 #custom-calendar {
-  padding: 18px 18px 0 18px;
+  padding: 0 18px 0 18px;
 }
 
 .event-wrapper,
@@ -189,30 +189,6 @@
     display: block;
     border-radius: 2px 2px 0 0;
     margin: 0 auto;
-  }
-
-  .event-date {
-    position: absolute;
-    left: -10px;
-    top: -10px;
-    font-size: 12px;
-    font-weight: bold;
-
-    .event-month {
-      background-color: var(--color-primary);
-      padding: 1px 14px;
-      color: #fff;
-      text-align: center;
-      border-radius: 4px 4px 0 0;
-    }
-
-    .event-day {
-      width: 100%;
-      backdrop-filter: blur(4px);
-      color: #fff;
-      background-color: rgba(0, 0, 0, 0.4);
-      text-align: center;
-    }
   }
 
   .event-title {
