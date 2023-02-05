@@ -17,9 +17,7 @@ function buildLeftSidebarContainer() {
 }
 
 function buildLogo() {
-  const el = $(`<div class='logo'>
-                    <a href="https://www.cnblogs.com/">CNBLOG</a>
-                </div>`)
+  const el = $('<div class=\'logo\'></div>')
   $('#left-side').append(el)
 }
 
@@ -56,10 +54,7 @@ function buildCustomLinks() {
     links = value
     if (!enable) { return }
   }
-  const el = $(`<div class="links side-wrapper">
-                      <h3>LINKS</h3>
-                      <ul></ul>
-                  </div>`)
+  const el = $('<div class="links left-side-wrapper"><h3>我的链接</h3><ul></ul></div>')
   for (const { name, link } of links) {
     el.find('ul').append(
       `<li><a href="${link}" target="_blank">${name}</a></li>`,
@@ -114,12 +109,7 @@ function removeHeaderToLeftSidebar() {
     },
   ]
 
-  const el = $(`
-    <div id="cnblog-nav" class="side-wrapper">
-        <h3>MENU</h3>
-        <ul></ul>
-    </div>
-    `)
+  const el = $('<div id="cnblog-nav" class="left-side-wrapper"><ul></ul></div>')
 
   for (const { icon, title, url, allowVisit } of navList) {
     const target = title === '首页' ? '_self' : '_blank'

@@ -143,6 +143,11 @@ body {
       border: 1px solid var(--geek-color-3);
       font-size: 12px;
       border-radius: 2px;
+
+      &:hover {
+        color: inherit;
+        background-color: var(--geek-color-3);
+      }
     }
   }
 }
@@ -920,7 +925,6 @@ h1.PostListTitle+.pager,
   padding-left: 16px;
   padding-right: 16px;
 }
-
 
 .clear {
   display: none;

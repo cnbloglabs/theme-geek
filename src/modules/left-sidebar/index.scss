@@ -5,12 +5,11 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
 }
 
 .logo {
-  font-family: 'DM Sans', sans-serif;
   font-size: 15px;
   color: var(--geek-color-10);
   font-weight: bold;
   text-align: center;
-  height: 68px;
+  height: 36px;
   line-height: 68px;
   letter-spacing: 4px;
   position: sticky;
@@ -35,12 +34,12 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
   }
 }
 
-.side-wrapper {
-  padding: 20px;
+.left-side-wrapper {
+  padding-left: 30px;
 
   h3 {
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: normal;
     margin-bottom: 20px;
   }
 
@@ -71,8 +70,8 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
   margin-top: auto;
 }
 
-.side-wrapper.links {
-  padding-top: 0;
+.left-side-wrapper.links {
+  margin-top: 30px;
 
   a {
     font-size: 13px;
@@ -165,7 +164,7 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
     }
   }
 
-  .side-wrapper {
+  .left-side-wrapper {
     padding: 60px 0 0;
 
     h3 {
@@ -207,8 +206,13 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
     display: block;
   }
 
-  .side-wrapper {
+  .left-side-wrapper {
     padding: 30px;
+
+    h3 {
+      padding-left: 22px;
+      position: relative;
+    }
   }
 
   #left-side {

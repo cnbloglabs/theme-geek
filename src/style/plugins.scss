@@ -20,7 +20,7 @@ $player: (
 $postMessage: (
   categoriesBackground: #f13a3a,
   tagsBackground: #22a6b3 #0097e6 #fbc531 #10ac84,
-  colorTags: var(--geek-color-9),
+  colorTags: var(--geek-color-10),
   colorMessage: var(--geek-color-8),
   colorCategories: #fff,
 );
@@ -71,10 +71,15 @@ $emoji: (
   }
 }
 
+
 // postMessage
-.custom-categories a,
-.custom-tags a {
-  box-shadow: none;
+.message-top {
+
+  .message-categories a,
+  .message-tags a {
+    border-radius: 2px;
+    box-shadow: none;
+  }
 }
 
 // image box
