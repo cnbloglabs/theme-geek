@@ -25,6 +25,23 @@ window.opts = {
     avatar: 'https://www.dummyimage.com/200/00b894/fff&text=A',
     headerBackground: 'https://www.dummyimage.com/600x200/6c5ce7/fff&text=,',
   },
+  links: {
+    enable: true,
+    value: [
+      {
+        name: '⛵ Cnblog Labs',
+        link: 'https://github.com/cnbloglabs',
+      },
+      {
+        name: '🌴 友情连接',
+        link: 'https://www.cnblogs.com/guangzan/p/15885313.html',
+      },
+      {
+        name: '🛒 有来开源商城',
+        link: 'https://www.youlai.tech',
+      },
+    ],
+  },
 }
 
 Object
