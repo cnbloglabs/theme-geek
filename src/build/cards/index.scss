@@ -32,6 +32,7 @@
   display: flex;
   flex-direction: column;
   word-break: break-all;
+
   &.top {
     .custom-card-title {
       &:before {
@@ -48,27 +49,32 @@
   padding: 20px 20px 8px;
   font-size: 14px;
   color: var(--color-basic-900);
+
   &:before {
     content: '\f15c';
     font-weight: normal;
     margin-right: 8px;
   }
+
   &:hover {
     color: var(--color-primary);
   }
 }
 
 .custom-card-desc {
-  color: var(--color-basic-600);
+  color: var(--color-basic-700);
   padding: 0 20px 8px;
   flex-grow: 1;
   font-size: 13px;
+
   .c_b_p_desc {
     line-height: 1.8;
   }
+
   .MJXp-math {
     white-space: break-spaces;
   }
+
   .MJXp-merror {
     padding: 0;
     background: none;
@@ -76,6 +82,7 @@
     color: inherit;
     font-size: 100%;
   }
+
   .MathJax .noError {
     padding: 0;
     border: none;
@@ -90,24 +97,29 @@
   align-items: center;
   padding: 10px 20px;
   border-top: 1px solid var(--color-basic-200);
+
   div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-right: 10px;
+
     li::before {
       margin-right: 4px;
     }
   }
+
   a:first-of-type {
     margin-left: auto;
     margin-right: 10px;
   }
+
   button {
     margin-left: auto;
     @include btn(primary);
   }
+
   li:before {
     font-weight: normal;
   }
@@ -130,6 +142,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
+
   .custom-card,
   .entrylistItem {
     &:hover {

@@ -4,19 +4,25 @@ const { currentBlogApp } = window
  * 判断访问者是否为博主
  * @returns {boolean} boolean - 是否为博主
  */
-export const isOwner = () => window.isBlogOwner
+export function isOwner() {
+  return window.isBlogOwner
+}
 
 /**
  * 判断用户登录是否登录
  * @returns {boolean} 是否登录
  */
-export const getLoginState = () => window.isLogined
+export function getLoginState() {
+  return window.isLogined
+}
 
 /**
  * 判断是否开启公告
  * @returns {boolean} 是否开启公告
  */
-export const openNews = () => !!$('#profile_block').length
+export function openNews() {
+  return !!$('#profile_block').length
+}
 
 /**
  * 获取博客园昵称
@@ -26,12 +32,10 @@ export function getBlogName() {
   if (openNews()) {
     return $('#profile_block>a:nth-of-type(1)').html().trim()
   }
-
   const headerTitle = $('#Header1_HeaderTitle').text().trim()
   if (headerTitle.length) {
     return headerTitle
   }
-
   return currentBlogApp
 }
 
@@ -40,10 +44,9 @@ export function getBlogName() {
  * @returns {number} 粉丝数
  */
 export function getFollowers() {
-  const count = openNews()
+  return openNews()
     ? $('#profile_block a:nth-of-type(3)').text().trim()
     : '未知'
-  return count
 }
 
 /**
@@ -51,10 +54,9 @@ export function getFollowers() {
  * @returns {number} 关注的人数
  */
 export function getFollowing() {
-  const count = openNews()
+  return openNews()
     ? $('#profile_block a:nth-of-type(4)').text().trim()
     : '未知'
-  return count
 }
 
 /**
@@ -97,7 +99,7 @@ export function getBlogUserGuid() {
 /**
  * 关注
  */
-export const follow = () => {
+export function follow() {
   const guid = window.cb_blogUserGuid
   if (guid) {
     window.follow(guid)
@@ -109,7 +111,7 @@ export const follow = () => {
 /**
  * 取消关注
  */
-export const unfollow = () => {
+export function unfollow() {
   window.unfollow(window.cb_blogUserGuid)
 }
 
@@ -117,7 +119,9 @@ export const unfollow = () => {
  * 判断文章是否打开了评论
  * @returns {boolean} 文章是否打开了评论
  */
-export const IsCommentTurnedOn = () => !!$('#tbCommentBody').length
+export function IsCommentTurnedOn() {
+  return !!$('#tbCommentBody').length
+}
 
 /**
  * 判断是否为博文详情页
@@ -198,7 +202,7 @@ export function isMd() {
  * 判断编辑器类型是否为 tinymce 5
  * @returns {boolean} 辑器类型是否为 tinymce 5
  */
-export function isTinymce5() {}
+export function isTinymce5() { }
 
 /**
  * 判断文章内容是否存在标题
