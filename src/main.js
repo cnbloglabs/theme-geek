@@ -28,7 +28,7 @@ window.opts = {
 }
 
 Object
-  .values(import.meta.glob('./build/**/*.js', { eager: true }))
+  .values(import.meta.glob('./modules/**/*.js', { eager: true }))
   .forEach(i => i.default())
 
 createTheme()
