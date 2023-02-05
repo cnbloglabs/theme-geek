@@ -36,10 +36,10 @@
   &.top {
     .custom-card-title {
       &:before {
-        content: '\f004';
-        font-weight: bold;
-        color: #f14668;
-        margin-right: 8px;
+        content: '📌';
+        // font-weight: bold;
+        // color: #f14668;
+        margin-right: 4px;
       }
     }
   }
@@ -50,11 +50,11 @@
   font-size: 14px;
   color: var(--geek-color-10);
 
-  &:before {
-    content: '\f15c';
-    font-weight: normal;
-    margin-right: 8px;
-  }
+  // &:before {
+  //   content: '\f15c';
+  //   font-weight: normal;
+  //   margin-right: 8px;
+  // }
 
   &:hover {
     color: var(--color-primary);
@@ -62,10 +62,10 @@
 }
 
 .custom-card-desc {
-  color: var(--geek-color-9);
+  color: var(--geek-color-8);
   padding: 0 20px 8px;
   flex-grow: 1;
-  font-size: 13px;
+  font-size: 12px;
 
   .c_b_p_desc {
     line-height: 1.8;
