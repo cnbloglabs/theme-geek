@@ -60,4 +60,6 @@ function buildNextPrevPost() {
   $('#cnblogs_post_body').after(elements)
 }
 
-export default () => poll(() => $('#post_next_prev>a').length, buildNextPrevPost)
+export function install() {
+  poll(() => $('#post_next_prev>a').length, buildNextPrevPost)
+}

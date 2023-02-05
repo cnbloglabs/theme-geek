@@ -1,3 +1,3 @@
-export default function footer() {
+export function install() {
   $('#footer').appendTo('#main')
 }

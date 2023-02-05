@@ -59,7 +59,7 @@ function pageElementInit() {
   $('.c_b_p_desc_readmore').remove()
 }
 
-function initHomePageElement() {}
+function initHomePageElement() { }
 
 function initCategoryPageElement() {
   if ($('.pager').length === 2) {
@@ -136,7 +136,7 @@ function build({ page, wrap, find, callback }) {
   callback()
 }
 
-export default () => {
+export function install() {
   const home = isHomePage()
   const category = isCategoryPage()
 

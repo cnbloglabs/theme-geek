@@ -154,7 +154,7 @@ function insertMessage() {
   $('.profile-followstate').text(followState ? '已关注' : '+ 关注')
 }
 
-export default () => {
+export function install() {
   const container = createContainer()
   const background = createBackground()
   const menu = createMenu()

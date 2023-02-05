@@ -28,7 +28,7 @@ function buildHeaderTrigger() {
     })
 }
 
-export default () => {
+export function install() {
   if (userAgent() === 'pc') {
     return
   }

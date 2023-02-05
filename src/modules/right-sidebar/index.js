@@ -25,9 +25,8 @@ function buildTopBtns() {
         <div class="account-button message">
             <a href="${message}" class='account-button-notice'>
                 <li class="fas fa-bell"></li>
-                <span class="notice-count" ${
-                  !noticeCount && 'style=display:none'
-                }>${noticeCount}</span>
+                <span class="notice-count" ${!noticeCount && 'style=display:none'
+    }>${noticeCount}</span>
             </a>
         </div>
         <div class="account-button stats">
@@ -98,7 +97,7 @@ function buildCalendar() {
   $('#leftcontentcontainer').before($(el))
 }
 
-export default () => {
+export function install() {
   flat()
   buildTopBtns()
   buildStatistics()

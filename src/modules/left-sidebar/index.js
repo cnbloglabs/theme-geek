@@ -145,11 +145,9 @@ function removeHeaderToLeftSidebar() {
   $('#left-side .logo').after(el)
 }
 
-function main() {
+export function install() {
   buildLeftSidebarContainer()
   buildLogo()
   buildCustomLinks()
   removeHeaderToLeftSidebar()
 }
-
-export default main

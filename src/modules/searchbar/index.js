@@ -1,10 +1,8 @@
 import './index.scss'
 
-// 构建搜索框
-const buildSearchbar = () => {
+export function install() {
   const el = '<div class="custom-searchbar"><input id="q" type="text" placeholder="Search..." onkeydown="return zzk_go_enter(event);"/></div>'
   $('#main').prepend(el)
   $('#sidebar_search').remove()
 }
 
-export default buildSearchbar

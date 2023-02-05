@@ -29,7 +29,7 @@ window.opts = {
 
 Object
   .values(import.meta.glob('./modules/**/*.js', { eager: true }))
-  .forEach(i => i.default())
+  .forEach(i => i.install())
 
 createTheme()
   .use(codeTrafficLight, { enable: true })
