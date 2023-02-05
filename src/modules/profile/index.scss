@@ -59,8 +59,7 @@
   }
 
   a:hover {
-    color: var(--color-primary);
-    background-color: var(--geek-color-2);
+    background-color: var(--geek-color-3);
     transition: 0.2s;
   }
 }
@@ -107,7 +106,6 @@
     font-size: 22px;
     color: #fff;
     font-weight: bold;
-    font-family: 'DM Sans', sans-serif;
     text-shadow: 0 0 3px #33354b;
   }
 
