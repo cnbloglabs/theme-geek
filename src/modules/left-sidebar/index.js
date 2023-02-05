@@ -54,7 +54,7 @@ function buildCustomLinks() {
     links = value
     if (!enable) { return }
   }
-  const el = $('<div class="links left-side-wrapper"><h3>我的链接</h3><ul></ul></div>')
+  const el = $('<div class="links left-side-wrapper"><ul></ul></div>')
   for (const { name, link } of links) {
     el.find('ul').append(
       `<li><a href="${link}" target="_blank">${name}</a></li>`,
