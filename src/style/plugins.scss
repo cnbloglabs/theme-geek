@@ -1,10 +1,10 @@
 $postSignature: (
-  primary: var(--border-post-signature),
-  background: var(--bg-post-signature),
+  primary: var(--color-primary),
+  background: var(--geek-color-2),
   borderRadius: 2px,
 );
 $toolMenu: (
-  background: var(--bg-md-summary),
+  background: var(--geek-color-2),
   color: #fff,
 );
 $signature: (
@@ -12,24 +12,24 @@ $signature: (
   fontSize: 1em,
 );
 $imagebox: (
-  background: var(--bg-tool-item),
+  background: var(--geek-color-2),
 );
 $player: (
-  bodyBackground: var(--bg-tags),
+  bodyBackground: var(--geek-color-6),
 );
 $postMessage: (
   categoriesBackground: #f13a3a,
   tagsBackground: #22a6b3 #0097e6 #fbc531 #10ac84,
-  colorTags: var(--color-basic-700),
-  colorMessage: var(--color-basic-600),
+  colorTags: var(--geek-color-9),
+  colorMessage: var(--geek-color-8),
   colorCategories: #fff,
 );
 $emoji: (
-  textEmojiColor: var(--color-basic-700),
-  bg: var(--bg-emoji),
-  borderColor: var(--border-form),
-  hoverBg: var(--bg-tags),
-  hoverBorderColor: var(--border-post-signature),
+  textEmojiColor: var(--geek-color-6),
+  bg: var(--geek-color-1),
+  borderColor: var(--geek-color-2),
+  hoverBg: var(--geek-color-3),
+  hoverBorderColor: var(--color-primary),
 );
 
 @import '/node_modules/@acnb/plugins/src/plugins/codeTrafficLight/index.scss';
@@ -48,12 +48,14 @@ $emoji: (
 // comments avatars
 .custom-comment-avatar {
   position: relative;
+
   img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
   }
 }
+
 .custom-comments-author {
   .custom-comment-avatar::after {
     position: absolute;
@@ -68,41 +70,51 @@ $emoji: (
     font-size: 80%;
   }
 }
+
 // postMessage
 .custom-categories a,
 .custom-tags a {
   box-shadow: none;
 }
+
 // image box
 .medium-zoom-image--opened {
   z-index: 41;
 }
+
 // toolMenu
 .custom-toolbar {
   z-index: 9;
 }
+
 .rocket-rotate {
   position: relative;
   top: 2px;
   transform: rotate(-45deg);
 }
+
 .toolbar-item {
   box-shadow: 0 2px 6px 0 rgb(0 0 0 / 20%);
 }
+
 .custom-drag-menu {
   z-index: 3;
 }
+
 .medium-zoom-overlay {
   z-index: 2;
 }
+
 // click
 #click-effects {
   z-index: 6;
 }
+
 // player
 body .aplayer.aplayer-fixed .aplayer-lrc {
   bottom: 30px;
 }
+
 // catalog
 #catalog {
   padding: 25px;
@@ -116,19 +128,22 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
     align-items: center;
     position: sticky;
     top: 0;
-    font-family: DM Sans, sans-serif;
-    color: var(--color-basic-700);
-    font-size: 15px;
+    color: var(--geek-color-9);
+    font-size: 16px;
     margin-bottom: 20px;
+    font-weight: normal;
+    cursor: pointer;
   }
 
   ul {
-    border-left: 1px solid var(--border-catalog);
+    border-left: 1px solid var(--geek-color-2);
+
     li {
-      color: var(--color-basic-800);
+      color: var(--geek-color-10);
       display: flex;
       align-items: center;
       line-height: 1.8;
+
       &::before {
         position: relative;
         right: 5px;
@@ -138,16 +153,19 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
         content: '';
         border-radius: 50%;
         border: 1px solid var(--color-primary);
-        background-color: var(--bg-sidebar);
+        background-color: var(--geek-color-1);
         margin-right: 4px;
         transition: transform 0.2s;
       }
+
       &:hover {
-        color: var(--color-basic-900);
+        color: var(--geek-color-10);
       }
+
       a {
         display: inline-block;
         width: 100%;
+
         .icon {
           width: 1.2em;
           height: 1.8em;
@@ -159,35 +177,43 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
       font-weight: 700;
       font-size: 16px;
     }
+
     .h2-list {
       font-size: 14px;
     }
+
     .h3-list,
     .h4-list,
     .h5-list,
     .h6-list {
       font-size: 12px;
     }
-    .h1-list ~ .h2-list {
+
+    .h1-list~.h2-list {
       margin-left: 1em;
       font-size: 14px;
     }
-    .h2-list ~ .h3-list {
+
+    .h2-list~.h3-list {
       margin-left: 2em;
     }
-    .h3-list ~ .h4-list {
+
+    .h3-list~.h4-list {
       margin-left: 3em;
     }
-    .h4-list ~ .h5-list {
+
+    .h4-list~.h5-list {
       margin-left: 4em;
     }
-    .h5-list ~ .h6-list {
+
+    .h5-list~.h6-list {
       margin-left: 5em;
     }
 
     .catalog-active {
       color: var(--color-primary);
       transition: all 0.3s;
+
       &::before {
         transform: scale(1) translateX(0);
         background-color: var(--color-primary);

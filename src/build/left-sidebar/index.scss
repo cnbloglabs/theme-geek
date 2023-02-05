@@ -7,7 +7,7 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
 .logo {
   font-family: 'DM Sans', sans-serif;
   font-size: 15px;
-  color: var(--color-basic-900);
+  color: var(--geek-color-10);
   font-weight: bold;
   text-align: center;
   height: 68px;
@@ -15,7 +15,7 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
   letter-spacing: 4px;
   position: sticky;
   top: 0;
-  background: var(--bg-logo);
+  background: var(--geek-color-1);
 }
 
 #cnblog-nav {
@@ -28,9 +28,6 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
 }
 
 #cnblog-nav {
-  // span {
-  //   width: 20px;
-  // }
   @for $i from 1 through length($iconsColor) {
     a:nth-child(#{$i}) span::before {
       color: nth($iconsColor, $i);
@@ -40,28 +37,31 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
 
 .side-wrapper {
   padding: 20px;
+
   h3 {
-    font-family: 'DM Sans', sans-serif;
-    color: #5c5e6e;
     font-size: 15px;
     font-weight: bold;
     margin-bottom: 20px;
   }
+
   ul {
     display: flex;
     flex-direction: column;
     font-size: 15px;
     white-space: nowrap;
+
     li {
       text-decoration: none;
-      color: var(--color-basic-700);
+      color: var(--geek-color-9);
       display: flex;
       align-items: center;
+
       &:not(:last-child) {
         margin-bottom: 20px;
       }
+
       &:hover {
-        color: var(--color-basic-900);
+        color: var(--geek-color-10);
       }
     }
   }
@@ -73,6 +73,7 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
 
 .side-wrapper.links {
   padding-top: 0;
+
   a {
     font-size: 13px;
   }
@@ -80,10 +81,11 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
 
 .links {
   overflow-y: auto;
+
   h3 {
     position: sticky;
     top: 0;
-    background-color: var(--bg-sidebar);
+    background-color: var(--geek-color-1);
   }
 }
 
@@ -98,11 +100,13 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
   height: 52px;
   border-top: 1px solid var(--border-sidebar-block);
   position: relative;
+
   .follow-text {
     display: flex;
     align-items: center;
     transition: 0.3s;
   }
+
   .developer {
     position: absolute;
     left: 0;
@@ -111,9 +115,10 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
     transition: 0.3s;
     padding: 0 20px;
     align-items: center;
-    background-color: var(--bg-sidebar);
+    background-color: var(--geek-color-1);
     width: 100%;
     height: 100%;
+
     img {
       border-radius: 50%;
       width: 26px;
@@ -122,10 +127,12 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
       margin-right: 10px;
     }
   }
+
   &:hover {
     .follow-text {
       transform: translateY(100%);
     }
+
     .developer {
       top: 0;
     }
@@ -138,14 +145,18 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
       font-size: 22px;
       margin-right: 0;
     }
+
     .nav-item-text {
       display: none;
     }
+
     ul {
       a {
         margin-bottom: 5px;
+
         li {
           padding: 18px 0;
+
           span:last-child {
             margin-top: 10px;
           }
@@ -153,25 +164,27 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
       }
     }
   }
+
   .side-wrapper {
     padding: 60px 0 0;
+
     h3 {
       display: none;
     }
+
     ul {
       li {
         padding: 10px 0 5px;
         flex-direction: column;
         font-size: 12px;
+
         a {
           margin-top: 10px;
-        }
-        &:active {
-          filter: brightness(0.6);
         }
       }
     }
   }
+
   .logo,
   .links,
   .developer span,
@@ -182,6 +195,7 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
 
 @media screen and (max-width: 768px) {
   #home {
+
     #sideBar,
     #left-side {
       display: none;
@@ -203,19 +217,23 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
       flex-direction: row;
       flex-wrap: wrap;
       border-bottom: 1px solid var(--border-sidebar-block);
+
       ul {
         flex-direction: row;
+
         a {
           width: 20%;
+
           li {
             span:first-child {
-              background-color: var(--bg-tags);
+              background-color: var(--geek-color-6);
               border-radius: 50%;
               display: flex;
               justify-content: center;
               align-items: center;
               width: 10vw;
               height: 10vw;
+
               &::before {
                 font-size: 16px;
               }

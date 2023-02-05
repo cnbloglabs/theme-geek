@@ -4,18 +4,15 @@
   border-radius: 4px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  background: var(--bg-scrollbar-track);
+  background: var(--geek-color-3);
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--bg-scrollbar-thumb);
+  background: var(--geek-color-4);
   border-radius: 4px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--bg-scrollbar-thumb-hover);
+  background: var(--geek-color-6);
 }

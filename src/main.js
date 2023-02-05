@@ -19,10 +19,19 @@ import {
   tools,
   webTag,
 } from '@acnb/plugins'
-import build from './build'
+
+window.opts = {
+  theme: {
+    avatar: 'https://www.dummyimage.com/200/00b894/fff&text=A',
+    headerBackground: 'https://www.dummyimage.com/600x200/6c5ce7/fff&text=,',
+  },
+}
+
+Object
+  .values(import.meta.glob('./build/**/*.js', { eager: true }))
+  .forEach(i => i.default())
 
 createTheme()
-  .use(build)
   .use(codeTrafficLight, { enable: true })
   .use(clickEffects, { enable: false })
   .use(commentsAvatars, { enable: true })

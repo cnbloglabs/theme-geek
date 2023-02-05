@@ -11,19 +11,19 @@ import {
 } from '../../constants/links'
 import './index.scss'
 
-const buildLeftSidebarContainer = () => {
+function buildLeftSidebarContainer() {
   const el = $('<div id=\'left-side\'></div>')
   $('#home').append(el)
 }
 
-const buildLogo = () => {
+function buildLogo() {
   const el = $(`<div class='logo'>
                     <a href="https://www.cnblogs.com/">CNBLOG</a>
                 </div>`)
   $('#left-side').append(el)
 }
 
-const buildCustomLinks = () => {
+function buildCustomLinks() {
   /**
    * 兼容旧的配置 Array<Link>
    * 当前推荐的配置类型为
@@ -54,8 +54,7 @@ const buildCustomLinks = () => {
   else {
     const { enable, value } = userConfig
     links = value
-    if (!enable)
-    { return }
+    if (!enable) { return }
   }
   const el = $(`<div class="links side-wrapper">
                       <h3>LINKS</h3>
@@ -69,7 +68,7 @@ const buildCustomLinks = () => {
   $('#left-side').append(el)
 }
 
-const removeHeaderToLeftSidebar = () => {
+function removeHeaderToLeftSidebar() {
   const navList = [
     {
       icon: 'fa-blog',
@@ -131,8 +130,7 @@ const removeHeaderToLeftSidebar = () => {
             </li>
         </a>`)
 
-    if (!isOwner && !allowVisit)
-    { continue }
+    if (!isOwner && !allowVisit) { continue }
     if (title === '订阅') {
       item.removeAttr('target').attr({
         'data-rss': url,
@@ -147,9 +145,11 @@ const removeHeaderToLeftSidebar = () => {
   $('#left-side .logo').after(el)
 }
 
-export default () => {
+function main() {
   buildLeftSidebarContainer()
   buildLogo()
   buildCustomLinks()
   removeHeaderToLeftSidebar()
 }
+
+export default main

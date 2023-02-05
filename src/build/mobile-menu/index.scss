@@ -3,6 +3,7 @@
     display: none;
   }
 }
+
 @media screen and (max-width: 768px) {
   .mobile-menu {
     display: none;
@@ -13,39 +14,45 @@
     height: 100vh;
     overflow: auto;
     z-index: 4;
+
     &::-webkit-scrollbar {
       display: none;
     }
   }
+
   #side-btn-wrap {
     visibility: visible;
     position: fixed;
-    bottom: 21.6px;
-    right: 27px;
+    bottom: 20px;
+    right: 28px;
     padding: 10px;
     background: #fff;
     box-shadow: 1px 1px 8px var(--color-primary);
     border-radius: 50%;
     z-index: 20;
   }
+
   #left-side {
     .favourite {
       padding: 30px;
-      border-bottom: 1px solid var(--border-sidebar-block);
+
       h3 {
         display: block;
         padding-left: 0;
       }
+
       ul {
         flex-direction: row;
         flex-wrap: wrap;
+
         li {
           padding: 0.3rem 0.6rem;
           border-radius: 2px;
           margin-bottom: 0.5rem;
           margin-right: 0.5rem;
-          background-color: var(--bg-tags);
+          background-color: var(--geek-color-6);
           font-size: 12px;
+
           a {
             margin: 0;
           }
@@ -124,6 +131,7 @@
   #side-btn.side-btn-active #side-btn-burger:before {
     transition: all 0.2s;
   }
+
   // header trigger
 
   .navbar-burger {
@@ -136,6 +144,7 @@
     right: 4px;
     margin-left: auto;
     z-index: 5;
+
     span {
       background-color: currentColor;
       display: block;
@@ -147,24 +156,30 @@
       transition-property: background-color, opacity, transform;
       transition-timing-function: ease-out;
       width: 16px;
+
       &:nth-child(1) {
         top: calc(50% - 6px);
       }
+
       &:nth-child(2) {
         top: calc(50% - 1px);
       }
+
       &:nth-child(3) {
         top: calc(50% + 4px);
       }
     }
+
     &.is-active {
       span {
         &:nth-child(1) {
           transform: translateY(5px) rotate(45deg);
         }
+
         &:nth-child(2) {
           opacity: 0;
         }
+
         &:nth-child(3) {
           transform: translateY(-5px) rotate(-45deg);
         }
@@ -182,6 +197,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }

@@ -20,7 +20,7 @@
 
 .custom-card,
 .entrylistItem {
-  background-color: var(--bg-card);
+  background-color: var(--geek-color-1);
   border-radius: 4px;
   box-sizing: border-box;
   flex-grow: 1;
@@ -48,7 +48,7 @@
 .custom-card-title {
   padding: 20px 20px 8px;
   font-size: 14px;
-  color: var(--color-basic-900);
+  color: var(--geek-color-10);
 
   &:before {
     content: '\f15c';
@@ -62,7 +62,7 @@
 }
 
 .custom-card-desc {
-  color: var(--color-basic-700);
+  color: var(--geek-color-9);
   padding: 0 20px 8px;
   flex-grow: 1;
   font-size: 13px;
@@ -95,8 +95,7 @@
 .custom-card-actions {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
-  border-top: 1px solid var(--color-basic-200);
+  padding: 0 20px 10px;
 
   div {
     display: flex;

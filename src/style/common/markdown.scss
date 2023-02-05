@@ -124,7 +124,7 @@ $height-iframe: map-get($md, iframe-height);
 
   blockquote {
     margin: 22px 0;
-    padding: 1px 22px;
+    padding: 2px 22px;
     color: $color-blockquote;
     background: $color-blockquote-bg;
     border-left: 4px solid $color-blockquote-border;
@@ -256,11 +256,7 @@ pre code.hljs {
   }
 }
 
-// .cnb-code-toolbar:hover {
-//   color: var(--color-basic-900);
-//   background-color: rgba(0,0,0,0.3);
-// }
 span.cnb-code-toolbar-item {
-  color: var(--color-basic-900);
+  color: var(--geek-color-10);
   background-color: rgba(0, 0, 0, 0.3);
 }

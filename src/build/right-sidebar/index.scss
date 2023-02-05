@@ -5,7 +5,7 @@
   height: 60px;
   position: sticky;
   top: 0;
-  background-color: var(--bg-account);
+  background-color: var(--geek-color-1);
   z-index: 2;
   flex-shrink: 0;
 }
@@ -13,7 +13,7 @@
 .account-button {
   border: 0;
   background: 0;
-  color: var(--color-basic-500);
+  color: var(--geek-color-10);
   padding: 0;
   cursor: pointer;
   position: relative;
@@ -35,18 +35,18 @@
   .notice-count {
     display: inline-block;
     position: absolute;
-    top: -7px;
+    top: -8px;
     right: -5px;
     width: 14px;
     height: 14px;
-    line-height: 11px;
+    line-height: 12px;
     border-radius: 50%;
     color: #fff;
     background: var(--color-primary);
     font-size: 8px;
     text-align: center;
     white-space: nowrap;
-    border: 2px solid var(--bg-account);
+    border: 2px solid var(--geek-color-1);
   }
 }
 
@@ -59,7 +59,7 @@
     top: 0;
     padding: 8px 12px;
     border-radius: 4px;
-    background: var(--bg-body);
+    background: var(--geek-color-1);
     opacity: 0;
 
     li {
@@ -67,7 +67,7 @@
       white-space: nowrap;
       font-size: 13px;
       line-height: 1.7;
-      color: var(--color-basic-700);
+      color: var(--geek-color-9);
     }
   }
 
@@ -88,7 +88,7 @@
   margin-left: auto;
   margin-right: 20px;
   font-size: 20px;
-  color: var(--color-basic-700);
+  color: var(--geek-color-9);
 }
 
 // 顶部按钮 end
@@ -100,8 +100,7 @@
 
 .event-wrapper,
 #blogCalendar {
-  // transition: 0.3s;
-  background-color: var(--bg-calendar);
+  background-color: var(--geek-color-2);
 }
 
 #blog-calendar {
@@ -194,16 +193,14 @@
 
   .event-date {
     position: absolute;
-    left: -14px;
-    top: -14px;
+    left: -10px;
+    top: -10px;
     font-size: 12px;
     font-weight: bold;
-    transform: scale(0.8);
 
     .event-month {
       background-color: var(--color-primary);
       padding: 1px 14px;
-      font-family: 'DM Sans', sans-serif;
       color: #fff;
       text-align: center;
       border-radius: 4px 4px 0 0;
@@ -213,22 +210,20 @@
       width: 100%;
       backdrop-filter: blur(4px);
       color: #fff;
-      font-family: 'DM Sans', sans-serif;
       background-color: rgba(0, 0, 0, 0.4);
       text-align: center;
     }
   }
 
   .event-title {
-    color: var(--color-basic-700);
+    color: var(--geek-color-9);
     margin: 8px 0 0;
-    font-family: 'DM Sans', sans-serif;
     padding: 0 14px;
     font-size: 13px;
   }
 
   .event-subtitle {
-    color: var(--color-basic-500);
+    color: var(--geek-color-10);
     font-family: 'DM Sans', sans-serif;
     font-size: 12px;
     font-weight: 500;

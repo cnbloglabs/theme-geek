@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   font-size: 14px;
-  color: var(--color-basic-900);
+  color: var(--geek-color-10);
   border-radius: 2px;
   margin-bottom: 24px;
   white-space: nowrap;
@@ -24,7 +24,7 @@
     }
 
     li {
-      color: var(--color-basic-600);
+      color: var(--geek-color-8);
     }
 
     span:nth-child(2) {

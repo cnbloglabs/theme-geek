@@ -20,8 +20,8 @@ html {
 }
 
 body {
-  background-color: var(--bg-body);
-  color: var(--color-basic-900);
+  background-color: var(--geek-color-2);
+  color: var(--geek-color-10);
   font-size: 1em;
   line-height: 1.5;
   font-family: UbuntuMono, 'Varela Round', 'PingFang SC', 'Microsoft YaHei',
@@ -61,7 +61,7 @@ body {
   grid-template-columns: 100%;
   grid-template-rows: 40vh 1fr;
   padding: 20px;
-  background-color: var(--bg-mainContent);
+  background-color: var(--geek-color-2);
   overflow: auto;
 }
 
@@ -76,7 +76,7 @@ body {
 
 .entrylistPostSummary,
 .postCon {
-  color: var(--color-basic-700);
+  color: var(--geek-color-9);
   font-size: 14px;
 }
 
@@ -93,7 +93,7 @@ body {
 
 #sideBar {
   grid-area: right;
-  background-color: var(--bg-sidebar);
+  background-color: var(--geek-color-1);
   border-radius: 0 4px 0 0;
 }
 
@@ -110,15 +110,15 @@ body {
   padding: 20px 20px 0;
 
   h3 {
-    color: var(--color-basic-900);
-    font-size: 14px;
+    color: var(--geek-color-10);
+    font-size: 16px;
     margin-bottom: 16px;
-    font-weight: 500;
+    font-weight: normal;
   }
 
   ul {
     li {
-      padding: 4px 8px;
+      padding: 4px 0px;
       font-size: 12px;
       cursor: pointer;
 
@@ -139,7 +139,8 @@ body {
     li {
       margin: 0 4px 4px 0;
       padding: 4px 12px;
-      background-color: var(--bg-tags);
+      background-color: var(--geek-color-2);
+      border: 1px solid var(--geek-color-3);
       font-size: 12px;
       border-radius: 2px;
     }
@@ -147,7 +148,8 @@ body {
 }
 
 .recent_comment_body {
-  background-color: var(--bg-tags);
+  background-color: var(--geek-color-2);
+  border: 1px solid var(--geek-color-3);
   border-radius: 4px;
 }
 
@@ -174,7 +176,7 @@ body {
   border-right: 1px solid var(--border-sidebar-block);
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-sidebar);
+  background-color: var(--geek-color-1);
   flex-shrink: 0;
   border-radius: 4px 0 0 0;
 }
@@ -184,10 +186,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg-footer);
-  color: var(--color-basic-700);
+  background-color: var(--geek-color-1);
+  color: var(--geek-color-9);
   font-size: 13px;
-  border-top: 1px solid var(--color-basic-200);
 
   #poweredby {
     margin-left: 12px;
@@ -196,16 +197,16 @@ body {
 
 #post_detail {
   margin-top: 20px;
-  padding: 16px;
+  padding: 16px 16px 0;
   animation: content-in 0.5s ease-in 0s;
   border-radius: 4px;
-  background-color: var(--bg-form);
+  background-color: var(--geek-color-1);
   overflow: hidden;
 
   #topics .postDesc {
     margin: 0 0 20px;
     padding: 0;
-    color: var(--color-basic-700);
+    color: var(--geek-color-9);
     text-align: center;
     font-size: 13px;
     text-transform: capitalize;
@@ -231,8 +232,8 @@ body {
   margin: 24px 0 0;
   font-size: 14px;
   text-align: center;
-  background-color: var(--bg-pager);
-  color: var(--color-basic-700);
+  background-color: var(--geek-color-1);
+  color: var(--geek-color-9);
   border-radius: 4px;
 
   a,
@@ -240,17 +241,17 @@ body {
     margin: 0 10px;
     padding: 0 12px;
     border-radius: 4px;
-    background-color: var(--bg-pager-btn);
-    border: 2px solid rgba(0, 0, 0, 0);
+    background-color: var(--geek-color-2);
+    border: 1px solid var(--geek-color-3);
 
     &:hover {
       transition: all 0.2s;
-      border: 2px solid var(--color-primary);
+      border-color: var(--color-primary);
     }
   }
 
   a {
-    color: var(--color-basic-900);
+    color: var(--geek-color-10);
   }
 
   span.current {
@@ -281,7 +282,7 @@ h1.PostListTitle+.pager,
     padding: 8px 0;
     border-radius: 4px;
     width: 100%;
-    background-color: var(--bg-pager);
+    background-color: var(--geek-color-1);
     display: block;
     border: 2px solid rgba(0, 0, 0, 0);
 
@@ -304,7 +305,7 @@ h1.PostListTitle+.pager,
   padding: 12px;
   font-size: 16px;
   font-weight: normal;
-  background-color: var(--bg-listItemTitle);
+  background-color: var(--geek-color-1);
   text-align: center;
 }
 
@@ -331,12 +332,12 @@ h1.PostListTitle+.pager,
   .PostList {
     padding: 8px;
     margin: 0;
-    background-color: var(--bg-listItem);
+    background-color: var(--geek-color-1);
     border-radius: 4px;
     box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
 
     .postTitl2 {
-      color: var(--color-basic-800);
+      color: var(--geek-color-10);
       font-size: 16px;
       font-weight: normal;
     }
@@ -344,7 +345,7 @@ h1.PostListTitle+.pager,
     .postDesc2 {
       margin-bottom: 0;
       padding-top: 0;
-      color: var(--color-basic-600);
+      color: var(--geek-color-8);
     }
 
     .postText2 {
@@ -356,7 +357,7 @@ h1.PostListTitle+.pager,
 #taglist_main {
   margin-top: 0;
 
-  background-color: var(--bg-sidebar);
+  background-color: var(--geek-color-1);
 
   #taglist_title_wrap {
     border-radius: 4px;
@@ -372,8 +373,6 @@ h1.PostListTitle+.pager,
     td {
       display: block;
     }
-
-    tbody {}
 
     tr {
       display: grid;
@@ -394,19 +393,9 @@ h1.PostListTitle+.pager,
         padding: 6px 18px;
         width: 100%;
         border-radius: 4px;
-        background-color: var(--bg-tags);
-        border: 1px solid var(--tag-border-color);
+        background-color: var(--geek-color-2);
+        border: 1px solid var(--geek-color-3);
         font-size: 13px;
-
-        &:hover {
-          background: var(--bg-btn-hover);
-          transition: all 0.2s;
-        }
-
-        &:active {
-          background: var(--bg-btn-active);
-          transition: all 0.2s;
-        }
       }
 
       span {
@@ -426,13 +415,13 @@ h1.PostListTitle+.pager,
 }
 
 #BlogPostCategory {
-  margin-bottom: 5.4px;
+  margin-bottom: 6px;
   font-size: 16px;
   order: 1;
 }
 
 #EntryTag {
-  margin-bottom: 5.4px;
+  margin-bottom: 6px;
   font-size: 16px;
   order: 2;
 }
@@ -483,18 +472,14 @@ h1.PostListTitle+.pager,
   #green_channel_favorite {
     padding: 6px 12px;
     border-radius: 4px;
-    background-color: var(--bg-pager-btn);
-    border: 1px solid var(--border-form) !important;
-    color: var(--color-basic-900) !important;
+    background-color: var(--geek-color-1);
+    border: 1px solid var(--geek-color-4) !important;
+    color: var(--geek-color-10) !important;
 
     &:hover {
-      filter: brightness(1.1);
-      transition: all 0.2s;
-    }
-
-    &:active {
-      filter: brightness(0.95);
-      transition: all 0.2s;
+      background-color: var(--geek-color-2);
+      background-image: none;
+      transition: background-color .2s;
     }
   }
 
@@ -532,27 +517,22 @@ h1.PostListTitle+.pager,
     background: none;
     padding: 6px 12px;
     border-radius: 4px;
-    background-color: var(--bg-pager-btn);
-    border: 1px solid var(--border-form) !important;
+    background-color: var(--geek-color-1);
+    border: 1px solid var(--geek-color-4) !important;
     white-space: nowrap;
 
-    &:hover {
-      filter: brightness(1.1);
-      transition: all 0.2s;
-    }
-
-    &:active {
-      filter: brightness(0.95);
-      transition: all 0.2s;
-    }
-
     span {
-      color: var(--color-basic-900);
+      color: var(--geek-color-10);
     }
 
     .diggnum,
     .burynum {
       line-height: 1em !important;
+    }
+
+    &:hover {
+      background-color: var(--geek-color-2);
+      transition: background-color .2s;
     }
   }
 
@@ -585,14 +565,13 @@ h1.PostListTitle+.pager,
 // 评论列表
 #blog-comments-placeholder {
   border-radius: 4px;
-  padding: 0 16px;
-  background-color: var(--bg-form);
+  background-color: var(--geek-color-1);
   overflow: hidden;
 
   .feedback_area_title {
-    padding: 7.56px 10.8px;
-    border: 1px solid var(--border-form);
-    background-color: var(--bg-form-title);
+    padding: 8px 10px;
+    border: 1px solid var(--geek-color-3);
+    background-color: var(--geek-color-2);
     border-radius: 2px 2px 0 0;
     font-size: 12px;
     font-weight: 700;
@@ -605,12 +584,12 @@ h1.PostListTitle+.pager,
   }
 
   .feedbackItem {
-    border-left: 1px solid var(--border-form);
-    border-right: 1px solid var(--border-form);
-    padding: 17.982px 10.8px;
+    border-left: 1px solid var(--geek-color-3);
+    border-right: 1px solid var(--geek-color-3);
+    padding: 17.982px 10px;
 
     &:nth-last-child(2) {
-      border-bottom: 1px solid var(--border-form);
+      border-bottom: 1px solid var(--geek-color-3);
     }
   }
 
@@ -625,8 +604,8 @@ h1.PostListTitle+.pager,
     }
 
     .blog_comment_body {
-      background-color: var(--bg-common-body) !important;
-      color: var(--color-basic-700);
+      background-color: var(--geek-color-2) !important;
+      color: var(--geek-color-9);
       margin-right: 10px;
       margin-left: 0;
 
@@ -634,10 +613,6 @@ h1.PostListTitle+.pager,
         border-bottom: none;
       }
     }
-
-    // img {
-    //     margin-left: 10.8px;
-    // }
 
     .blog_comment_body::before {
       display: none;
@@ -647,13 +622,13 @@ h1.PostListTitle+.pager,
       content: '';
       display: block;
       position: absolute;
-      right: -18.84px;
-      top: 5.4px;
-      width: 6.258px;
+      right: -14px;
+      top: 6px;
+      width: 6px;
       height: 0;
-      border-left: solid 12.96px var(--bg-common-body);
-      border-top: solid 3.24px rgba(0, 0, 0, 0);
-      border-bottom: solid 7.182px rgba(0, 0, 0, 0);
+      border-left: solid 12px var(--geek-color-2);
+      border-top: solid 8px rgba(0, 0, 0, 0);
+      border-bottom: solid 8px rgba(0, 0, 0, 0);
     }
 
     .feedbackManage {
@@ -661,7 +636,7 @@ h1.PostListTitle+.pager,
     }
 
     .layer {
-      margin-left: 5.4px;
+      margin-left: 6px;
       order: 3 !important;
     }
 
@@ -680,15 +655,6 @@ h1.PostListTitle+.pager,
     .feedbackCon {
       flex-direction: row-reverse;
       max-width: 100%;
-      // .blog_comment_body {
-      //     // max-width: 60%;
-
-      //     // img {
-      //     //     width: 27px;
-      //     //     height: 27px;
-      //     //     vertical-align: middle;
-      //     // }
-      // }
 
       br {
         display: none;
@@ -701,17 +667,17 @@ h1.PostListTitle+.pager,
   }
 
   .layer {
-    padding: 0 5.4px;
-    background-color: var(--bg-layer);
-    color: var(--color-basic-700);
+    padding: 0 6px;
+    background-color: var(--geek-color-2);
+    color: var(--geek-color-9);
     border-radius: 4px;
-    margin-right: 5.4px;
+    margin-right: 6px;
     order: 0;
     font-size: 12px;
   }
 
   .comment_date {
-    margin: 0 5.4px;
+    margin: 0 6px;
     order: 2;
     font-size: 14px;
   }
@@ -727,7 +693,7 @@ h1.PostListTitle+.pager,
     margin-right: 8px;
   }
 
-  color: var(--color-basic-600);
+  color: var(--geek-color-8);
 
   &>a:last-of-type {
     margin-left: 8px;
@@ -739,10 +705,6 @@ h1.PostListTitle+.pager,
   .feedbackManage {
     order: 3;
     font-size: 14px;
-
-    .comment_actions {
-      border-bottom: 1px solid var(--color-primary);
-    }
   }
 
   .comment_vote {
@@ -765,11 +727,11 @@ h1.PostListTitle+.pager,
     margin: 16px 0 0 10px;
     max-width: 72%;
     border-radius: 4px;
-    color: var(--color-basic-700);
+    color: var(--geek-color-9);
     font-size: 14px;
     line-height: 1.6;
-    padding: 5.4px 10.8px;
-    background-color: var(--bg-common-body);
+    padding: 6px 10px;
+    background-color: var(--geek-color-1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
     &:before {
@@ -777,12 +739,12 @@ h1.PostListTitle+.pager,
       display: block;
       position: absolute;
       left: -24.84px;
-      top: 5.4px;
+      top: 6px;
       width: 12.258px;
       height: 0;
-      border-right: solid 12.96px var(--bg-common-body);
+      border-right: solid 12px var(--geek-color-1);
       border-top: solid 3.24px rgba(0, 0, 0, 0);
-      border-bottom: solid 7.182px rgba(0, 0, 0, 0);
+      border-bottom: solid 8px rgba(0, 0, 0, 0);
     }
   }
 
@@ -794,8 +756,9 @@ h1.PostListTitle+.pager,
 
 // 发表评论
 #comment_form {
-  padding: 32px 16px;
-  background-color: var(--bg-form);
+  padding-top: 24px;
+  padding-bottom: 32px;
+  background-color: var(--geek-color-1);
   overflow: hidden;
 
   #divCommentShow,
@@ -807,7 +770,7 @@ h1.PostListTitle+.pager,
 
   #comment_form_container {
     position: relative;
-    border: 1px solid var(--border-form);
+    border: 1px solid var(--geek-color-3);
     border-radius: 4px;
 
     &>p:nth-of-type(3),
@@ -816,17 +779,17 @@ h1.PostListTitle+.pager,
     }
 
     &>p:last-of-type {
-      color: var(--color-basic-300);
-      margin-left: 10.8px;
+      color: var(--geek-color-5);
+      margin-left: 10px;
       font-size: 14px;
     }
 
     #commentform_title {
       background: none;
       margin-bottom: 0;
-      padding: 7.56px 10.8px;
-      border-bottom: 1px solid var(--border-form);
-      background-color: var(--bg-form-title);
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--geek-color-3);
+      background-color: var(--geek-color-2);
       border-radius: 2px 2px 0 0;
       font-size: 12px;
       font-weight: 700;
@@ -849,7 +812,7 @@ h1.PostListTitle+.pager,
       border: none;
 
       .commentbox_title {
-        border-bottom-color: var(--border-form);
+        border-bottom-color: var(--geek-color-3);
       }
 
       .commentbox_tab.active {
@@ -863,12 +826,12 @@ h1.PostListTitle+.pager,
       // .commentbox_title_right {
       // }
       #tbCommentBody {
-        margin-bottom: 10.8px !important;
+        margin-bottom: 10px !important;
         height: 81px;
         min-height: 170px;
         background: none;
         font-size: 16px;
-        border-bottom: 1px dashed var(--border-form);
+        border-bottom: 1px dashed var(--geek-color-3);
         color: #999;
       }
 
@@ -885,16 +848,11 @@ h1.PostListTitle+.pager,
 
       #btn_comment_submit {
         position: absolute;
-        bottom: 10.8px;
-        right: 10.8px;
+        bottom: 10px;
+        right: 10px;
         width: 75.6px;
         height: 32px;
         @include btn(primary);
-
-        &:hover {
-          transition: all 0.2s;
-          filter: brightness(0.8);
-        }
       }
     }
 
@@ -905,12 +863,12 @@ h1.PostListTitle+.pager,
 }
 
 #ad_t2 {
-  margin: 21.6px 0 0 0;
+  margin: 20px 0 0 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   font-size: 14px;
-  color: var(--color-basic-600);
+  color: var(--geek-color-8);
   border-radius: 4px;
 
   br {
@@ -922,7 +880,7 @@ h1.PostListTitle+.pager,
     margin-right: 0;
     padding: 4px 0;
     @include text-over();
-    background-color: var(--bg-common-body);
+    background-color: var(--geek-color-2);
 
     &:not(:nth-child(1)) {
       margin-top: 5px;
@@ -948,6 +906,23 @@ h1.PostListTitle+.pager,
 // 评论输入框下方导航栏
 .under-comment-nav,
 .under-comment-box-nav {
+  display: none;
+}
+
+
+.blogpost-body-html pre.codeblock {
+  background: none
+}
+
+
+#blog-comments-placeholder,
+#comment_form {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+
+.clear {
   display: none;
 }
 
