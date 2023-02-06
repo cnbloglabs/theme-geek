@@ -24,9 +24,7 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
       cursor: pointer;
     }
   }
-}
 
-#cnblog-nav {
   @for $i from 1 through length($iconsColor) {
     a:nth-child(#{$i}) span::before {
       color: nth($iconsColor, $i);
@@ -64,19 +62,21 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
       }
     }
   }
+
+  &.links {
+    margin-top: 30px;
+
+    a {
+      font-size: 13px;
+    }
+  }
 }
 
 .left-sidebar_bottom {
   margin-top: auto;
 }
 
-.left-side-wrapper.links {
-  margin-top: 30px;
 
-  a {
-    font-size: 13px;
-  }
-}
 
 .links {
   overflow-y: auto;
@@ -207,7 +207,7 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
   }
 
   .left-side-wrapper {
-    padding: 30px;
+    padding: 20px 10px 0;
 
     h3 {
       padding-left: 22px;
@@ -217,7 +217,6 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
 
   #left-side {
     #cnblog-nav {
-      padding-top: 60px;
       flex-direction: row;
       flex-wrap: wrap;
       border-bottom: 1px solid var(--border-sidebar-block);

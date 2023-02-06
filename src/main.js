@@ -51,7 +51,7 @@ createTheme()
   )
   .use(
     background,
-    { enable: true },
+    { enable: false },
     { opacitySelector: '#left-side,#sideBar,#mainContent,#footer,.custom-searchbar' },
   )
   .use(
