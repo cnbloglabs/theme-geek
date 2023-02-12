@@ -828,8 +828,17 @@ h1.PostListTitle+.pager,
         display: none;
       }
 
-      // .commentbox_title_right {
-      // }
+      .commentbox_title_right {
+
+        .comment_svg {
+          fill: var(--geek-color-6)
+        }
+
+        .comment_svg_stroke {
+          stroke: var(--geek-color-6)
+        }
+      }
+
       #tbCommentBody {
         margin-bottom: 10px !important;
         height: 81px;
@@ -837,7 +846,11 @@ h1.PostListTitle+.pager,
         background: none;
         font-size: 16px;
         border-bottom: 1px dashed var(--geek-color-3);
-        color: #999;
+        color: var(--geek-color-10);
+
+        &::placeholder {
+          color: var(--geek-color-8);
+        }
       }
 
       // #tbCommentBodyPreview {
@@ -929,5 +942,6 @@ h1.PostListTitle+.pager,
 .clear {
   display: none;
 }
+
 
 @import './index.m.scss';

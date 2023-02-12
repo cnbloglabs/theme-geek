@@ -1,4 +1,3 @@
-// 顶部按钮 start
 .account {
   display: flex;
   align-items: center;
@@ -58,9 +57,10 @@
     position: absolute;
     top: 0;
     padding: 8px 12px;
-    border-radius: 4px;
-    background: var(--geek-color-1);
+    border-radius: 2px;
+    background: var(--geek-color-2);
     opacity: 0;
+    border: 1px solid var(--geek-color-3);
 
     li {
       display: flex;
@@ -88,7 +88,6 @@
   margin-left: auto;
   margin-right: 20px;
   font-size: 20px;
-  color: var(--geek-color-9);
 }
 
 // 顶部按钮 end
