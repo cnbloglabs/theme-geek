@@ -30,7 +30,7 @@ export default defineConfig(() => ({
       formats: ['iife'],
       entry: './src/main.js',
       name: 'theme',
-      fileName: 'index',
+      fileName: () => 'geek.js',
     },
   },
 }))
