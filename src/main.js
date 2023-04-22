@@ -4,7 +4,6 @@ import {
   background,
   catalog,
   clickEffects,
-  codeTrafficLight,
   colorMode,
   commentsAvatars,
   darkMode,
@@ -25,7 +24,6 @@ Object
   .forEach(i => i.install())
 
 createTheme()
-  .use(codeTrafficLight, { enable: true })
   .use(clickEffects, { enable: false })
   .use(commentsAvatars, { enable: true })
   .use(colorMode, { enable: true, color: '#2F63FF' })
