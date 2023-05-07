@@ -209,9 +209,11 @@ pre code.hljs {
 }
 
 // code toolbar
-.span.cnb-code-toolbar-item {
-  background: #fff;
-  color: #fff;
+span.cnb-code-toolbar-item {
+    color: var(--geek-color-9);
+    background: var(--geek-color-3);
+    mix-blend-mode: normal;
+    opacity: 1;
 }
 
 // table start
@@ -254,9 +256,4 @@ pre code.hljs {
       height: 50vw;
     }
   }
-}
-
-span.cnb-code-toolbar-item {
-  color: var(--geek-color-10);
-  background-color: rgba(0, 0, 0, 0.3);
 }

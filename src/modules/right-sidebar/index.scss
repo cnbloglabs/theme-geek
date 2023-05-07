@@ -97,17 +97,14 @@
   padding: 0 18px 0 18px;
 }
 
-.event-wrapper,
-#blogCalendar {
+.event-wrapper {
   background-color: var(--geek-color-2);
 }
 
 #blog-calendar {
-  display: none !important;
   position: relative;
-  padding: 20px 20px 20px;
-  border-bottom: 1px solid #272a3a;
-  overflow: hidden;
+  padding: 20px 20px 0;
+  
 
   #blogCalendar {
 
@@ -116,6 +113,25 @@
     tr,
     td {
       display: block;
+    }
+
+    // .CalWeekendDay {
+    //     color: var(--geek-color-5);
+    // }
+
+    .CalOtherMonthDay {
+        color: var(--geek-color-5);
+    }
+
+    .CalNextPrev {
+        color: var(--geek-color-7);
+    }
+
+    .CalTodayDay {
+      border-radius: 2px;
+      font-size: 0.7em;
+      border: 1px dashed var(--color-primary);
+      border-radius: 50%;
     }
 
     tr {
@@ -132,17 +148,13 @@
           }
         }
 
-        // .CalNextPrev {
-        //     a:hover {
-        //         color: #fff;
-        //    }
-        // }
+
       }
 
       &:nth-child(2) {
         padding: 0 3.24px;
         margin-bottom: 5px;
-        border-bottom: 1px solid #24273b;
+        border-bottom: 1px solid var(--geek-color-2);
       }
 
       &:not(:nth-child(1)) {
@@ -160,19 +172,31 @@
 
       th,
       td {
+        font-size: 12px;
         padding: 0.2rem;
+        font-weight: normal;
       }
     }
 
     u {
-      color: var(--color-primary);
-    }
+      text-decoration: none;
+      position: relative;
 
-    .CalTodayDay {
-      background-color: #24273b;
-      color: var(--color-primary);
-      border-radius: 2px;
-      font-size: 0.7em;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        left: 50%;
+        background-color: var(--color-primary);
+        transform: translateX(-50%);
+      }
+
+      &:hover {
+        color: var(--color-primary);
+      }
     }
   }
 }
@@ -203,18 +227,6 @@
     padding: 0 14px;
   }
 }
-
-#blogCalendar {
-  padding-bottom: 30px;
-  position: relative;
-  bottom: -50px;
-}
-
-// &:hover {
-//     #blogCalendar {
-//         transform: translateY(calc(-100% - 30px));
-//     }
-// }
 
 // 日历 end
 @media screen and (max-width: 767px) {

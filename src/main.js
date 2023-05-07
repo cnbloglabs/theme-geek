@@ -71,7 +71,7 @@ createTheme()
       scrollContainer: '#mainContent',
       toolbarItems: [
         {
-          icon: 'fa-rocket rocket-rotate',
+          icon: 'fas fa-rocket rocket-rotate',
           iconType: 'className',
         },
         {

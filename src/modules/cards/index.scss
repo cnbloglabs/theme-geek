@@ -103,8 +103,9 @@
     justify-content: center;
     align-items: center;
     margin-right: 10px;
-
-    li::before {
+    color: var(--geek-color-8);
+    
+    i {
       margin-right: 4px;
     }
   }
@@ -112,6 +113,12 @@
   a:first-of-type {
     margin-left: auto;
     margin-right: 10px;
+
+    button {
+      background: none;
+      border: 1px solid var(--color-primary);
+      color: var(--color-primary);
+    }
   }
 
   button {

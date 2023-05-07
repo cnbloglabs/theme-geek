@@ -90,7 +90,7 @@ function buildCalendar() {
         </div>
     </div>
     `
-  $('#leftcontentcontainer').before($(el))
+  $('#sidebar_news').after($(el))
 }
 
 export function install() {
