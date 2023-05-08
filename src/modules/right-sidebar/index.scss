@@ -130,8 +130,9 @@
     .CalTodayDay {
       border-radius: 2px;
       font-size: 0.7em;
-      border: 1px dashed var(--color-primary);
+      border: 1px solid var(--color-primary);
       border-radius: 50%;
+      background-color:var(--theme-primary-2);
     }
 
     tr {
