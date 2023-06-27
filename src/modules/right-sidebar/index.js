@@ -75,7 +75,13 @@ function buildStatistics() {
 
 function buildCalendar() {
   const quarter = getQuarter()
-  const quarterImg = `https://guangzan.gitee.io/imagehost/Illustrations/${quarter.toLowerCase()}.png`
+  const imageUrlPrefix = 'https://images.cnblogs.com/cnblogs_com/guangzan'
+  const quarterImg = (() => ({
+    Spring: `${imageUrlPrefix}/1894231/o_230626114104_spring.png`,
+    Summer: `${imageUrlPrefix}/1894231/o_230626114104_summer.png`,
+    Autumn: `${imageUrlPrefix}/1894231/o_230626114105_autumn.png`,
+    Winter: `${imageUrlPrefix}/1894231/o_230626114104_winter.png`,
+  }[quarter]))()
   const month = getMonth()
   const instance = new Date()
   const year = instance.getFullYear()
