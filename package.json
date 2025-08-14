@@ -23,7 +23,7 @@
   "dependencies": {
     "@acnb/core": "^1.0.8",
     "@acnb/options": "^0.2.9",
-    "@acnb/plugins": "^0.5.3"
+    "@acnb/plugins": "^0.5.5"
   },
   "devDependencies": {
     "@guangzan/eslint-config": "^0.1.19",
