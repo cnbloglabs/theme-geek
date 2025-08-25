@@ -39,10 +39,21 @@
   }
 
   #main {
+    grid-template-rows: 40px 1fr 40px;
     margin-top: 0;
     grid-area: auto;
     height: 100vh;
     padding: 0;
+  }
+
+  #footer {
+    &>br, #footer_site_link, .footer-copyright {
+      display: none;
+    }
+
+    .footer-icp {
+      text-align: center;
+    }
   }
 
   #mainContent {
